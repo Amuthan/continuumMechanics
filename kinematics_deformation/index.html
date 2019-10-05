@@ -1,0 +1,846 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Lecture notes on Continuum Mechanics.">
+      
+      
+      
+        <meta name="author" content="Amuthan A. Ramabathiran">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.1.1">
+    
+    
+      
+        <title>Analysis of deformation - Continuum Mechanics</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.3020aac5.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.224b79ff.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#2196f3">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.01ccdecf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700|Open+Sans">
+        <style>body,input{font-family:"Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Open Sans","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="blue" data-md-color-accent="blue">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#analysis-of-deformation" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="Continuum Mechanics" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Continuum Mechanics
+            </span>
+            <span class="md-header-nav__topic">
+              Analysis of deformation
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="Continuum Mechanics" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Continuum Mechanics
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../intro/" title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../kinematics_intro/" title="Kinematics - basic definitions" class="md-nav__link">
+      Kinematics - basic definitions
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Analysis of deformation
+      </label>
+    
+    <a href="./" title="Analysis of deformation" class="md-nav__link md-nav__link--active">
+      Analysis of deformation
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#deformation" title="Deformation" class="md-nav__link">
+    Deformation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deformation-gradient" title="Deformation gradient" class="md-nav__link">
+    Deformation gradient
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#length-transformation" title="Length transformation" class="md-nav__link">
+    Length transformation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#volume-transformation" title="Volume transformation" class="md-nav__link">
+    Volume transformation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#area-transformation" title="Area transformation" class="md-nav__link">
+    Area transformation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#polar-decomposition-theorem" title="Polar decomposition theorem" class="md-nav__link">
+    Polar decomposition theorem
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../kinematics_motion/" title="Analysis of motion" class="md-nav__link">
+      Analysis of motion
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#deformation" title="Deformation" class="md-nav__link">
+    Deformation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deformation-gradient" title="Deformation gradient" class="md-nav__link">
+    Deformation gradient
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#length-transformation" title="Length transformation" class="md-nav__link">
+    Length transformation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#volume-transformation" title="Volume transformation" class="md-nav__link">
+    Volume transformation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#area-transformation" title="Area transformation" class="md-nav__link">
+    Area transformation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#polar-decomposition-theorem" title="Polar decomposition theorem" class="md-nav__link">
+    Polar decomposition theorem
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="analysis-of-deformation">Analysis of Deformation</h1>
+<p>We will now study the deformation of the body at fixed instant of time, say the current time instant <script type="math/tex">t</script>. In particular, we will see that <em>all</em> the information relevant to the change in shape of the body from the initial instant of time to the current instant of time is contained in a quantity called the <em>deformation gradient</em>.</p>
+<h2 id="deformation">Deformation</h2>
+<p>Let us consider, as before, a motion <script type="math/tex">(\chi_t)_{t \in I}</script> of a body <script type="math/tex">\mathcal{B}</script> as it moves and deforms in the three dimensional space <script type="math/tex">\mathbb{R}^3</script>. Since it is much easier to deal with maps between open subsets of Euclidean spaces, our attention henceforth will almost exclusively be on the deformation map <script type="math/tex">\varphi_t:B_0 \to B_t</script>, where <script type="math/tex">B_0 = \chi_0(\mathcal{B})</script> and <script type="math/tex">B_t = \chi_t(\mathcal{B})</script> are the initial and current placements of the body, respectively. </p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>Before we proceed further, we will introduce a useful notational convention that will turn out to quite useful in the sequel. We will, for the most part, use uppercase symbols for quantities associated with the initial configuration, and lowercase symbols for quantities associated with the current configuration. This also includes the indices for components of vectors and tensors with respect to suitably chosen bases.</p>
+</div>
+<p>Let us now introduce a basis for the three dimensional Euclidean space <script type="math/tex">\mathbb{R}^3</script>. For the sake of conceptual clarity, let us introduce <em>two</em> sets of bases <script type="math/tex">(\mathsf{E}_I)_{I=1}^3</script> and <script type="math/tex">(\mathsf{e}_i)_{i=1}^3</script>; note that these are the bases chosen by a single observer. We will use the basis <script type="math/tex">(\mathsf{E}_I)</script> to denote points in <script type="math/tex">B_0</script> and the basis <script type="math/tex">(\mathsf{e}_i)</script> to denote points in <script type="math/tex">B_t</script>. Notice how we have used uppercase and lowercase symbols for the initial and current placements, according the convention just outlined.</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>For all practical purposes, we can identify the bases <script type="math/tex">(\mathsf{E}_I)</script> and <script type="math/tex">(\mathsf{e}_i)</script> of <script type="math/tex">\mathbb{R}^3</script>. A formal way to express this equivalence is using the equation <script type="math/tex">\mathsf{e}_i = \sum \delta_{iI} \mathsf{E}_I</script>. More generally, the bases could be related via an orthogonal matrix as follows: <script type="math/tex">\mathsf{e}_i = \sum \hat{Q}_{iJ} \mathsf{E}_J</script>, with the matrix <script type="math/tex">[\hat{\mathsf{Q}}]</script> whose <script type="math/tex">(i,J)^{\text{th}}</script> entry is <script type="math/tex">\hat{Q}_{iJ}</script> being orthogonal. Even though it is sufficient to identify the two bases for the following development, we will retain the upper and lower case notations for the purpose of conceptual clarity.</p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Note</p>
+<p>In a more general development of continuum mechanics, the background space is itself modeled as a manifold. Since a manifold is, in general, not a linear space, the choice of a basis for space doesn't make sense in the general development. Rather, coordinates are assigned to every point on the manifold by the choice of an appropriate coordinate system. The choice of the two bases for <script type="math/tex">\mathbb{R}^3</script> as we have done here can be understood as the choice of two Cartesian coordinate systems, one for <script type="math/tex">B_0</script>, and another for <script type="math/tex">B_t</script>.</p>
+</div>
+<p>With this background, let us work out the coordinate representations of the deformation map. If <script type="math/tex">(x_i)</script> and <script type="math/tex">(X_I)</script> are the Cartesian coordinates of the points <script type="math/tex">\mathsf{X} \in B_0</script> and <script type="math/tex">\mathsf{x} \in B_t</script>, respectively, the deformation map <script type="math/tex">\mathsf{x} = \varphi(\mathsf{X}, t)</script> can be written in coordinate form as follows: 
+<script type="math/tex; mode=display">x_i = \varphi_i(X_1, X_2, X_3, t), \quad i = 1,2,3.</script>
+Here <script type="math/tex">\varphi_i(\cdot, t):B_0 \to \mathbb{R}</script> are the component maps of <script type="math/tex">\varphi(\cdot,t):B_0 \to \mathbb{R}^3</script>. We will often write this equation as <script type="math/tex">x_i = \varphi_i(\mathsf{X},t)</script>.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Consider the following deformation:
+<script type="math/tex; mode=display">x_1 = \lambda_1 X_1, \quad x_2 = \lambda_2 X_2, \quad x_3 = \lambda_3 X_3,</script>
+with <script type="math/tex">\lambda_1, \lambda_2, \lambda_3 > 0</script>. This corresponds to a <strong>volumetric strain</strong>. To understand why this is the case, note that a cube of side length <script type="math/tex">1</script> gets transformed to a cuboid of side lengths <script type="math/tex">\lambda_1, \lambda_2, \lambda_3</script> as a consequence of this deformation. </p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>As another example of an elementary deformation, let us consider the following:
+<script type="math/tex; mode=display">x_1 = X_1 + X_2 \tan \theta, \quad x_2 = X_2, \quad x_3 = X_3.</script>
+This is an example of a <strong>pure shear</strong>.</p>
+</div>
+<h2 id="deformation-gradient">Deformation gradient</h2>
+<p>We now turn to the critical notion of the <em>deformation gradient</em>. As remarked earlier, this quantity carries <em>all</em> the information that is required to characterize the deformation of the body. But in its essence, it is a very simple idea. Note that the deformation map
+<script type="math/tex; mode=display">\varphi_t:B_0 \to B_t</script>
+is a nonlinear function of <script type="math/tex">\mathsf{X} \in B_0</script>. Recall that the preferred means to study general nonlinear maps is to construct their local linearized version, and study this linearized map locally. This, in particular, involves the computation of the Frechet derivative of the nonlinear map. The Frechet derivative of the deformation map is called the <strong>deformation gradient</strong>.</p>
+<p>We will use the fact that when the Frechet derivative exists, it is identical to the Gateaux derivative, and use the latter to derive the expression for the deformation gradient. At any <script type="math/tex">\mathsf{X} \in B_0</script>, choose an arbitrary vector <script type="math/tex">\Delta \mathsf{X} \in T_{\mathsf{X}}B_0</script> in the tangent space to <script type="math/tex">B_0</script> at <script type="math/tex">\mathsf{X}</script>. Consider the line <script type="math/tex">\bar{\mathsf{X}}:[0,\delta] \to B_0</script> defined as follows: for any <script type="math/tex">s \in [0,\delta]</script>,
+<script type="math/tex; mode=display">\bar{\mathsf{X}}(s) = \mathsf{X} + s\Delta\mathsf{X}.</script>
+Since <script type="math/tex">B_0</script> is open, it is always possible to choose an appropriate value of <script type="math/tex">\delta > 0</script> so as to ensure that the image of this line lies entirely in <script type="math/tex">B_0</script>. In the limit when <script type="math/tex">\delta \to 0</script>, the material curve <script type="math/tex">\chi_0^{-1} \circ \bar{\mathsf{X}}:[0,\delta] \to \mathcal{B}</script> is called an <strong>infinitesimal material line segment</strong>. It follows from a simple calculation that
+<script type="math/tex; mode=display">\frac{d}{ds}\bigg\vert_{s=0}\bar{\mathsf{X}}(s) = \Delta \mathsf{X}.</script>
+This just expresses the fact that the tangent vector to the curve <script type="math/tex">\bar{\mathsf{X}}</script> at <script type="math/tex">\mathsf{X}</script> is <script type="math/tex">\Delta\mathsf{X}</script>.</p>
+<p>As a consequence of the deformation, the line <script type="math/tex">\bar{\mathsf{X}}</script> gets deformed to the line <script type="math/tex">\bar{\mathsf{x}}:[0,\delta] \to B_t</script>, where, for any <script type="math/tex">s \in [0,\delta]</script>,
+<script type="math/tex; mode=display">\bar{\mathsf{x}}(s) = \varphi_t(\bar{\mathsf{X}}(s)).</script>
+We will use the notation <script type="math/tex">\Delta \mathsf{x} \in T_{\mathsf{x}}B_t</script> to denote the tangent vector to the deformed curve <script type="math/tex">\bar{\mathsf{x}}</script> at <script type="math/tex">\mathsf{x} = \varphi_t(\mathsf{X})</script>.</p>
+<p>We will now define the deformation gradient at <script type="math/tex">\mathsf{X}</script> as the map 
+<script type="math/tex; mode=display">\mathsf{F}(\mathsf{X},t):T_{\mathsf{X}}B_0 \to T_{\mathsf{x}}B_t</script>
+that maps the tangent vector <script type="math/tex">\Delta\mathsf{X} \in T_{\mathsf{X}}B_0</script> to the tangent vector <script type="math/tex">\Delta\mathsf{x} \in T_{\mathsf{X}}B_t</script>:
+<script type="math/tex; mode=display">\Delta \mathsf{x} = \mathsf{F}(\mathsf{X},t)\Delta\mathsf{X}.</script>
+To compute the expression for the deformation gradient <script type="math/tex">\mathsf{F}(\mathsf{X},t)</script> in terms of the deformation map, note that
+<script type="math/tex; mode=display">
+\begin{split}
+\Delta \mathsf{x} &= \frac{d}{ds}\bigg\vert_{s=0} \bar{\mathsf{x}}(s)\\
+ &= \frac{d}{ds}\bigg\vert_{s=0} \varphi_t(\bar{\mathsf{X}}(s))\\
+ &= \nabla \varphi_t(\mathsf{X}) \cdot \frac{d}{ds}\bigg\vert_{s=0} \bar{\mathsf{X}}(s)\\
+ &= \nabla \varphi_t(\mathsf{X}) \cdot \Delta \mathsf{X}.
+\end{split}
+</script>
+For reasons that will become clear later on, we will introduce a new notation:
+<script type="math/tex; mode=display">
+\nabla \varphi_t(\mathsf{X}) \cdot \Delta \mathsf{X} = \text{GRAD } \varphi_t(\mathsf{X}) \Delta \mathsf{X}.
+</script>
+</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>Notice that we dropped the generalized dot product in <script type="math/tex">\nabla\varphi_t(\mathsf{X})\cdot\Delta\mathsf{X}</script> in writing it as <script type="math/tex">\text{GRAD }\varphi_t(\mathsf{X})\Delta\mathsf{X}</script>. This is to due to the fact that the deformation gradient is actually the Frechet derivative of the deformation map. As long as we are working in Euclidean spaces, this distinction isn't really important.</p>
+</div>
+<p>We will therefore write the action of the deformation map <script type="math/tex">\mathsf{F}(\mathsf{X},t)</script> on <script type="math/tex">\Delta\mathsf{X} \in T_{\mathsf{X}}B_0</script> as follows:
+<script type="math/tex; mode=display">
+\Delta \mathsf{x} = \mathsf{F}(\mathsf{X},t)\Delta\mathsf{X} = \text{GRAD } \varphi_t(\mathsf{X}) \Delta\mathsf{X}.
+</script>
+Since the deformationg gradient maps tangent vectors to curves in the initial placement to tangent vectors to curves in the current placement, it is also called as the <strong>tangent map</strong> of the deformation. </p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>The symbol <script type="math/tex">\text{GRAD }\cdot</script> stands for the gradient operation with respect to the coordinate system chosen on <script type="math/tex">B_0</script>. The uppercase notation is chosen to be consistent with the notational convention we chose earlier.</p>
+</div>
+<p>Let us work out the coordinate representation of the deformation gradient. Since we are working within a Cartesian coordinate setting, we can choose the same basis <script type="math/tex">(\mathsf{E}_I)</script> for all the tangent spaces of <script type="math/tex">B_0</script>, and the basis <script type="math/tex">(\mathsf{e}_i)</script> for all the tangent spaces of <script type="math/tex">B_t</script>. If 
+<script type="math/tex; mode=display">
+\Delta \mathsf{x} = \sum \Delta x_i \mathsf{e}_i, \quad\text{and}\quad \Delta \mathsf{X} = \sum \Delta X_I \mathsf{E}_I,
+</script>
+then it follows from a straightforward calculation that
+<script type="math/tex; mode=display">
+\Delta x_i = \sum F_{iI}\Delta X_I = \sum \frac{\partial \varphi_i(\mathsf{X},t)}{\partial X_I} \Delta X_I.
+</script>
+The coordinate representation of the deformation gradient follows immediately as 
+<script type="math/tex; mode=display">
+\mathsf{F}(\mathsf{X},t) = \sum F_{iJ}(\mathsf{X},t) \mathsf{e}_i \otimes \mathsf{E}_J,
+</script>
+where
+<script type="math/tex; mode=display">F_{iJ}(\mathsf{X},t) = \frac{\partial \varphi_i(\mathsf{X},t)}{\partial X_J}.</script>
+We will at times use the shorthand notation <script type="math/tex">F_{iJ}(\mathsf{X},t) = \varphi_{i,J}(\mathsf{X},t)</script> to write this equation. Note that the components of <script type="math/tex">\mathsf{F}(\mathsf{X},t)</script> can be arranged into a matrix <script type="math/tex">[\mathsf{F}]</script> whose <script type="math/tex">(i,J)^{\text{th}}</script> entry is <script type="math/tex">F_{iJ}(\mathsf{X},t)</script>. In terms of this matrix, we see that
+<script type="math/tex; mode=display">
+\begin{bmatrix} \Delta x_1\\ \Delta x_2\\ \Delta x_3\end{bmatrix}
+=
+\begin{bmatrix} 
+F_{11} & F_{12} & F_{13}\\
+F_{21} & F_{22} & F_{23}\\
+F_{31} & F_{32} & F_{33}
+\end{bmatrix}
+\begin{bmatrix} \Delta X_1\\ \Delta X_2\\ \Delta X_3\end{bmatrix},
+</script>
+or, in a much more concise form, <script type="math/tex">[\Delta \mathsf{x}] = [\mathsf{F}][\Delta\mathsf{X}]</script>.</p>
+<p>Let us quickly look into the physical meaning of the deformation gradient <script type="math/tex">\mathsf{F}(\mathsf{X},t)</script>. Suppose that <script type="math/tex">\mathsf{X},\mathsf{X}' \in B_0</script> are two <em>neighboring</em> points, and let <script type="math/tex">\Delta \mathsf{X} = \mathsf{X}' - \mathsf{X}</script>. Let the corresponding points in the current placement be <script type="math/tex">\mathsf{x}, \mathsf{x}' \in B_t</script>, and let <script type="math/tex">\Delta \mathsf{x} = \mathsf{x} - \mathsf{x}'</script>. In the limit when the line joining <script type="math/tex">\mathsf{X}</script> and <script type="math/tex">\mathsf{X}'</script> in <script type="math/tex">B_0</script> corresponds to an infinitesimal material line segment in <script type="math/tex">\mathcal{B}</script>, it follows from a simple application of Taylor's theorem that
+<script type="math/tex; mode=display">
+\begin{split}
+x'_i &= \varphi_i(X'_1, X'_2, X'_3, t)\\
+ &= \varphi_i(X_1 + \Delta X_1, X_2 + \Delta X_2, X_3 + \Delta X_3, t)\\
+ &= \varphi_i(X_1,X_2,X_3,t) + \sum \frac{\partial \varphi_i(X_1,X_2,X_3,t)}{\partial X_I} \Delta X_I + o(\lVert \Delta \mathsf{X}\rVert^2).
+\end{split}
+</script>
+Rearranging this, we see that
+<script type="math/tex; mode=display">\Delta x_i \simeq \sum F_{iI}(\mathsf{X},t)\Delta X_I.</script>
+The deformation gradient <script type="math/tex">\mathsf{F}(\mathsf{X},t)</script> thus tells us how two neighboring points in the initial placement get relatively deformed as a consequence of the deformation. </p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>In the derivation above, <script type="math/tex">o(\cdot)</script> stands for the <strong>little 'o'</strong> symbol. This is defined as follows: given functions <script type="math/tex">f, g:\mathbb{R} \to \mathbb{R}</script>, we say that <script type="math/tex">f = o(g)</script> at <script type="math/tex">x_* \in \mathbb{R}</script> if it is true that
+<script type="math/tex; mode=display">\lim_{x \to x_*} \frac{f(x)}{g(x)} = 0.</script>
+The extension to higher dimensional functions is similarly defined.</p>
+</div>
+<p>Let us know revisit the examples we studied in the previous section and compute their deformation gradient</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>For the case of a volumetric strain deformation with <script type="math/tex">x_1 = \lambda_1 X_1</script>, <script type="math/tex">x_2 = \lambda_2 X_2</script> and <script type="math/tex">x_3 = \lambda_3 X_3</script>, it follows from a simple computation that
+<script type="math/tex; mode=display">F_{iJ}(\mathsf{X},t) = \sum \lambda_i \delta_{iJ} \mathsf{e}_i \otimes \mathsf{E}_J.</script>
+In matrix form,
+<script type="math/tex; mode=display">
+[\mathsf{F}(\mathsf{X},t)] =
+\begin{bmatrix}
+\lambda_1 & 0 & 0\\
+0 & \lambda_2 & 0\\
+0 & 0 & \lambda_3
+\end{bmatrix}.
+</script>
+It is a good idea to relate this deformation gradient to the effect the volumetric strain deformation has on a unit cube.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Let us consider the example of pure shear, with <script type="math/tex">x_1 = X_1 + \tan \theta X_2</script>, <script type="math/tex">x_2 = X_2</script> and <script type="math/tex">x_3 = X_3</script>. It follows from a straightforward calculation that
+<script type="math/tex; mode=display">
+[\mathsf{F}(\mathsf{X},t)] =
+\begin{bmatrix}
+1 & s & 0\\
+0 & 1 & 0\\
+0 & 0 & 1
+\end{bmatrix},
+</script>
+where <script type="math/tex">s = \tan \theta</script> denotes the amount of shear. Note that the deformation gradient can be equivalenlty written as
+<script type="math/tex; mode=display">
+\mathsf{F}(\mathsf{X},t) = \mathsf{I} + s \mathsf{e}_1 \otimes \mathsf{E}_2.
+</script>
+Here, <script type="math/tex">\mathsf{I}:T_{\mathsf{X}}B_0 \to T_{\mathsf{x}}B_t</script> is the <em>identity</em> map that maps the basis <script type="math/tex">(E_I)</script> of <script type="math/tex">T_{\mathsf{X}}B_0</script> to the basis <script type="math/tex">(\mathsf{e}_i)</script> of <script type="math/tex">T_{\mathsf{x}}B_t</script>.</p>
+</div>
+<p>In practice, we will often have a few other restrictions on the deformation gradient <script type="math/tex">\mathsf{F}(\mathsf{X},t)</script>. In particular, we will always assume that the deformation gradient is invertible. This implies, in particular that the determinant of <script type="math/tex">\mathsf{F}(\mathsf{X},t)</script> is non-zero. We will, in fact, show shortly that for physically admissible deformations, <script type="math/tex">\text{det}(\mathsf{F}(\mathsf{X},t)) > 0</script>. We will therefore assume in the sequel the existence of the inverse deformation map <script type="math/tex">\mathsf{F}^{-1}(\mathsf{x},t):T_{\mathsf{x}}B_t \to T_{\mathsf{X}}B_0</script>. </p>
+<h2 id="length-transformation">Length transformation</h2>
+<p>Let us now see how the length of an infinitesimal line element changes as a consequence of deformation. In what follows, we will identify, as in the preceeding discussions, an infinitesimal line element with an element of the appropriate tangent space. Thus, suppose that the vector <script type="math/tex">\Delta\mathsf{X} \in T_{\mathsf{X}}B_0</script> is mapped to <script type="math/tex">\Delta\mathsf{x} \in T_{\mathsf{x}}B_t</script> by the deformation gradient <script type="math/tex">\mathsf{F}(\mathsf{X},t)</script>. It follows from a simple calculation that
+<script type="math/tex; mode=display">
+\begin{split}
+\lVert \Delta \mathsf{x}\rVert^2 &= \Delta \mathsf{x} \cdot \Delta \mathsf{x}\\
+ &= (\mathsf{F}(\mathsf{X},t)\Delta\mathsf{X}) \cdot (\mathsf{F}(\mathsf{X},t)\Delta\mathsf{X})\\
+ &= \Delta \mathsf{X} \cdot \mathsf{F}^T(\mathsf{x},t)\mathsf{F}(\mathsf{X},t)\Delta\mathsf{X},
+\end{split}
+</script>
+where <script type="math/tex">\mathsf{x} = \varphi(\mathsf{X},t)</script>. Note that <script type="math/tex">\mathsf{F}^T:T_{\mathsf{x}}B_t \to T_{\mathsf{X}}B_0</script>. We now introduce the <strong>right Cauchy-Green tensor</strong> <script type="math/tex">\mathsf{C}(\mathsf{X},t):T_{\mathsf{X}}B_0 \to T_{\mathsf{x}}B_t</script> as follows:
+<script type="math/tex; mode=display">
+\mathsf{C}(\mathsf{X},t) = \mathsf{F}^T(\mathsf{x},t)\mathsf{F}(\mathsf{X},t).
+</script>
+</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>Many engineering textbooks write the foregoing equation as <script type="math/tex">\mathsf{C} = \mathsf{F}^T\mathsf{F}</script>. We will adopt such a simplified notation when it suits our needs. But it should always be kept in mind what such shorthand notations actually mean.</p>
+</div>
+<p>In terms of the bases <script type="math/tex">(\mathsf{E}_I)</script> and <script type="math/tex">(\mathsf{e}_i)</script> of the respective tangent spaces, it follows from a simple calculation that
+<script type="math/tex; mode=display">
+\begin{split}
+\mathsf{F}^T(\mathsf{x},t) &= \sum F_{iJ}(\mathsf{X},t) \mathsf{E}_J \otimes \mathsf{e}_i,\\
+\mathsf{C}(\mathsf{X},t) &= \sum F_{iI}(\mathsf{X},t)F_{iJ}(\mathsf{X},t) \mathsf{E}_I \otimes \mathsf{E}_J.
+\end{split}
+</script>
+</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>It is instructive to pause here and reflect on the mathematical difference between the quantities <script type="math/tex">\mathsf{F}(\mathsf{X},t):T_{\mathsf{X}}B_0 \to T_{\mathsf{x}}B_t</script> and <script type="math/tex">\mathsf{C}(\mathsf{X},t):T_{\mathsf{X}}B_0 \to T_{\mathsf{X}}B_0</script>. Both these are linear maps, and can be converted into tensors on the product spaces <script type="math/tex">T_{\mathsf{X}}B_0 \otimes T_{\mathsf{x}}B_t</script> and <script type="math/tex">T_{\mathsf{X}}B_0 \otimes T_{\mathsf{X}}B_0</script>, respectively. Notice how the definition of <script type="math/tex">\mathsf{F}(\mathsf{X},t)</script> involves <em>two</em> distinct vector spaces, while <script type="math/tex">\mathsf{C}(\mathsf{X},t)</script> depends only on one vector space. For this reason, <script type="math/tex">\mathsf{F}(\mathsf{X},t)</script> is called a <strong>two-point tensor</strong>, while <script type="math/tex">\mathsf{C}(\mathsf{X},t)</script> is a tensor in the usual sense of the term as we studied earlier.</p>
+</div>
+<p>Returning to our discussion of the change in the length of an infinitesimal line segment as a consequence of deformation, it follows from the developments so far that
+<script type="math/tex; mode=display">
+\lVert \Delta\mathsf{x} \rVert^2 - \lVert \Delta\mathsf{X} \rVert^2 = \Delta\mathsf{X} \cdot \left(\mathsf{F}^T(\mathsf{x},t)\mathsf{F}(\mathsf{X},t) - \mathsf{I}\right)\Delta\mathsf{X},
+</script>
+where <script type="math/tex">\mathsf{I}</script> is the identity map on <script type="math/tex">T_{\mathsf{X}}B_0</script>. Introducing the <strong>Green-Lagrange strain tensor</strong>, also called the <strong>Lagrangian strain tensor</strong>, <script type="math/tex">\mathsf{E}(\mathsf{X},t):T_{\mathsf{X}}B_0 \to T_{\mathsf{X}}B_0</script> as 
+<script type="math/tex; mode=display">
+\mathsf{E}(\mathsf{X},t) = \frac{1}{2}\left(\mathsf{F}^T(\mathsf{x},t)\mathsf{F}(\mathsf{X},t) - \mathsf{I}\right),
+</script>
+we see that the change in length of an infinitesimal line segment can be expressed in terms of the Lagrangian strain tensor as
+<script type="math/tex; mode=display">
+\lVert \Delta\mathsf{x} \rVert^2 - \lVert \Delta\mathsf{X} \rVert^2 = 2\Delta\mathsf{X} \cdot \mathsf{E}(\mathsf{X},t)\Delta\mathsf{X}.
+</script>
+We thus see that the change in length of an infinitesimal line segment is dictated by the Lagrangian strain tensor. </p>
+<p>In terms of the basis <script type="math/tex">(\mathsf{E}_I)</script> of <script type="math/tex">T_{\mathsf{X}}B_0</script>, it is straightfoward to verify that
+<script type="math/tex; mode=display">
+\mathsf{E}(\mathsf{X},t) = \sum E_{IJ}(\mathsf{X},t) \mathsf{E}_I \otimes \mathsf{E}_J, \qquad E_{IJ}(\mathsf{X},t) = \frac{1}{2}\left(C_{IJ}(\mathsf{X},t) - \delta_{IJ}\right).
+</script>
+Here, <script type="math/tex">C_{IJ}(\mathsf{X},t) = \sum F_{iI}(\mathsf{X},t)F_{iJ}(\mathsf{X},t)</script> are the components of the right Cauchy-Green tensor, and <script type="math/tex">\delta_{IJ}</script> is the Kronecker delta symbol. The <em>diagonal</em> component fields <script type="math/tex">E_{II}(\mathsf{X},t)</script> are called <strong>axial</strong>, or <strong>tensile</strong> strains, while the <em>off-diagonal</em> component fields <script type="math/tex">E_{IJ}(\mathsf{X},t)</script>, with <script type="math/tex">I \neq J</script> are called <strong>shear</strong> strains.</p>
+<p>The preceeding discussion allowed us to study the change in length of an infinitesimal line segment in the Lagrangian description. Alternatively, we can describe the same phenomena from the Eulerian viewpoint. Following the same line of thought as above, we see that
+<script type="math/tex; mode=display">
+\Delta\mathsf{X}\cdot\Delta\mathsf{X} = \mathsf{F}^{-1}(\mathsf{x},t)\Delta\mathsf{x} \cdot \mathsf{F}^{-1}(\mathsf{x},t)\Delta\mathsf{x}.
+</script>
+Defining the <strong>left Cauchy-Green tensor</strong> <script type="math/tex">\mathsf{b}(\mathsf{x},t):T_{\mathsf{x}}B_t \to T_{\mathsf{x}}B_t</script> as 
+<script type="math/tex; mode=display">\mathsf{b}(\mathsf{x},t) = \mathsf{F}(\mathsf{X},t)\mathsf{F}^T(\mathsf{x},t),</script>
+where <script type="math/tex">\mathsf{X} = \phi_t^{-1}(\mathsf{x})</script>, it follows that 
+<script type="math/tex; mode=display">
+\begin{split}
+\Delta \mathsf{X} \cdot \Delta \mathsf{X} &= \Delta \mathsf{x} \cdot \mathsf{F}^{-T}(\mathsf{X},t)\mathsf{F}^{-1}(\mathsf{x},t)\Delta\mathsf{x}\\
+ &= \Delta\mathsf{x} \cdot \mathsf{b}^{-1}(\mathsf{x},t)\Delta\mathsf{x}.
+\end{split}
+</script>
+The <strong>Eulerian strain tensor</strong>, also called the <strong>Almansi strain tensor</strong>, is the map <script type="math/tex">\mathsf{e}:T_{\mathsf{x}}B_t \to T_{\mathsf{x}}B_t</script> defined as follows:
+<script type="math/tex; mode=display">
+\mathsf{e}(\mathsf{x},t) = \frac{1}{2}\left(\mathsf{F}^{-T}(\mathsf{X},t)\mathsf{F}^{-1}(\mathsf{x},t) - \mathsf{I}\right).
+</script>
+Here, <script type="math/tex">\mathsf{I}</script> is the identity map on <script type="math/tex">T_{\mathsf{x}}B_t</script>.</p>
+<p>Using these definitions, we can now compute the change in length of an infinitesimal line segment in the Eulerian description as follows:
+<script type="math/tex; mode=display">
+\begin{split}
+\lVert \Delta \mathsf{x} \rVert^2 - \lVert \Delta \mathsf{X} \rVert^2 &= \Delta\mathsf{x}\cdot\Delta\mathsf{x} - \Delta\mathsf{x} \cdot \mathsf{b}^{-1}(\mathsf{x},t)\Delta\mathsf{x}\\
+&= 2\Delta\mathsf{x}\cdot\mathsf{e}(\mathsf{x},t)\Delta\mathsf{x}.
+\end{split}
+</script>
+It is important to note the following identity:
+<script type="math/tex; mode=display">
+\frac{1}{2}\left(\lVert \Delta \mathsf{x} \rVert^2 - \lVert \Delta \mathsf{X} \rVert^2\right) = \Delta\mathsf{X} \cdot \mathsf{E}(\mathsf{X},t)\Delta\mathsf{X} = \Delta\mathsf{x}\cdot\mathsf{e}(\mathsf{x},t)\Delta\mathsf{x}.
+</script>
+Thus, the <em>same</em> physical phenomena can be expressed in two complementary viewpoints. It is however important to develop concrete relations like the one above that express the mutual compatibility of such distinct but equivalent descriptions.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>We would intuitively expect a body undergoing a pure translation or a pure rotation to have zero strain since the relative positions of the body do not change under these kinds of deformations. Let us verify this. Suppose that we are given a deformation <script type="math/tex">\varphi_t:B_0 \to B_t</script> of the following form: for any <script type="math/tex">\mathsf{X} \in B_0</script>
+<script type="math/tex; mode=display">
+\varphi_t(\mathsf{X}) = \mathsf{c} + \mathsf{Q}(\mathsf{X} - \mathsf{O}),
+</script>
+where <script type="math/tex">\mathsf{c} \in \mathbb{R}^3</script> is a constant vector, and <script type="math/tex">\mathsf{O} \in \mathbb{R}^3</script> is some fixed point in <script type="math/tex">\mathbb{R}^3</script>. Further, we will assume that the constant map <script type="math/tex">\mathsf{Q}:\mathbb{R}^3 \to \mathbb{R}^3</script> is orthogonal. With these assumptions, it is clear that this denotes a deformation consisting of a rotation according to the rotation map <script type="math/tex">\mathsf{Q}</script> about the point <script type="math/tex">\mathsf{O}</script> followed by a uniform translation <script type="math/tex">\mathsf{c}</script>. It is left as a straightforward exercise to compute that
+<script type="math/tex; mode=display">\mathsf{F}(\mathsf{X},t) = \mathsf{Q},</script>
+and, consequently, that <script type="math/tex">\mathsf{E}(\mathsf{X},t) = \mathsf{0}</script>, and <script type="math/tex">\mathsf{e}(\mathsf{x},t) = \mathsf{0}</script>. We thus see that the definition of strain that we have developed is consistent with our intuitive sense of how a strain ought to behave.</p>
+</div>
+<p>Once we know how an infinitesimal line element changes in length as a consequence of deformation, the change in length of an arbitrary curve in the initial placement can be computed. Specifically, suppose that <script type="math/tex">\gamma:I \subseteq \mathbb{R} \to B_0</script> is a curve in <script type="math/tex">B_0</script>. The length of this curve, <script type="math/tex">L_\gamma</script> is computed as follows:
+<script type="math/tex; mode=display">L_{\gamma} = \int_I \lVert D\gamma(t)\rVert dt.</script>
+</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>It is not difficult to show that the length thus defined is independent of the parametrization of the curve. Indeed, suppose that there exists a smooth, monotonically increasing and surjective function <script type="math/tex">\tau:I \to J \subseteq \mathbb{R}</script> such that we can formulate an alternative parametrization of the line <script type="math/tex">\gamma(I)</script> as the curve <script type="math/tex">\tilde{\gamma}:J \to B_0</script> as follows: <script type="math/tex">\tilde{\gamma} = \gamma \circ \tau^{-1}</script>. Let <script type="math/tex">\tilde{L}_\gamma</script> denote the length of the curve <script type="math/tex">\tilde\gamma</script>; we expect, based on the fact that <script type="math/tex">\gamma(I) = \tilde{\gamma}(J)</script> that <script type="math/tex">\tilde{L}_\gamma = L_\gamma</script>. Let us verify this:
+<script type="math/tex; mode=display">
+\begin{split}
+L_\gamma &= \int_I \lVert D\gamma(t) \rVert dt\\
+ &= \int_I \lVert D(\tilde\gamma \circ \tau)(t) \rVert dt\\
+ &= \int_I \lVert D\tilde\gamma(\tau(t))\rVert D\tau(t) dt\\
+ &= \int_J \lVert D\tilde\gamma(s) \rVert ds\\
+ &= \tilde{L}_\gamma.
+\end{split}
+</script>
+In deriving this equation, use has been made of the fact that <script type="math/tex">D\tau(t) > 0</script> for every <script type="math/tex">t \in I</script>. </p>
+</div>
+<p>We now wish to find the length <script type="math/tex">l_{\gamma}</script> of the deformed curve <script type="math/tex">\varphi_t \circ \gamma: I \to B_t</script>. This follows at once from the following calculation:
+<script type="math/tex; mode=display">
+\begin{split}
+l_\gamma &= \int_I \lVert D(\varphi_t \circ \gamma)(t) \rVert dt\\
+ &= \int_I \lVert D\varphi(\gamma(t), t) D\gamma(t)\rVert dt\\
+ &= \int_I \sqrt{\mathsf{F}(\gamma(t),t)D\gamma(t) \cdot \mathsf{F}(\gamma(t),t)D\gamma(t)} \,dt\\
+ &= \int_I \sqrt{D\gamma(t) \cdot \mathsf{C}(\gamma(t),t)D\gamma(t)} \,dt.
+\end{split}
+</script>
+We thus see that a knowledge of the deformation gradient allows us to compute the lengths of any curve in the initial placement.</p>
+<h2 id="volume-transformation">Volume transformation</h2>
+<p>Let us now study how a volume of space occupied by the body at the initial time changes as a consequence of the deformation. Towards that end, we will first find out how an infinitesimal volume transforms as a consequence of deformation, and use this information to compute the change in volume of an arbitray initial volume. </p>
+<p>Consider three curves <script type="math/tex">\hat{\mathsf{X}}_1, \hat{\mathsf{X}}_2, \hat{\mathsf{X}}_3:[-\epsilon,\epsilon] \to B_0</script> such that <script type="math/tex">\hat{\mathsf{X}}_1(0) = \hat{\mathsf{X}}_2(0) = \hat{\mathsf{X}}_3(0) = \mathsf{X} \in B_0</script>. Let us consider the scalar triple product
+<script type="math/tex; mode=display">\Delta V = \frac{d}{ds}\bigg\vert_{s=0}\hat{\mathsf{X}}_1(s) \cdot \frac{d}{ds}\bigg\vert_{s=0}\hat{\mathsf{X}}_2(s) \times \frac{d}{ds}\bigg\vert_{s=0}\hat{\mathsf{X}}_3(s)</script>
+of the tangent vectors to these curves at <script type="math/tex">\mathsf{X}</script>. We will implicitly assume that the tangent vectors to the chosen curves at <script type="math/tex">\mathsf{X}</script> are non-collinear. The scalar triple product <script type="math/tex">\Delta V</script> is called an <strong>infinitesimal volume element</strong>. Note that that <script type="math/tex">\Delta V \in \mathbb{R}</script>. We wish to study how the scalar triple product, <script type="math/tex">\Delta v \in \mathbb{R}</script>, of the tangents corresponding deformed curves, <script type="math/tex">\hat{x}_i = \phi_t \circ \hat{X}_i:[-\epsilon,\epsilon] \to B_t</script>, <script type="math/tex">i = 1,2,3</script>, at <script type="math/tex">\mathsf{x} = \varphi_t(\mathsf{X}) \in B_t</script> is related to <script type="math/tex">\Delta V</script>. This relationship is easily computed:
+<script type="math/tex; mode=display">
+\begin{split}
+\Delta v &= \frac{d}{ds}\bigg\vert_{s=0}\hat{\mathsf{x}}_1(s) \cdot \frac{d}{ds}\bigg\vert_{s=0}\hat{\mathsf{x}}_2(s) \times \frac{d}{ds}\bigg\vert_{s=0}\hat{\mathsf{x}}_3(s)\\
+ &= \frac{d}{ds}\bigg\vert_{s=0}\varphi_t \circ \hat{\mathsf{X}}_1(s) \cdot \frac{d}{ds}\bigg\vert_{s=0}\varphi_t \circ \hat{\mathsf{X}}_2(s) \times \frac{d}{ds}\bigg\vert_{s=0}\varphi_t \circ \hat{\mathsf{X}}_3(s)\\
+ &= \mathsf{F}(\mathsf{X},t)\frac{d}{ds}\bigg\vert_{s=0}\hat{\mathsf{X}}_1(s) \cdot \mathsf{F}(\mathsf{X},t)\frac{d}{ds}\bigg\vert_{s=0}\hat{\mathsf{X}}_2(s) \times \mathsf{F}(\mathsf{X},t)\frac{d}{ds}\bigg\vert_{s=0}\hat{\mathsf{X}}_3(s)\\
+ &= \text{det}(\mathsf{F}(\mathsf{X},t))\,\frac{d}{ds}\bigg\vert_{s=0}\hat{\mathsf{X}}_1(s) \cdot \frac{d}{ds}\bigg\vert_{s=0}\hat{\mathsf{X}}_2(s) \times \frac{d}{ds}\bigg\vert_{s=0}\hat{\mathsf{X}}_3(s)\\
+ &= \text{det}(\mathsf{F}(\mathsf{X},t))\,\Delta V.
+\end{split}
+</script>
+In deriving this expression, we have made use of the chain rule of differentiation, and the definition of the determinant of a linear map in terms of volume forms. Introducing the <strong>Jacobian</strong> 
+<script type="math/tex; mode=display">
+J(\mathsf{X},t) = \text{det}(\mathsf{F}(\mathsf{X},t)),
+</script>
+we can succinctly write the transformation rule for infinitesimal volume elements as follows:
+<script type="math/tex; mode=display">\Delta v = J(\mathsf{X},t)\Delta V.</script>
+Again, notice how a knowledge of the deformation gradient is sufficient to compute how volumes transform.</p>
+<p>If <script type="math/tex">\Omega \subseteq B_0</script> is some sub-region of <script type="math/tex">B_0</script>, we can compute the volume <script type="math/tex">V_\Omega</script> occupied by the region <script type="math/tex">\Omega</script> using the integral
+<script type="math/tex; mode=display">V_\Omega = \int_\Omega dV.</script>
+Here the integral is to be understood as the standard triple integral used to compute volumes in <script type="math/tex">\mathbb{R}^3</script>. As a consequence of deformation, the region <script type="math/tex">\Omega</script> gets transformed to <script type="math/tex">\phi_t(\Omega) \subseteq B_t</script>. The volume <script type="math/tex">v_\Omega</script> of this deformed region can be computed as
+<script type="math/tex; mode=display">v_\Omega = \int_{\phi_t(\Omega)} dv.</script>
+Employing the standard change of variables rules for integration, we can transform this volume integral over <script type="math/tex">\phi_t(\Omega)</script> to an integral over <script type="math/tex">\Omega</script>:
+<script type="math/tex; mode=display">v_\Omega = \int_\Omega J(\mathsf{X},t) \, dV.</script>
+Notice the similarity between this and the transformation rule for infinitesimal volumes derived eariler.</p>
+<h2 id="area-transformation">Area transformation</h2>
+<p>Finally, let us consider how infinitesimal area elements transform as a consequence of deformation, and subsequently, how the area of arbitrary surfaces transform. The starting point is the volume transformation rule that we studied earlier.</p>
+<p>Suppose that we have three curves <script type="math/tex">\hat{\mathsf{X}}_1, \hat{\mathsf{X}}_2, \hat{\mathsf{X}}_3:[-\epsilon,\epsilon] \to B_0</script> such that <script type="math/tex">\hat{\mathsf{X}}_1(0) = \hat{\mathsf{X}}_2(0) = \hat{\mathsf{X}}_3(0) = \mathsf{X} \in B_0</script>, such that their tangents are non-collinear at <script type="math/tex">\mathsf{X}</script>, as before. Let us now consider an <strong>infinitesimal area element</strong> <script type="math/tex">\Delta A \in T_{\mathsf{X}}B_0</script>, defined as follows:
+<script type="math/tex; mode=display">
+\Delta A = \frac{d}{ds}\bigg\vert_{s=0} \hat{\mathsf{X}}_2(s) \times \frac{d}{ds}\bigg\vert_{s=0} \hat{\mathsf{X}}_3(s).
+</script>
+Without loss of generality, we will suppose that the curves <script type="math/tex">\hat{\mathsf{X}}_2,\hat{\mathsf{X}}_3</script> are fixed, but <script type="math/tex">\hat{\mathsf{X}}_1</script> is arbitrary, as long as the tangents of these curves at <script type="math/tex">\mathsf{X}</script> are not collinear. With this definition, we can write the infinitesimal volume element <script type="math/tex">\Delta V</script> at <script type="math/tex">\mathsf{X}</script> defined by the curves <script type="math/tex">\hat{\mathsf{X}}_1, \hat{\mathsf{X}}_2, \hat{\mathsf{X}}_3</script> as 
+<script type="math/tex; mode=display">
+\Delta V = \frac{d}{ds}\bigg\vert_{s=0} \hat{\mathsf{X}}_1(s) \cdot \Delta A.
+</script>
+As a consequence of deformation, the infinitesimal volume element <script type="math/tex">\Delta V</script> gets transformed to the volume element <script type="math/tex">\Delta v</script>, and the infinitesimal area element <script type="math/tex">\Delta A</script> gets transformed to <script type="math/tex">\Delta a \in T_{\mathsf{\varphi_t(\mathsf{X})}}B_t</script>. Using the transformation rule <script type="math/tex">\Delta v = J(\mathsf{X},t)\Delta V</script> for volume elements, we see that
+<script type="math/tex; mode=display">
+\begin{split}
+J(\mathsf{X},t) \frac{d}{ds}\bigg\vert_{s=0} \hat{\mathsf{X}}_1(s) \cdot \Delta A &= \frac{d}{ds}\bigg\vert_{s=0} \hat{\mathsf{x}}_1(s) \cdot \Delta a\\
+ &= \frac{d}{ds}\bigg\vert_{s=0} \varphi_t \circ \hat{\mathsf{X}}_1(s) \cdot \Delta a\\
+ &= \mathsf{F}(\mathsf{X},t)\frac{d}{ds}\bigg\vert_{s=0} \hat{\mathsf{X}}_1(s) \cdot \Delta a\\
+ &= \frac{d}{ds}\bigg\vert_{s=0} \hat{\mathsf{X}}_1(s) \cdot \mathsf{F}^T(\varphi_t(\mathsf{X}), t)\Delta a.
+\end{split}
+</script>
+Since the curve <script type="math/tex">\hat{\mathsf{X}}_1</script> is arbitrary, we see at once that
+<script type="math/tex; mode=display">
+J(\mathsf{X},t) \Delta A = \mathsf{F}^T(\varphi_t(\mathsf{X}), t) \Delta\mathsf{a}.
+</script>
+We obtain the transformation rule for areas after a simple rearrangement of this equation as
+<script type="math/tex; mode=display">\Delta a = J(\mathsf{X},t) \mathsf{F}^{-T}(\mathsf{X},t)\Delta A.</script>
+It is worth keeping in mind that <script type="math/tex">\Delta a \in T_{\mathsf{x}}B_t</script> and <script type="math/tex">\Delta A \in T_{\mathsf{X}}B_0</script>, where <script type="math/tex">\mathsf{x} = \varphi_t(\mathsf{X})</script>.</p>
+<p>Suppose now that <script type="math/tex">S \subseteq B_0</script> is a surface embedded in <script type="math/tex">B_0</script>, with unit normal <script type="math/tex">\mathsf{N}(\mathsf{X})</script> at every <script type="math/tex">\mathsf{X} \in S</script>. The total area <script type="math/tex">A_S \in \mathbb{R}</script> of this surface is computed using the following surface integral:
+<script type="math/tex; mode=display">
+A_S = \int_S \mathsf{N}(\mathsf{X}) \cdot dA.
+</script>
+The total deformed area <script type="math/tex">a_{S} \in \mathbb{R}</script> of the deformed surface <script type="math/tex">\varphi_t(S) \subseteq B_t</script> is computed as follows:
+<script type="math/tex; mode=display">
+\begin{split}
+a_S &= \int_{\varphi_t(S)} \mathsf{n}(\mathsf{x}) \cdot da\\
+ &= \int_S \mathsf{F}(\mathsf{X},t)\mathsf{N}(\mathsf{X}) \cdot J(\mathsf{X},t)\mathsf{F}^{-T}(\mathsf{X},t) dA\\
+ &= \int_S J(X,t) \mathsf{N}(\mathsf{X})\cdot dA.
+\end{split}
+</script>
+Here <script type="math/tex">\mathsf{n}(\mathsf{x}) = \mathsf{F}(\mathsf{X},t)\mathsf{N}(\mathsf{X})</script> is the unit normal to the deformed surface <script type="math/tex">\varphi_t(S)</script> at <script type="math/tex">\mathsf{x} = \varphi_t(\mathsf{X}) \in \varphi_t(S)</script>. </p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>Note that these area integrals are to be understood in the sense of the area of parametrized surfaces, as was studied earlier.</p>
+</div>
+<h2 id="polar-decomposition-theorem">Polar decomposition theorem</h2>
+<p>The previous sections illustrate the fact that <em>all</em> the relevant information regarding the change in shape of a body as a consequence of a deformation is captured by the deformation gradient. We will now study a very important decomposition of the deformation gradient that will prove to be very useful later on. The basic idea is very simple: a deformation characterized by a pure rotation does not produce any strain; hence, if we are interested in the strain caused by a general deformation, can we <em>extract out</em> its purely rotational components so that we are left with only that part of the deformation that is responsible for an actual shape change? </p>
+<p>The <strong>polar decomposition theorem</strong> provides a means to effect this decomposition in a precise manner. Specifically, this theorem states that <em>any</em> deformation graident can be decomposed uniquely as either a  pure stretch followed by a pure rotation, or a pure rotation followed by a pure stretch. Specifically, given a deformation <script type="math/tex">\varphi_t:B_0 \to B_t</script>, the deformation gradient <script type="math/tex">\mathsf{F}(\mathsf{X},t):T_{\mathsf{X}}B_0 \to T_{\mathsf{x}}B_t</script>, where <script type="math/tex">\mathsf{X} \in B_0</script>, and <script type="math/tex">\mathsf{x} = \varphi_t(\mathsf{X}) \in B_t</script>, can be decomposed uniquely as follows:
+<script type="math/tex; mode=display">
+\mathsf{F}(\mathsf{X},t) = \mathsf{R}(\mathsf{X},t)\mathsf{U}(\mathsf{X},t) = \mathsf{V}(\mathsf{x},t)\mathsf{R}(\mathsf{X},t),
+</script>
+where <script type="math/tex">\mathbf{R}(\mathsf{X},t):T_{\mathsf{X}}B_0 \to T_{\mathsf{x}}B_t</script> is an orthogonal map, called the <strong>rotation map</strong>, that quantifies the purely rotational part of the deformation gradient, and <script type="math/tex">\mathsf{U}(\mathsf{X},t):T_{\mathsf{X}}B_0 \to T_{\mathsf{X}}B_0</script> and <script type="math/tex">\mathsf{V}(\mathsf{x},t):T_{\mathsf{x}}B_t \to T_{\mathsf{x}}B_t</script> are symmetric and positive definite tensors, called the <strong>right stretch tensor</strong> and the <strong>left stretch tensor</strong>, respectively. The decomposition <script type="math/tex">\mathsf{F}(\mathsf{X},t) = \mathsf{R}(\mathsf{X},t)\mathsf{U}(\mathsf{X},t)</script> is called the <strong>right polar decomposition</strong> of <script type="math/tex">\mathsf{F}(\mathsf{X},t)</script>, and <script type="math/tex">\mathsf{F}(\mathsf{X},t) = \mathsf{V}(\mathsf{x},t)\mathsf{R}(\mathsf{X},t)</script> is called the <strong>left polar decomposition</strong> of <script type="math/tex">\mathsf{F}(\mathsf{X},t)</script>.</p>
+<p>The proof of the polar decomposition theorem is quite simple. To begin with, notice that the right Cauchy-Green tensor <script type="math/tex">\mathsf{C}(\mathsf{X},t):T_{\mathsf{X}}B_0 \to T_{\mathsf{X}}B_0</script> is both symmetric and positive definite. The symmetric of <script type="math/tex">\mathsf{C}(\mathsf{X},t)</script> follows from the fact that
+<script type="math/tex; mode=display">\mathsf{C}^T(\mathsf{X},t) = (\mathsf{F}^T(\mathsf{x},t)\mathsf{F}(\mathsf{X},t))^T = \mathsf{F}^T(\mathsf{x},t)\mathsf{F}(\mathsf{X},t) = \mathsf{C}(\mathsf{X},t).</script>
+The positive definiteness of <script type="math/tex">\mathsf{C}(\mathsf{X},t)</script> follows from the fact that for any <script type="math/tex">\Delta \mathsf{X} \in T_{\mathsf{X}}B_0</script>, 
+<script type="math/tex; mode=display">\Delta \mathsf{X} \cdot \mathsf{C}(\mathsf{X},t)\Delta \mathsf{X} = \mathsf{F}(\mathsf{X},t)\Delta \mathsf{X} \cdot \mathsf{F}(\mathsf{X},t)\Delta \mathsf{X} = \lVert \mathsf{F}(\mathsf{X},t)\Delta \mathsf{X}\rVert^2 \ge 0.</script>
+Further, it follows from the same argument that <script type="math/tex">\Delta \mathsf{X} \cdot \mathsf{C}(\mathsf{X},t)\Delta \mathsf{X} = 0</script> iff <script type="math/tex">\Delta X = \mathsf{0}</script>. Recall from our discussion of eigenvalues and eigenvectors that since <script type="math/tex">\mathsf{C}(\mathsf{X},t)</script> is symmetric and positive definite, we can compute its square root. Define the tensor <script type="math/tex">\mathsf{U}(\mathsf{X},t):T_{\mathsf{X}}B_0 \to T_{\mathsf{X}}B_0</script> as follows:
+<script type="math/tex; mode=display">\mathsf{U}(\mathsf{X},t) = \sqrt{\mathsf{C}(\mathsf{X},t)}.</script>
+It follows from the definition that <script type="math/tex">\mathsf{U}(\mathsf{X},t)</script> is both symmetric and positive definite. Define the map <script type="math/tex">\mathsf{R}:T_{\mathsf{X}}B_0\to T_{\mathsf{x}}B_t</script> as follows:
+<script type="math/tex; mode=display">\mathsf{R}(\mathsf{X},t) = \mathsf{F}(\mathsf{X},t)\mathsf{U}^{-1}(\mathsf{X},t).</script>
+It is easy to check that the map <script type="math/tex">\mathsf{R}(\mathsf{X},t)</script> is an orthogonal map. Indeed, note that
+<script type="math/tex; mode=display">\mathsf{R}^T\mathsf{R} = \mathsf{U}^{-T}\mathsf{F}^T\mathsf{F}\mathsf{U} = \mathsf{U}^{-1}\mathsf{U}^2\mathsf{U} = \mathsf{I},</script>
+where <script type="math/tex">\mathsf{I}:T_{\mathsf{X}}B_0 \to T_{\mathsf{X}}B_0</script> is the identity tensor on <script type="math/tex">T_{\mathsf{X}}B_0</script>. Note that we have suppressed the arguments of the various maps to keep the notation simple. A similar argument shows that <script type="math/tex">\mathsf{R}\mathsf{R}^T = \mathsf{I}</script>, where <script type="math/tex">\mathsf{I}</script> is the identity map on <script type="math/tex">T_{\mathsf{x}}B_t</script>. This shows that <script type="math/tex">\mathsf{R}(\mathsf{X},t)</script> is an orthogonal map. We have thus shown that the deformation gradient <script type="math/tex">\mathsf{F}(\mathsf{X},t)</script> can be written as the action of a symmetric tensor followed by the action of a rotation map. </p>
+<p>We still need to show that this decomposition is unique. Towards this end, suppose that <script type="math/tex">\mathsf{F}(\mathsf{X},t)</script> also admits another right polar decomposition of the form <script type="math/tex">\mathsf{F} = \tilde{\mathsf{R}}\tilde{\mathsf{U}}</script>, where, in the interest of notational simplicity, we have suppressed the arguments of the various maps. It follows from the following argument,
+<script type="math/tex; mode=display">\mathsf{U}^2 = \mathsf{F}^T\mathsf{F} = \tilde{\mathsf{U}}^T\tilde{\mathsf{R}}\mathsf{R}\mathsf{U} = \tilde{\mathsf{U}}^2,</script>
+that <script type="math/tex">\mathsf{U} = \tilde{\mathsf{U}}</script>. This, along with the equation <script type="math/tex">\mathsf{R}\mathsf{U} = \tilde{\mathsf{R}}\tilde{\mathsf{U}}</script> shows that <script type="math/tex">\mathsf{R} = \tilde{\mathsf{R}}</script>, thereby establishing the uniqueness of the right polar decomposition.</p>
+<p>To prove the left decomposition, define the tensor <script type="math/tex">\mathsf{V}(\mathsf{x},t):T_{\mathsf{x}}B_t \to T_{\mathsf{x}}B_t</script> as follows:
+<script type="math/tex; mode=display">V(\mathsf{x},t) = \sqrt{\mathsf{b}(\mathsf{x},t)},</script>
+where <script type="math/tex">\mathsf{b}(\mathsf{x},t)</script> is the left Cauchy-Green tensor. It is easily checked that <script type="math/tex">\mathsf{V}(\mathsf{x},t)</script> is both symmetric and positive definite. It follows from an argument analogous to the previous one that the map <script type="math/tex">\mathsf{S}(\mathsf{X},t):T_{\mathsf{X}}B_0 \to T_{\mathsf{x}}B_t</script> defined as
+<script type="math/tex; mode=display">S(\mathsf{X},t) = \mathsf{V}^{-1}(\mathsf{x},t)\mathsf{F}(\mathsf{X},t),</script>
+is orthogonal. We thus see that the the deformation gradient can be written in the left polar decomposition form as <script type="math/tex">\mathsf{F}(\mathsf{X},t) = \mathsf{V}(\mathsf{x},t)\mathsf{S}(\mathsf{S},t)</script>. We will now show that <script type="math/tex">\mathsf{S} \equiv \mathsf{R}</script>. To see this, note that we can use the orthogonality of <script type="math/tex">\mathsf{S}(\mathsf{X},t)</script> in the following way:
+<script type="math/tex; mode=display">\mathsf{F} = \mathsf{V}\mathsf{S} = (\mathsf{S}\mathsf{S}^T)\mathsf{V}\mathsf{S} = \mathsf{S}(\mathsf{S}^T\mathsf{V}\mathsf{S}).</script>
+Notice now that since <script type="math/tex">\mathsf{S}</script> is orthogonal, and <script type="math/tex">\mathsf{S}^T\mathsf{V}\mathsf{S}</script> is symmetric and positive definite, it follows from the uniqueness of the right polar decomposition that
+<script type="math/tex; mode=display">
+\begin{split}
+\mathsf{R}(\mathsf{X},t) &= \mathsf{S}(\mathsf{X},t),\\
+\mathsf{U}(\mathsf{X},t) &= \mathsf{R}^T(\mathsf{x},t)\mathsf{V}(\mathsf{x},t)\mathsf{R}(\mathsf{X},t).
+\end{split}
+</script>
+We have thus shown that <script type="math/tex">\mathsf{F}(\mathsf{X},t) = \mathsf{V}(\mathsf{x},t)\mathsf{R}(\mathsf{X},t)</script>, which this the left polar decomposition. The uniqueness of the left polar decomposition follows from an argument analogous to that of the uniqueness of the right polar decomposition. This completes the proof of the polar decomposition theorem.</p>
+<p>As a quick consistency check, let us see compute the Lagrangian strain tensor using the polar decomposition theorem:
+<script type="math/tex; mode=display">\mathsf{E} = \frac{1}{2}(\mathsf{F}^T\mathsf{F} - \mathsf{I}) = \frac{1}{2}(\mathsf{U}^2 - \mathsf{I}).</script>
+We have suppressed the arguments for notational convenience. We thus see that the rotation map <script type="math/tex">\mathsf{R}(\mathsf{X},t)</script> does not contribute to the strain, as expected. A similar caculation shows that this is true for the Eulerian strain tensor too. The strain is entirely captured by the right and left stretch tensors <script type="math/tex">\mathsf{U}(\mathsf{X},t)</script> and <script type="math/tex">\mathsf{V}(\mathsf{x},t)</script>, respectively. In this context, it is useful to mention that the eigenvalues of the right and left stretch vectors are called the <strong>right principal stretches</strong> and <strong>left principal stretches</strong>, respectively.</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../kinematics_intro/" title="Kinematics - basic definitions" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Kinematics - basic definitions
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../kinematics_motion/" title="Analysis of motion" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Analysis of motion
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.dc02f8ce.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      
+        <script src="../mathjaxhelper.js"></script>
+      
+    
+  </body>
+</html>

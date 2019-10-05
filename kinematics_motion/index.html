@@ -1,0 +1,718 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Lecture notes on Continuum Mechanics.">
+      
+      
+      
+        <meta name="author" content="Amuthan A. Ramabathiran">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.1.1">
+    
+    
+      
+        <title>Analysis of motion - Continuum Mechanics</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.3020aac5.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.224b79ff.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#2196f3">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.01ccdecf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700|Open+Sans">
+        <style>body,input{font-family:"Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Open Sans","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="blue" data-md-color-accent="blue">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#analysis-of-motion" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="Continuum Mechanics" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Continuum Mechanics
+            </span>
+            <span class="md-header-nav__topic">
+              Analysis of motion
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="Continuum Mechanics" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Continuum Mechanics
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../intro/" title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../kinematics_intro/" title="Kinematics - basic definitions" class="md-nav__link">
+      Kinematics - basic definitions
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../kinematics_deformation/" title="Analysis of deformation" class="md-nav__link">
+      Analysis of deformation
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Analysis of motion
+      </label>
+    
+    <a href="./" title="Analysis of motion" class="md-nav__link md-nav__link--active">
+      Analysis of motion
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#basic-definitions" title="Basic definitions" class="md-nav__link">
+    Basic definitions
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#material-velocity-and-acceleration" title="Material velocity and acceleration" class="md-nav__link">
+    Material velocity and acceleration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spatial-velocity-and-acceleration" title="Spatial velocity and acceleration" class="md-nav__link">
+    Spatial velocity and acceleration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#material-time-derivatives" title="Material time derivatives" class="md-nav__link">
+    Material time derivatives
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#time-derivaties-related-to-deformation" title="Time derivaties related to deformation" class="md-nav__link">
+    Time derivaties related to deformation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mass-continuity-equation" title="Mass continuity equation" class="md-nav__link">
+    Mass continuity equation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reynolds-transport-theorem" title="Reynolds' transport theorem" class="md-nav__link">
+    Reynolds' transport theorem
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#basic-definitions" title="Basic definitions" class="md-nav__link">
+    Basic definitions
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#material-velocity-and-acceleration" title="Material velocity and acceleration" class="md-nav__link">
+    Material velocity and acceleration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spatial-velocity-and-acceleration" title="Spatial velocity and acceleration" class="md-nav__link">
+    Spatial velocity and acceleration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#material-time-derivatives" title="Material time derivatives" class="md-nav__link">
+    Material time derivatives
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#time-derivaties-related-to-deformation" title="Time derivaties related to deformation" class="md-nav__link">
+    Time derivaties related to deformation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mass-continuity-equation" title="Mass continuity equation" class="md-nav__link">
+    Mass continuity equation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reynolds-transport-theorem" title="Reynolds' transport theorem" class="md-nav__link">
+    Reynolds' transport theorem
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="analysis-of-motion">Analysis of motion</h1>
+<p>Our discussion of kinematics thus far has focused on the deformation of the initial placement of a body to its current placement. We will now consider the time evolution of a body as it moves and deforms in three dimensional space. We will begin our discussion by focusing on the evolution of a single material point, and subsequently extend it to the time evolution of the deformation gradient. We will, in particular, derive the <em>mass continuity</em> equation as an illustration of working with time derivatives. Finally, we will have a look at the important topic of taking the time derivatives of integrals whose domain and integrands both depend on time. </p>
+<h2 id="basic-definitions">Basic definitions</h2>
+<p>Suppose that <script type="math/tex">(\chi_t)_{t \in I}</script> is a motion of a material body <script type="math/tex">\mathcal{B}</script> in three dimensional space, as observed by an observer.  At the initial instant of time, chosen without loss of generality as <script type="math/tex">t = 0</script>, the body occupies the open subset <script type="math/tex">B_0 \subseteq \mathbb{R}^3</script> of three dimensional space. Let us now focus attention on a fixed point <script type="math/tex">\mathsf{X} \in B_0</script> and track its evolution as the body moves and deforms in space over the time interval <script type="math/tex">I</script>. The path followed by the body, given by
+<script type="math/tex; mode=display">
+\{\varphi_{\mathsf{X}}:I \to \mathbb{R}^3 \,|\, \text{ for any } t \in I, \; \varphi_{\mathsf{X}}(t) = \varphi(\mathsf{X},t)\},
+</script>
+is called the <strong>pathline</strong> of the point <script type="math/tex">\mathsf{X} \in B_0</script>. Different particles will have different pathlines, but they never intersect owing to the fact that <script type="math/tex">J(\mathsf{X},t) > 0</script>. </p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>Pathlines are especially convenient when working with solids, where the correlation between the instantaneous relative positions of the particles remain similar over typical time intervals of interest. In fluids, on the other hand, the chaotic nature of the motion often results in the pathlines being intricately mixed and knotted. In such cases, it is more helpful to work with the <em>streamlines</em> and <em>streaklines</em>. A <strong>streamline</strong> is a line, defined at every instant of time, such that the tangent vector at any point on the line coincides with the velocity of the particle occupying that position at that specific instant of time. Note that a streamline is globally computed at a given time instant, and can vary over time. A <strong>streakline</strong>, on the other hand, is the trace of the current position of <em>every</em> particle that occupied a particular fixed point at some previous instant of time. A streakline is what is observed when a dye is injected in a fluid flow a fixed point.</p>
+</div>
+<h3 id="material-velocity-and-acceleration">Material velocity and acceleration</h3>
+<p>The <strong>material velocity</strong> of the particle initially at <script type="math/tex">\mathsf{X} \in B_0</script> is defined as the map <script type="math/tex">\mathsf{V}_{\mathsf{X}}:I \to T\mathbb{R}^3</script> such that, for any <script type="math/tex">t \in I</script>,
+<script type="math/tex; mode=display">\mathsf{V}_{\mathsf{X}}(t) = \frac{\partial \varphi(\mathsf{X},t)}{\partial t}.</script>
+We will also use the notation <script type="math/tex">\mathsf{V}(\mathsf{X},t)</script> in place of <script type="math/tex">\mathsf{V}_{\mathsf{X}}(t)</script>, when convenient. If the observer chooses a global basis <script type="math/tex">(\mathsf{e}_i)</script> for <script type="math/tex">\mathbb{R}^3</script>, then the components of the material velocity can be written as
+<script type="math/tex; mode=display">
+\mathsf{V}(\mathsf{X},t) = \sum V_i(\mathsf{X},t) \mathsf{e}_i.
+</script>
+Note that we use lowercase subscript indices to indicate the components of <script type="math/tex">\mathsf{V}_{\mathsf{X}}(t)</script>. This is because of the fact that though the spatial reference of the point whose velocity we compute is <script type="math/tex">\mathsf{X} \in B_0</script>, the velocity vector at time 
+(t) is itself <em>not</em> in <script type="math/tex">T_{\mathsf{X}}B_0</script>, but rather in <script type="math/tex">T_{\varphi_t(\mathsf{X})}\mathbb{R}^3</script>. </p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>Note also that if we focus on a particular instant of time <script type="math/tex">t</script>, <script type="math/tex">\mathsf{V}(\mathsf{X},t)</script> is not necessarily in <script type="math/tex">T_{\varphi_t(\mathsf{X})}B_t</script>, but rather in <script type="math/tex">T_{\varphi_t(\mathsf{X})}\mathbb{R}^3</script>. This is due to the fact that if the body were a surface or a curve in three dimensional space, then <script type="math/tex">T_{\mathsf{x}}B_t \subsetneq T_{\mathsf{x}}\mathbb{R}^3</script> for every <script type="math/tex">\mathsf{x} \in B_t</script>. Since we only deal with cases where the placement of the body at any instant of time is an open subset of <script type="math/tex">\mathbb{R}^3</script>, thereby excluding surface-like and line-like bodies from our discussion, this distinction is not important for our purposes. It is nevertheless a good idea to keep this distinction in mind for the sake of conceptual clarity.</p>
+</div>
+<p>The <strong>material acceleration</strong> of the particle initially at <script type="math/tex">\mathsf{X} \in B_0</script> is defined as the map <script type="math/tex">\mathsf{A}_{\mathsf{X}}:I \to T\mathbb{R}^3</script> such that, for any instant of time <script type="math/tex">t \in I</script>,
+<script type="math/tex; mode=display">\mathsf{A}_{\mathsf{X}}(t) = \frac{\partial \mathsf{V}(\mathsf{X},t)}{\partial t} = \frac{\partial^2 \varphi(\mathsf{X},t)}{\partial t}.</script>
+As before, we will use the notation <script type="math/tex">\mathsf{A}(\mathsf{X},t)</script> in place of <script type="math/tex">\mathsf{A}_{\mathsf{X}}(t)</script> when required. Given a global coordinate system, the components of the material acceleration can be computed just as in the case of the material velocity.  </p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>Techincally speaking, the material acceleration <script type="math/tex">\mathsf{A}_{\mathsf{X}}(t)</script> of a particle intially at <script type="math/tex">\mathsf{X} \in B_0</script> at time <script type="math/tex">t</script> lives in the linear space <script type="math/tex">T_{\mathsf{x}}(T_{\mathsf{x}}\mathbb{R}^3)</script>, where <script type="math/tex">\mathsf{x} = \varphi_t(\mathsf{X})</script>. However, since the tangent space at a point is always a linear space, we will use the more relaxed notion that <script type="math/tex">\mathsf{A}_{\mathsf{X}}(t) \in T_{\mathsf{x}}\mathbb{R}^3</script>.</p>
+</div>
+<h3 id="spatial-velocity-and-acceleration">Spatial velocity and acceleration</h3>
+<p>The material version of the velocity and acceleration are quite convenient when studying the behavior of solids. When working with fluids, it is more convenient to focus on the nature of the particles occupying a given point in space at a given instant of time, rather than tracking individual particles (which is often infeasible). Towards this end, we will develop the <em>spatial</em> versions of the velocities and accelerations. </p>
+<p>Suppose that the body occupies the region <script type="math/tex">B_t \subseteq \mathbb{R}^3</script> at the instant of time <script type="math/tex">t \in I</script>. Let us focus on a point <script type="math/tex">\mathsf{x} \in B_t</script> and denote by <script type="math/tex">\mathsf{v}(\mathsf{x},t) \in T_{\mathsf{x}}\mathbb{R}^3</script> the velocity of the particle that occupies the position <script type="math/tex">\mathsf{x} \in B_t</script> at the instant of time <script type="math/tex">t</script>. Since this is nothing but the velocity at time <script type="math/tex">t</script> of the particle that was intially at <script type="math/tex">\varphi_t^{-1}(\mathsf{x})</script>, we have the following identity:
+<script type="math/tex; mode=display">\mathsf{v}(\mathsf{x},t) = \mathsf{V}(\varphi_t^{-1}(\mathsf{x}), t).</script>
+The <strong>spatial velocity</strong> of the particle at <script type="math/tex">\mathsf{x} \in \mathbb{R}^3</script> is defined as the map <script type="math/tex">\mathsf{v}_{\mathsf{x}}:I \to T\mathbb{R}^3</script> such that <script type="math/tex">\mathsf{v}_{\mathsf{x}}(t) = \mathsf{v}(\mathsf{x},t)</script>, for any <script type="math/tex">t \in I</script>.</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>By defining, for any <script type="math/tex">t \in I</script>, <script type="math/tex">\mathsf{v}_t:B_t \to T\mathbb{R}^3</script> and <script type="math/tex">\mathsf{V}_t:B_0 \to T\mathbb{R}^3</script> in the usual manner, we see that <script type="math/tex">\mathsf{v}_t = \mathsf{V}_t \circ \varphi_t^{-1}</script>.</p>
+</div>
+<p>The <strong>spatial acceleration</strong>, <script type="math/tex">\mathsf{a}_{\mathsf{x}}:I \to T\mathbb {R}^3</script>, of the particle at <script type="math/tex">\mathsf{x} \in \mathbb{R}^3</script> is defined similarly as the acceleration of the particle that was initially at <script type="math/tex">\varphi_t^{-1}(\mathsf{x})</script>: for any <script type="math/tex">t \in I</script>,
+<script type="math/tex; mode=display">\mathsf{a}_{\mathsf{x}}(t) = \mathsf{A}(\varphi_t^{-1}(\mathsf{x}), t).</script>
+As before, we will at times use the notation <script type="math/tex">\mathsf{a}(\mathsf{x},t)</script> in place of <script type="math/tex">\mathsf{a}_{\mathsf{x}}(t)</script>.</p>
+<p>If the observer chooses a global basis <script type="math/tex">(\mathsf{e}_i)</script> for <script type="math/tex">\mathbb{R}^3</script>, the components of the spatial velocity can be expressed as 
+<script type="math/tex; mode=display">\mathsf{v}(\mathsf{x},t) = \sum v_i(\mathsf{x},t)\mathsf{e}_i.</script>
+The coordinate representation of the spatial acceleration is computed likewise.</p>
+<h3 id="material-time-derivatives">Material time derivatives</h3>
+<p>Recall that the material acceleration is the time derivative of the material velocity. Let us now look at the relation between the spatial velocity and the spatial acceleration. For any <script type="math/tex">\mathsf{X} \in B_0</script> and <script type="math/tex">\mathsf{x} = \varphi_t(\mathsf{X}) \in B_t</script>, we see that
+<script type="math/tex; mode=display">
+\begin{split}
+\mathsf{a}(\mathsf{x},t) &= \mathsf{A}(\mathsf{X},t)\\
+ &= \frac{\partial \mathsf{V}(\mathsf{X},t)}{\partial t}\\
+ &= \frac{\partial \mathsf{v}(\varphi(\mathsf{X},t), t)}{\partial t}\\
+ &= \frac{\partial \mathsf{v}(\mathsf{x},t)}{\partial t} + \text{grad }\mathsf{v}(\mathsf{x},t) \cdot \frac{\partial \varphi(\mathsf{X},t)}{\partial t}\\
+ &= \frac{\partial \mathsf{v}(\mathsf{x},t)}{\partial t} + \text{grad }\mathsf{v}(\mathsf{x},t) \cdot \mathsf{v}(\mathsf{x},t).
+\end{split}
+</script>
+Let us now introduce the <strong>material time derivative</strong>, <script type="math/tex">D\mathsf{v}(\mathsf{x},t)/Dt</script>, of the spatial velocity as follows:
+<script type="math/tex; mode=display">
+\frac{D\mathsf{v}(\mathsf{x},t)}{Dt} = \frac{\partial \mathsf{v}(\mathsf{x},t)}{\partial t} + \text{grad }\mathsf{v}(\mathsf{x},t) \cdot \mathsf{v}(\mathsf{x},t).
+</script>
+</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>We have introduce the notation <script type="math/tex">\text{grad }\cdot</script> to denote the gradient of a field variable that depends on <script type="math/tex">\mathsf{x} \in \mathbb{R}^3</script>. Note that this is different from the gradient operation <script type="math/tex">\text{GRAD }\cdot</script> that is defined only for fields defined on <script type="math/tex">B_0</script>.</p>
+</div>
+<p>We thus obtain the following relation between the spatial velocity and the spatial acceleration:
+<script type="math/tex; mode=display">
+\mathsf{a}(\mathsf{x},t) = \frac{D\mathsf{v}(\mathsf{x},t)}{Dt}.
+</script>
+Unlike the relation between the material velocity and the material acceleration, the spatial acceleration is not the (partial) time derivative of the spatial velocity; in addition to the partial time derivative of the spatial velocity with respect to time, it also has the the <strong>convective term</strong> <script type="math/tex">\text{grad }\mathsf{v}(\mathsf{x},t) \cdot \mathsf{v}(\mathsf{x},t)</script>. The physical intuition behind this expression for the spatial acceleration is that the velocity at a given point in space changes as a consequence of both a local change in velocity, and because of material <em>convected</em> to the considered point due to the motion of the body. </p>
+<p>Let us quickly work out the expression for the material time derivative of the velocity according to a global basis <script type="math/tex">\mathsf{e}_i</script> of <script type="math/tex">\mathbb{R}^3</script> chosen by an observer. It follows from a simple calculation that
+<script type="math/tex; mode=display">
+a_i(\mathsf{x},t) = \frac{\partial v_i(\mathsf{x},t)}{\partial t} + \sum \frac{\partial v_i(\mathsf{x},t)}{\partial x_j}v_j(\mathsf{x},t).
+</script>
+</p>
+<div class="admonition danger">
+<p class="admonition-title">Note</p>
+<p>It is important to note that <script type="math/tex">\text{grad }\mathsf{v} \cdot \mathsf{v} \neq \mathsf{v} \cdot \text{grad }\mathsf{v}</script> in general. Many authors write the convective term of the material time derivative of the spatial velocity as <script type="math/tex">\mathsf{v} \cdot \nabla \mathsf{v}</script> in place of what we write as <script type="math/tex">\text{grad }\mathsf{v} \cdot \mathsf{v}</script>. To avoid ambiguity, we will always use the notation <script type="math/tex">\text{grad }\mathsf{v} \cdot \mathsf{v}</script>.</p>
+</div>
+<p>For completeness, let us also note that the material time derivative of the <em>material</em> velocity is defined simply as the partial time derivative:
+<script type="math/tex; mode=display">\frac{D\mathsf{V}(\mathsf{X},t)}{Dt} = \frac{\partial \mathsf{V}(\mathsf{X},t)}{\partial t}.</script>
+Notice how the same term <em>material time derivative</em> is used to describe the time derivative <em>as we follow a particle</em> for <em>both</em> material and spatial velocity fields. Though this terminology can be confusing, it does not cause any problems in practice since the meaning is always evident from the context.</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>Many authors use the notation <script type="math/tex">\dot{\mathsf{v}}(\mathsf{x},t)</script> for the material time derivative. We will also adopt this convention at places. In terms of this notation, the relation between the spatial velocity and spatial acceleration can be written succinctly as <script type="math/tex">\mathsf{a}(\mathsf{x},t) = \dot{\mathsf{v}}(\mathsf{x},t)</script>. Note that in the case of the material velocity, the <em>dot</em> notation is identical to the partial derivative with respect to time.</p>
+</div>
+<p>The foregoing definition of the material time derivative can be extended to both scalar and tensor fields. For instance, if <script type="math/tex">\tau(\mathsf{x},t) \in \otimes^k T_{\mathsf{x}}\mathbb{R}^3</script> denotes a tensor field of order <script type="math/tex">k</script>, then its material time derivative is computed as
+<script type="math/tex; mode=display">
+\frac{D\tau(\mathsf{x},t)}{Dt} = \frac{\partial \tau(\mathsf{x},t)}{\partial t} + \text{grad }\tau(\mathsf{x},t) \cdot \mathsf{v}(\mathsf{x},t).
+</script>
+The material time derivative of a material tensor field is simply its partial time derivative.</p>
+<h2 id="time-derivaties-related-to-deformation">Time derivaties related to deformation</h2>
+<p>Let us now turn our attention to the time evolution of quantities associated with the deformation of a body in three dimensional space. To keep the discussion simple, only the time derivatives of a few important quantities associated with the deformation gradient <script type="math/tex">\mathsf{F}(\mathsf{X},t)</script> are considered in detail. For the purpose of this discussion, we will use two sets of bases: <script type="math/tex">(\mathsf{E}_I)</script> for quantities associated with the initial placement <script type="math/tex">B_0</script>, and <script type="math/tex">(\mathsf{e}_i)</script> for the ambient three dimensional space <script type="math/tex">\mathbb{R}^3</script>. Note that these are chosen by a given observer. Note also that these are often identical to each other, and the distinction is retained here purely for the purpose of conceptual clarity.</p>
+<p>Let us start with the time evolution of the deformation gradient itself. The material time derivative of the deformation gradient, which is identical to its partial derivative with respect to time, is given in coordinate form as 
+<script type="math/tex; mode=display">\dot{\mathsf{F}}(\mathsf{X},t) = \sum \frac{\partial{F}_{iJ}(\mathsf{X},t)}{\partial t} \mathsf{e}_i \otimes \mathsf{E}_J.</script>
+It is worth reiterating that <script type="math/tex">\dot{\mathsf{F}}</script> stands for the material time derivative of <script type="math/tex">\mathsf{F}</script>.</p>
+<p>The material time derivative of the right Cauchy-Green tensor <script type="math/tex">\mathsf{C}(\mathsf{X},t):T_{\mathsf{X}}B_0 \to T_{\mathsf{X}}B_0</script> is computed similarly:
+<script type="math/tex; mode=display">
+\begin{split}
+\dot{\mathsf{C}}(\mathsf{X},t) &= \frac{\partial}{\partial t}\left(\sum F_{kI}(\mathsf{X},t)F_{kJ}(\mathsf{X},t) \mathsf{E}_I \otimes \mathsf{E}_J\right)\\
+ &= \sum \left(\frac{\partial F_{kI}(\mathsf{X},t)}{\partial t}F_{kJ}(\mathsf{X},t) + F_{kI}(\mathsf{X},t)\frac{\partial F_{kJ}(\mathsf{X},t)}{\partial t}\right) \mathsf{E}_I \otimes \mathsf{E}_J.
+\end{split}
+</script>
+Noting that <script type="math/tex">\mathsf{F}^T(\varphi_t(\mathsf{X}),t) = \sum F_{iJ}(\mathsf{X},t) \mathsf{E}_J \otimes \mathsf{e}_i</script>, we see that
+<script type="math/tex; mode=display">\dot{\mathsf{F}}^T(\varphi_t(\mathsf{X}),t) = \sum \frac{\partial F_{iJ}(\mathsf{X},t)}{\partial t} \mathsf{E}_J \otimes \mathsf{e}_i.</script>
+We therefore arrive at the following expression for the material time derivative of the right Cauchy-Green tensor:
+<script type="math/tex; mode=display">\dot{C}(\mathsf{X},t) = \dot{\mathsf{F}}^T(\varphi_t(\mathsf{X},t)\mathsf{F}(\mathsf{X},t) + \mathsf{F}^T(\varphi_t(\mathsf{X}),t)\dot{\mathsf{F}}(\mathsf{X},t).</script>
+The <strong>Lagrangian rate of deformation tensor</strong> <script type="math/tex">\mathsf{D}(\mathsf{X},t):T_{\mathsf{X}}B_0 \to T_{\mathsf{X}}B_0</script> is defined as
+<script type="math/tex; mode=display">\mathsf{D}(\mathsf{X},t) = \frac{1}{2}\frac{D\mathsf{C}(\mathsf{X},t)}{Dt}.</script>
+To understand the physical relevance of this tensor, consider two vectors <script type="math/tex">\Delta \mathsf{X}, \Delta \mathsf{Y} \in T_{\mathsf{X}}B_0</script>. The angle between these two vectors is computed using <script type="math/tex">\Delta\mathsf{X} \cdot \Delta\mathsf{Y}</script>. As the body deforms in space accoring to a prescribed motion, the inner product of the corresponding deformed vectors also evolves with time. Let us compute the rate at which this change:
+<script type="math/tex; mode=display">
+\begin{split}
+\frac{D(\mathsf{F}(\mathsf{X},t)\Delta\mathsf{X}\cdot\mathsf{F}(\mathsf{X},t)\Delta\mathsf{Y})}{Dt} &= \frac{D(\Delta\mathsf{X}\cdot\mathsf{C}(\mathsf{X},t)\Delta\mathsf{Y})}{Dt}\\
+ &= 2\Delta\mathsf{X}\cdot\mathsf{D}(\mathsf{X},t)\Delta\mathsf{Y}.
+\end{split}
+</script>
+We thus see that the Lagrangian rate of deformation tensor gives us information about how the angle between two vectors in a given tangent space evolve as a consequence of deformation.</p>
+<p>As a final and non-trivial example of computing the material time derivatives related to the deformation, let us compute the material time derivative of the determinant of the deformation gradient, but this time around, in the Eulerian setting. Recall that the Jacobian of the deformation is defined as <script type="math/tex">J(\mathsf{X},t) = \text{det }\mathsf{F}(\mathsf{X},t)</script> for any <script type="math/tex">\mathsf{X} \in B_0</script> and <script type="math/tex">t \in I</script>. The spatial version of the Jacobian, which we will denote as <script type="math/tex">J(\mathsf{x},t)</script>, where <script type="math/tex">\mathsf{x} \in B_t</script>, is defined as
+<script type="math/tex; mode=display">J(\mathsf{x},t) = \text{det }\mathsf{J}(\varphi_t^{-1}(\mathsf{x}), t).</script>
+Note that we are using the <em>same</em> symbol <script type="math/tex">\mathsf{J}</script> for both the material and spatial versions of the Jacobian; this is largely done because of conventional practice in the continuum mechanics literature. We will now show that the material time derivative of the Jacobian, when expressed in the Eulerian form, is given by 
+<script type="math/tex; mode=display">\frac{DJ(\mathsf{x},t)}{Dt} = \mathsf{J}(\mathsf{x},t)\,\text{div }\mathsf{v}(\mathsf{x},t).</script>
+Here, <script type="math/tex">\text{div }\mathsf{v}(\mathsf{x},t)</script> stands for the divergence, with respect to the spatial variable <script type="math/tex">\mathsf{x}</script>, of the spatial velocity <script type="math/tex">\mathsf{v}_t(\mathsf{x})</script>. This equation will play a key role in deriving various results in the forthcoming sections; it is worthwhile working out the proof of this statement.</p>
+<p>To keep the algebra simple, let us focus on the special case of motion in a two dimensional space <script type="math/tex">\mathbb{R}^2</script>. The material time derivative of the Jacobian is most easily computed in material form, and using Cartesian coordinates: if <script type="math/tex">\mathsf{X} = \varphi_t^{-1}(\mathsf{x})</script>,
+<script type="math/tex; mode=display">
+\begin{split}
+\frac{DJ(\mathsf{x},t)}{Dt} &= \frac{\partial J(\mathsf{X},t)}{\partial t}\\
+ &= \frac{\partial}{\partial t}\left(\text{det} \begin{bmatrix}
+ F_{11}(\mathsf{X},t) & F_{12}(\mathsf{X},t)\\
+ F_{21}(\mathsf{X},t) & F_{22}(\mathsf{X},t)
+ \end{bmatrix}\right)\\
+ &= \text{det}\begin{bmatrix}
+ \dot{F}_{11}(\mathsf{X},t) & \dot{F}_{12}(\mathsf{X},t)\\
+ F_{21}(\mathsf{X},t) & F_{22}(\mathsf{X},t)
+ \end{bmatrix}
+ +
+ \text{det}\begin{bmatrix}
+ F_{11}(\mathsf{X},t) & F_{12}(\mathsf{X},t)\\
+ \dot{F}_{21}(\mathsf{X},t) & \dot{F}_{22}(\mathsf{X},t)
+ \end{bmatrix}.
+\end{split}
+</script>
+To compute <script type="math/tex">\dot{F}_{iJ}(\mathsf{X},t)</script> note that
+<script type="math/tex; mode=display">
+\begin{split}
+\dot{F}_{iJ}(\mathsf{X},t) &= \frac{\partial}{\partial t}\frac{\partial \varphi_i(\mathsf{X},t)}{\partial X_J}\\
+ &= \frac{\partial}{\partial X_J}\frac{\partial \varphi_i(\mathsf{X},t)}{\partial t}\\
+ &= \frac{\partial V_i(\mathsf{X},t)}{\partial X_J}.
+\end{split}
+</script>
+Using the fact that <script type="math/tex">\mathsf{V}(\mathsf{X},t) = \mathsf{v}(\varphi(\mathsf{X},t),t)</script>, we see that
+<script type="math/tex; mode=display">
+\begin{split}
+\dot{F}_{iJ}(\mathsf{X},t) &= \frac{\partial v_i(\varphi(\mathsf{X},t),t)}{\partial X_J}\\
+ &= \sum \frac{\partial v_i(\varphi(\mathsf{X},t),t)}{\partial x_j}\frac{\partial \varphi_j(\mathsf{X},t)}{\partial X_J}\\
+ &= \sum \frac{\partial v_i(\mathsf{x},t)}{\partial x_j} F_{jJ}(\mathsf{X},t).
+\end{split}
+</script>
+Subsituting this expression for <script type="math/tex">\dot{F}_{iJ}(\mathsf{X},t)</script> in the expression for <script type="math/tex">\dot{J}(\mathsf{x},t)</script> derived earlier, we get, after a tedious but straightforward expansion,
+<script type="math/tex; mode=display">
+\begin{split}
+\dot{J}(\mathsf{x},t) &= \text{det}\begin{bmatrix}
+v_{1,1}F_{11} + v_{1,2}F_{21} & v_{1,1}F_{12} + v_{1,2}F_{22}\\
+F_{21} & F_{22}
+\end{bmatrix}\\
+ &+ \text{det}\begin{bmatrix}
+ F_{11} & F_{12}\\  
+ v_{2,1}F_{11} + v_{1,2}F_{21} & v_{2,1}F_{12} + v_{2,2}F_{22}\\
+\end{bmatrix}\\
+ &= v_{1,1}\,\text{det}\begin{bmatrix}F_{11} & F_{12}\\ F_{21} & F_{22}\end{bmatrix} + v_{2,2}\,\text{det} \begin{bmatrix}F_{11} & F_{12}\\ F_{21} & F_{22}\end{bmatrix}\\
+ &= \left(\frac{\partial v_1(\mathsf{x},t)}{\partial x_1} + \frac{\partial v_2(\mathsf{x},t)}{\partial x_2}\right) J(\mathsf{x},t)\\
+ &= J(\mathsf{x},t) \, \text{div }\mathsf{v}(\mathsf{x},t).
+\end{split}
+</script>
+In the foregoing derivation, we have used the shortand notation <script type="math/tex">v_{i,j}</script> to denote <script type="math/tex">\partial v_i(\mathsf{x},t)/\partial x_j</script>, and omitted the arguments in some of the intermediate expressions to keep the notation simple. </p>
+<p>A similar but more tedious argument can be used to show that the same result holds in three dimensions too. This completes the proof of the important result: <script type="math/tex">\dot{J}(\mathsf{x},t) = J(\mathsf{x},t)\,\text{div }\mathsf{v}(\mathsf{x},t)</script>.</p>
+<h2 id="mass-continuity-equation">Mass continuity equation</h2>
+<p>As an immediate and useful application of the expression for the material time derivative for the determinant of the deformation gradient just derived, let us derive the <em>mass continuity equation</em>. This will also provide a gentle segue to the balance principles that we will study later on, after completing our study of kinematics.</p>
+<p>Suppose that the <strong>mass density</strong> of the body at the inital instant of time <script type="math/tex">t = 0</script> is given by the scalar field <script type="math/tex">\rho_0:B_0 \to \mathbb{R}</script>. This means that if we consider an infinitesimal volume <script type="math/tex">\Delta V</script> about a point <script type="math/tex">\mathsf(X)\in B_0</script>, the mass contained within that volume is given by <script type="math/tex">\rho_0(\mathsf{X})\Delta V</script>. Let the mass density at time time over the region <script type="math/tex">B_t = \varphi_t(B_0)</script> be given by the scalar field <script type="math/tex">\rho_t:B_t \to \mathbb{R}</script>. At any <script type="math/tex">\mathsf{x} \in B_t</script>, we will often write <script type="math/tex">\rho(\mathsf{x},t)</script> for <script type="math/tex">\rho_t(\mathsf{x})</script>. Suppose that <script type="math/tex">\Delta v</script> is the deformed volume at <script type="math/tex">\mathsf{x} = \varphi_t(\mathsf{X})</script> corresponding to the intial infinitesimal volume <script type="math/tex">\Delta V</script> at <script type="math/tex">\mathsf{X} \in B_0</script>. The mass inside the volume <script type="math/tex">\Delta v</script> is exactly identical to the mass inside <script type="math/tex">\Delta V</script> initially since both <script type="math/tex">\Delta V</script> and <script type="math/tex">\Delta v</script> contain exactly the same particles. We therefore have the identity
+<script type="math/tex; mode=display">\rho_0(\mathsf{X})\Delta V = \rho(\mathsf{x},t) \Delta v.</script>
+Using the fact that the <script type="math/tex">\Delta v = J(\mathsf{x},t)\Delta V</script>, we can write the equation above as 
+<script type="math/tex; mode=display">\rho_0(\mathsf{X}) = J(\mathsf{x},t)\rho(\mathsf{x},t).</script>
+This equation is known as the <strong>mass conservation equation</strong> on account of the fact that it relates the initial and current mass densities. </p>
+<p>The mass conservation equation can be cast into a differential equation by taking the material time derivative of the equation <script type="math/tex">\rho_0(\mathsf{X}) = J(\mathsf{x},t)\rho(\mathsf{x},t)</script>. Since <script type="math/tex">\dot{\rho}_0(\mathsf{X}) = 0</script>, we see that
+<script type="math/tex; mode=display">
+\begin{split}
+0 &= \frac{D(J(\mathsf{x},t)\rho(\mathsf{x},t))}{Dt}\\
+ &= \dot{J}(\mathsf{x},t) \rho(\mathsf{x},t) + J(\mathsf{x},t) \dot{\rho}(\mathsf{x},t)\\
+ &= J(\mathsf{x},t) \rho(\mathsf{x},t) \,\text{div }\mathsf{v}(\mathsf{x},t) + J(\mathsf{x},t) \left(\frac{\partial \rho(\mathsf{x},t)}{\partial t} + \text{grad }\rho(\mathsf{x},t) \cdot \mathsf{v}(\mathsf{x},t) \right)\\
+ &= J(\mathsf{x},t)\left(\frac{\partial \rho(\mathsf{x},t)}{\partial t} + \text{div}(\rho(\mathsf{x},t)\mathsf{v}(\mathsf{x},t)) \right).
+\end{split}
+</script>
+In deriving this equation, we used the identity: <script type="math/tex">\text{div}(\rho \mathsf{v}) = \rho \, \text{div }\mathsf{v} + \text{grad }\rho \cdot \mathsf{v}</script>. Since the determinant of the deformation gradient is always strictly positive, we arrive at the following equation:
+<script type="math/tex; mode=display">
+\frac{\partial \rho(\mathsf{x},t)}{\partial t} + \text{div}(\rho(\mathsf{x},t)\mathsf{v}(\mathsf{x},t)) = 0.
+</script>
+This equation is known as the <strong>mass continuity equation</strong>, and is the differential statement of the mass conservation equation <script type="math/tex">\rho_0(\mathsf{X}) = J(\mathsf{x},t)\rho(\mathsf{x},t)</script>. 
+Note that we can also write the mass continuity equation in terms of the material time derivative of the density field as
+<script type="math/tex; mode=display">
+\frac{D\rho(\mathsf{x},t)}{Dt} + \rho(\mathsf{x},t)\,\text{div }\mathsf{v}(\mathsf{x},t) = 0.
+</script>
+Both these forms are useful in applications. We will also present an alternative derivation of the mass continuity equation later on. </p>
+<h2 id="reynolds-transport-theorem">Reynolds' transport theorem</h2>
+<p>To conclude our discussion of time derivatives of various quantities related to the motion and deformation of a body in three dimensional space, let us consider material time derivatives of the form
+<script type="math/tex; mode=display">
+\frac{D}{Dt} \int_{B_t} f(\mathsf{x},t) \, dv.
+</script>
+Here, <script type="math/tex">f:\mathbb{R}^3 \times I \to \mathbb{R}</script> is a scalar field. Note that both the integrand <script type="math/tex">f(\mathsf{x},t)</script> and the domain of integration <script type="math/tex">B_t = \varphi_t(B_0)</script> are functions of time. The reason for studying such integrals will become evident soon. In short, we will see that <em>all</em> the <em>balance principles</em> of continuum mechanics that we will study later on will be expressed primarily in an integral form; the rationale behind this will be explained when we study balance principles in continuum mechanics.</p>
+<p>The standard procedure to evaluate the material time derivatives of time dependent integrals of the form presented above is to first <em>pull back</em> the integral to the reference placement using the change of variables formula for integration, and take the partial time derivative of the Lagrangian form of the integral. Let us work this out in detail:
+<script type="math/tex; mode=display">
+\begin{split}
+\frac{D}{Dt} \int_{B_t} f(\mathsf{x},t) \, dv &= \frac{D}{Dt}\int_{B_0} f(\varphi(\mathsf{X},t),t) J(\mathsf{X},t) \, dV\\
+ &= \int_{B_0} \frac{\partial}{\partial t}\left(f(\varphi(\mathsf{X},t),t) J(\mathsf{X},t)\right)\, dV\\
+ &= \int_{B_0} \left(\frac{Df(\mathsf{x},t)}{Dt} + f(\mathsf{x},t)\,\text{div }\mathsf{v}(\mathsf{x},t)\right)J(\mathsf{X},t)\,dV\\
+ &= \int_{B_t} \left(\frac{Df(\mathsf{x},t)}{Dt} + f(\mathsf{x},t)\,\text{div }\mathsf{v}(\mathsf{x},t)\right) \, dv.
+\end{split}
+</script>
+In deriving the foregoing relation, we have used some of the identities derived in the context of the mass continuity equation.</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>As a simple illustration, consider an initial volume <script type="math/tex">\Omega_0 \subseteq B_0</script>. Let us study the evolution of the mass contained within this volume, which is
+<script type="math/tex; mode=display">\int_{\Omega_0} \rho_0(\mathsf{X})\,dV.</script>
+At a later time <script type="math/tex">t</script>, the mass contained the in the deformed volume <script type="math/tex">\Omega_t = \varphi_t(\Omega_0)</script> is given by
+<script type="math/tex; mode=display">\int_{\Omega_t} \rho(\mathsf{x},t)\,dv.</script>
+Since we expect this mass to be exactly identical to the mass contained in the initial volume <script type="math/tex">\Omega_0</script>, we expect the material time derivative of the mass contained in <script type="math/tex">\Omega_t</script> to be zero. Let us verify this:
+<script type="math/tex; mode=display">
+\frac{D}{Dt}\int_{\Omega_t} \rho(\mathsf{x},t)\,dv = \int_{\Omega_t} \left(\frac{D\rho(\mathsf{x},t)}{Dt} + \rho(\mathsf{x},t)\,\text{div }\mathsf{v}(\mathsf{x},t)\right) \, dv = 0.
+</script>
+In the equation above, the last identity follows from the mass continuity equation derived earlier. We thus see that mass continuity equation expresses the simple idea that the mass contained an <em>arbitrary</em> volume of the body does not change if we follow the volume during the motion and deformation of the body. </p>
+</div>
+<p>Finally, n the special case when the integrand is of the form <script type="math/tex">\rho f</script>, where <script type="math/tex">\rho</script> is the mass density and <script type="math/tex">f</script> is a scalar field, we can use the mass continuity equation to simplify the material time derivative of the integral as follows:
+<script type="math/tex; mode=display">
+\frac{D}{Dt}\int_{B_t} \rho(\mathsf{x},t)f(\mathsf{x},t)\,dv = \int_{B_t} \rho(\mathsf{x},t)\frac{Df(\mathsf{x},t)}{Dt}\,dv.
+</script>
+It is left as a simple exercise to verify this. This important result is known as the <strong>Reynolds' transport theorem</strong>, and will play a key role in our study of the balance principles of continuum mechanics.</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../kinematics_deformation/" title="Analysis of deformation" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Analysis of deformation
+              </span>
+            </div>
+          </a>
+        
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.dc02f8ce.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      
+        <script src="../mathjaxhelper.js"></script>
+      
+    
+  </body>
+</html>
