@@ -709,23 +709,25 @@ J(\mathsf{X},t) \Delta A = \mathsf{F}^T(\varphi_t(\mathsf{X}), t) \Delta\mathsf{
 We obtain the transformation rule for areas after a simple rearrangement of this equation as
 <script type="math/tex; mode=display">\Delta a = J(\mathsf{X},t) \mathsf{F}^{-T}(\mathsf{X},t)\Delta A.</script>
 It is worth keeping in mind that <script type="math/tex">\Delta a \in T_{\mathsf{x}}B_t</script> and <script type="math/tex">\Delta A \in T_{\mathsf{X}}B_0</script>, where <script type="math/tex">\mathsf{x} = \varphi_t(\mathsf{X})</script>.</p>
-<p>Suppose now that <script type="math/tex">S \subseteq B_0</script> is a surface embedded in <script type="math/tex">B_0</script>, with unit normal <script type="math/tex">\mathsf{N}(\mathsf{X})</script> at every <script type="math/tex">\mathsf{X} \in S</script>. The total area <script type="math/tex">A_S \in \mathbb{R}</script> of this surface is computed using the following surface integral:
-<script type="math/tex; mode=display">
+<!--
+Suppose now that \(S \subseteq B_0\) is a surface embedded in \(B_0\), with unit normal \(\mathsf{N}(\mathsf{X})\) at every \(\mathsf{X} \in S\). The total area \(A_S \in \mathbb{R}\) of this surface is computed using the following surface integral:
+\[
 A_S = \int_S \mathsf{N}(\mathsf{X}) \cdot dA.
-</script>
-The total deformed area <script type="math/tex">a_{S} \in \mathbb{R}</script> of the deformed surface <script type="math/tex">\varphi_t(S) \subseteq B_t</script> is computed as follows:
-<script type="math/tex; mode=display">
+\]
+The total deformed area \(a_{S} \in \mathbb{R}\) of the deformed surface \(\varphi_t(S) \subseteq B_t\) is computed as follows:
+\[
 \begin{split}
 a_S &= \int_{\varphi_t(S)} \mathsf{n}(\mathsf{x}) \cdot da\\
  &= \int_S \mathsf{F}(\mathsf{X},t)\mathsf{N}(\mathsf{X}) \cdot J(\mathsf{X},t)\mathsf{F}^{-T}(\mathsf{X},t) dA\\
  &= \int_S J(X,t) \mathsf{N}(\mathsf{X})\cdot dA.
 \end{split}
-</script>
-Here <script type="math/tex">\mathsf{n}(\mathsf{x}) = \mathsf{F}(\mathsf{X},t)\mathsf{N}(\mathsf{X})</script> is the unit normal to the deformed surface <script type="math/tex">\varphi_t(S)</script> at <script type="math/tex">\mathsf{x} = \varphi_t(\mathsf{X}) \in \varphi_t(S)</script>. </p>
-<div class="admonition info">
-<p class="admonition-title">Remark</p>
-<p>Note that these area integrals are to be understood in the sense of the area of parametrized surfaces, as was studied earlier.</p>
-</div>
+\]
+Here \(\mathsf{n}(\mathsf{x}) = \mathsf{F}(\mathsf{X},t)\mathsf{N}(\mathsf{X})\) is the unit normal to the deformed surface \(\varphi_t(S)\) at \(\mathsf{x} = \varphi_t(\mathsf{X}) \in \varphi_t(S)\).
+
+!!! info "Remark"
+    Note that these area integrals are to be understood in the sense of the area of parametrized surfaces, as was studied earlier.
+-->
+
 <h2 id="polar-decomposition-theorem">Polar decomposition theorem</h2>
 <p>The previous sections illustrate the fact that <em>all</em> the relevant information regarding the change in shape of a body as a consequence of a deformation is captured by the deformation gradient. We will now study a very important decomposition of the deformation gradient that will prove to be very useful later on. The basic idea is very simple: a deformation characterized by a pure rotation does not produce any strain; hence, if we are interested in the strain caused by a general deformation, can we <em>extract out</em> its purely rotational components so that we are left with only that part of the deformation that is responsible for an actual shape change? </p>
 <p>The <strong>polar decomposition theorem</strong> provides a means to effect this decomposition in a precise manner. Specifically, this theorem states that <em>any</em> deformation graident can be decomposed uniquely as either a  pure stretch followed by a pure rotation, or a pure rotation followed by a pure stretch. Specifically, given a deformation <script type="math/tex">\varphi_t:B_0 \to B_t</script>, the deformation gradient <script type="math/tex">\mathsf{F}(\mathsf{X},t):T_{\mathsf{X}}B_0 \to T_{\mathsf{x}}B_t</script>, where <script type="math/tex">\mathsf{X} \in B_0</script>, and <script type="math/tex">\mathsf{x} = \varphi_t(\mathsf{X}) \in B_t</script>, can be decomposed uniquely as follows:
