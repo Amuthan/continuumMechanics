@@ -594,7 +594,7 @@ Here, <script type="math/tex">C_{IJ}(\mathsf{X},t) = \sum F_{iI}(\mathsf{X},t)F_
 </script>
 Defining the <strong>left Cauchy-Green tensor</strong> <script type="math/tex">\mathsf{b}(\mathsf{x},t):T_{\mathsf{x}}B_t \to T_{\mathsf{x}}B_t</script> as 
 <script type="math/tex; mode=display">\mathsf{b}(\mathsf{x},t) = \mathsf{F}(\mathsf{X},t)\mathsf{F}^T(\mathsf{x},t),</script>
-where <script type="math/tex">\mathsf{X} = \phi_t^{-1}(\mathsf{x})</script>, it follows that 
+where <script type="math/tex">\mathsf{X} = \varphi_t^{-1}(\mathsf{x})</script>, it follows that 
 <script type="math/tex; mode=display">
 \begin{split}
 \Delta \mathsf{X} \cdot \Delta \mathsf{X} &= \Delta \mathsf{x} \cdot \mathsf{F}^{-T}(\mathsf{X},t)\mathsf{F}^{-1}(\mathsf{x},t)\Delta\mathsf{x}\\
@@ -659,7 +659,7 @@ We thus see that a knowledge of the deformation gradient allows us to compute th
 <p>Let us now study how a volume of space occupied by the body at the initial time changes as a consequence of the deformation. Towards that end, we will first find out how an infinitesimal volume transforms as a consequence of deformation, and use this information to compute the change in volume of an arbitray initial volume. </p>
 <p>Consider three curves <script type="math/tex">\hat{\mathsf{X}}_1, \hat{\mathsf{X}}_2, \hat{\mathsf{X}}_3:[-\epsilon,\epsilon] \to B_0</script> such that <script type="math/tex">\hat{\mathsf{X}}_1(0) = \hat{\mathsf{X}}_2(0) = \hat{\mathsf{X}}_3(0) = \mathsf{X} \in B_0</script>. Let us consider the scalar triple product
 <script type="math/tex; mode=display">\Delta V = \frac{d}{ds}\bigg\vert_{s=0}\hat{\mathsf{X}}_1(s) \cdot \frac{d}{ds}\bigg\vert_{s=0}\hat{\mathsf{X}}_2(s) \times \frac{d}{ds}\bigg\vert_{s=0}\hat{\mathsf{X}}_3(s)</script>
-of the tangent vectors to these curves at <script type="math/tex">\mathsf{X}</script>. We will implicitly assume that the tangent vectors to the chosen curves at <script type="math/tex">\mathsf{X}</script> are non-collinear. The scalar triple product <script type="math/tex">\Delta V</script> is called an <strong>infinitesimal volume element</strong>. Note that that <script type="math/tex">\Delta V \in \mathbb{R}</script>. We wish to study how the scalar triple product, <script type="math/tex">\Delta v \in \mathbb{R}</script>, of the tangents corresponding deformed curves, <script type="math/tex">\hat{x}_i = \phi_t \circ \hat{X}_i:[-\epsilon,\epsilon] \to B_t</script>, <script type="math/tex">i = 1,2,3</script>, at <script type="math/tex">\mathsf{x} = \varphi_t(\mathsf{X}) \in B_t</script> is related to <script type="math/tex">\Delta V</script>. This relationship is easily computed:
+of the tangent vectors to these curves at <script type="math/tex">\mathsf{X}</script>. We will implicitly assume that the tangent vectors to the chosen curves at <script type="math/tex">\mathsf{X}</script> are non-collinear. The scalar triple product <script type="math/tex">\Delta V</script> is called an <strong>infinitesimal volume element</strong>. Note that that <script type="math/tex">\Delta V \in \mathbb{R}</script>. We wish to study how the scalar triple product, <script type="math/tex">\Delta v \in \mathbb{R}</script>, of the tangents corresponding deformed curves, <script type="math/tex">\hat{x}_i = \varphi_t \circ \hat{X}_i:[-\epsilon,\epsilon] \to B_t</script>, <script type="math/tex">i = 1,2,3</script>, at <script type="math/tex">\mathsf{x} = \varphi_t(\mathsf{X}) \in B_t</script> is related to <script type="math/tex">\Delta V</script>. This relationship is easily computed:
 <script type="math/tex; mode=display">
 \begin{split}
 \Delta v &= \frac{d}{ds}\bigg\vert_{s=0}\hat{\mathsf{x}}_1(s) \cdot \frac{d}{ds}\bigg\vert_{s=0}\hat{\mathsf{x}}_2(s) \times \frac{d}{ds}\bigg\vert_{s=0}\hat{\mathsf{x}}_3(s)\\
@@ -678,9 +678,9 @@ we can succinctly write the transformation rule for infinitesimal volume element
 Again, notice how a knowledge of the deformation gradient is sufficient to compute how volumes transform.</p>
 <p>If <script type="math/tex">\Omega \subseteq B_0</script> is some sub-region of <script type="math/tex">B_0</script>, we can compute the volume <script type="math/tex">V_\Omega</script> occupied by the region <script type="math/tex">\Omega</script> using the integral
 <script type="math/tex; mode=display">V_\Omega = \int_\Omega dV.</script>
-Here the integral is to be understood as the standard triple integral used to compute volumes in <script type="math/tex">\mathbb{R}^3</script>. As a consequence of deformation, the region <script type="math/tex">\Omega</script> gets transformed to <script type="math/tex">\phi_t(\Omega) \subseteq B_t</script>. The volume <script type="math/tex">v_\Omega</script> of this deformed region can be computed as
-<script type="math/tex; mode=display">v_\Omega = \int_{\phi_t(\Omega)} dv.</script>
-Employing the standard change of variables rules for integration, we can transform this volume integral over <script type="math/tex">\phi_t(\Omega)</script> to an integral over <script type="math/tex">\Omega</script>:
+Here the integral is to be understood as the standard triple integral used to compute volumes in <script type="math/tex">\mathbb{R}^3</script>. As a consequence of deformation, the region <script type="math/tex">\Omega</script> gets transformed to <script type="math/tex">\varphi_t(\Omega) \subseteq B_t</script>. The volume <script type="math/tex">v_\Omega</script> of this deformed region can be computed as
+<script type="math/tex; mode=display">v_\Omega = \int_{\varphi_t(\Omega)} dv.</script>
+Employing the standard change of variables rules for integration, we can transform this volume integral over <script type="math/tex">\varphi_t(\Omega)</script> to an integral over <script type="math/tex">\Omega</script>:
 <script type="math/tex; mode=display">v_\Omega = \int_\Omega J(\mathsf{X},t) \, dV.</script>
 Notice the similarity between this and the transformation rule for infinitesimal volumes derived eariler.</p>
 <h2 id="area-transformation">Area transformation</h2>
