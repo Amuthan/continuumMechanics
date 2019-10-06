@@ -684,7 +684,7 @@ Employing the standard change of variables rules for integration, we can transfo
 <script type="math/tex; mode=display">v_\Omega = \int_\Omega J(\mathsf{X},t) \, dV.</script>
 Notice the similarity between this and the transformation rule for infinitesimal volumes derived eariler.</p>
 <h2 id="area-transformation">Area transformation</h2>
-<p>Finally, let us consider how infinitesimal area elements transform as a consequence of deformation, and subsequently, how the area of arbitrary surfaces transform. The starting point is the volume transformation rule that we studied earlier.</p>
+<p>Finally, let us consider how infinitesimal area elements transform as a consequence of deformation. The starting point is the volume transformation rule that we studied earlier.</p>
 <p>Suppose that we have three curves <script type="math/tex">\hat{\mathsf{X}}_1, \hat{\mathsf{X}}_2, \hat{\mathsf{X}}_3:[-\epsilon,\epsilon] \to B_0</script> such that <script type="math/tex">\hat{\mathsf{X}}_1(0) = \hat{\mathsf{X}}_2(0) = \hat{\mathsf{X}}_3(0) = \mathsf{X} \in B_0</script>, such that their tangents are non-collinear at <script type="math/tex">\mathsf{X}</script>, as before. Let us now consider an <strong>infinitesimal area element</strong> <script type="math/tex">\Delta A \in T_{\mathsf{X}}B_0</script>, defined as follows:
 <script type="math/tex; mode=display">
 \Delta A = \frac{d}{ds}\bigg\vert_{s=0} \hat{\mathsf{X}}_2(s) \times \frac{d}{ds}\bigg\vert_{s=0} \hat{\mathsf{X}}_3(s).
@@ -704,11 +704,24 @@ J(\mathsf{X},t) \frac{d}{ds}\bigg\vert_{s=0} \hat{\mathsf{X}}_1(s) \cdot \Delta 
 </script>
 Since the curve <script type="math/tex">\hat{\mathsf{X}}_1</script> is arbitrary, we see at once that
 <script type="math/tex; mode=display">
-J(\mathsf{X},t) \Delta A = \mathsf{F}^T(\varphi_t(\mathsf{X}), t) \Delta\mathsf{a}.
+J(\mathsf{X},t) \Delta A = \mathsf{F}^T(\varphi_t(\mathsf{X}), t) \Delta a.
 </script>
 We obtain the transformation rule for areas after a simple rearrangement of this equation as
 <script type="math/tex; mode=display">\Delta a = J(\mathsf{X},t) \mathsf{F}^{-T}(\mathsf{X},t)\Delta A.</script>
 It is worth keeping in mind that <script type="math/tex">\Delta a \in T_{\mathsf{x}}B_t</script> and <script type="math/tex">\Delta A \in T_{\mathsf{X}}B_0</script>, where <script type="math/tex">\mathsf{x} = \varphi_t(\mathsf{X})</script>.</p>
+<p>To conclude this section, let us look at how the area transformation rule is typically applied in practice. Suppose that we are give a vector field <script type="math/tex">\mathsf{w}(\mathsf{x},t)</script> on <script type="math/tex">B_t</script>. The flux <script type="math/tex">F_{\mathsf{w}}</script> associated with this vector field is typically computed as
+<script type="math/tex; mode=display">F_{\mathsf{w}} = \int_{\partial B_t} \mathsf{w}(\mathsf{x},t) \cdot \mathsf{n}(\mathsf{x},t) \, da,</script>
+where <script type="math/tex">\mathsf{n}(\mathsf{x},t)</script> is the outward normal to <script type="math/tex">B_t</script> at <script type="math/tex">\mathsf{x} \in \partial B_t</script>. We can compute the flux associated with this vector field equivalently by evaluating the integral over the initial placement <script type="math/tex">B_0</script>:
+<script type="math/tex; mode=display">F_{\mathsf{w}} = \int_{\partial B_0} J(\mathsf{X},t) \, \mathsf{w}(\varphi(\mathsf{X},t),t) \cdot \mathsf{F}^{-T}(\mathsf{X},t)\mathsf{N}(\mathsf{X},t) \, dA.</script>
+Notice how the area transformation rule derived earlier for infinitesimal volumes, "<script type="math/tex">\mathsf{n}da = J\mathsf{F}^{-T}\mathsf{N}dA</script>", is used in writing the foregoing equation. Defining the <strong>Piola transform</strong> of the vector field <script type="math/tex">\mathsf{w}</script> on <script type="math/tex">B_t</script> as the vector field <script type="math/tex">\mathsf{W}</script> on <script type="math/tex">B_0</script>, where, for any <script type="math/tex">\mathsf{X} \in B_0</script>,
+<script type="math/tex; mode=display">\mathsf{W}(\mathsf{X},t) = J(\mathsf{X},t)\mathsf{F}^{-1}(\varphi(\mathsf{X},t),t)\mathsf{w}(\varphi(\mathsf{X},t),t),</script>
+we see that
+<script type="math/tex; mode=display">\int_{\partial B_0} \mathsf{w}(\mathsf{x},t)\cdot\mathsf{n}(\mathsf{x},t)\,da = \int_{\partial B_0} \mathsf{W}(\mathsf{X},t)\cdot\mathsf{N}(\mathsf{X},t)\,dA.</script>
+This formula will prove to be quite useful to us later on.</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>Note that all the area integrals encountered here are to be understood in the sense of the integrals of parametrized surfaces, as was studied earlier.</p>
+</div>
 <!--
 Suppose now that \(S \subseteq B_0\) is a surface embedded in \(B_0\), with unit normal \(\mathsf{N}(\mathsf{X})\) at every \(\mathsf{X} \in S\). The total area \(A_S \in \mathbb{R}\) of this surface is computed using the following surface integral:
 \[
@@ -722,10 +735,7 @@ a_S &= \int_{\varphi_t(S)} \mathsf{n}(\mathsf{x}) \cdot da\\
  &= \int_S J(X,t) \mathsf{N}(\mathsf{X})\cdot dA.
 \end{split}
 \]
-Here \(\mathsf{n}(\mathsf{x}) = \mathsf{F}(\mathsf{X},t)\mathsf{N}(\mathsf{X})\) is the unit normal to the deformed surface \(\varphi_t(S)\) at \(\mathsf{x} = \varphi_t(\mathsf{X}) \in \varphi_t(S)\).
-
-!!! info "Remark"
-    Note that these area integrals are to be understood in the sense of the area of parametrized surfaces, as was studied earlier.
+Here \(\mathsf{n}(\mathsf{x}) = \mathsf{F}(\mathsf{X},t)\mathsf{N}(\mathsf{X})\) is the unit normal to the deformed surface \(\varphi_t(S)\) at \(\mathsf{x} = \varphi_t(\mathsf{X}) \in \varphi_t(S)\). 
 -->
 
 <h2 id="polar-decomposition-theorem">Polar decomposition theorem</h2>
