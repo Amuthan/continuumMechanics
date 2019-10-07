@@ -1,0 +1,541 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Lecture notes on Continuum Mechanics.">
+      
+      
+      
+        <meta name="author" content="Amuthan A. Ramabathiran">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.1.1">
+    
+    
+      
+        <title>Thermodynamics - Continuum Mechanics</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.3020aac5.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.224b79ff.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#2196f3">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.01ccdecf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700|Open+Sans">
+        <style>body,input{font-family:"Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Open Sans","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="blue" data-md-color-accent="blue">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#review-of-thermodynamics" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="Continuum Mechanics" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Continuum Mechanics
+            </span>
+            <span class="md-header-nav__topic">
+              Thermodynamics
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="Continuum Mechanics" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Continuum Mechanics
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../intro/" title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../kinematics_intro/" title="Kinematics - basic definitions" class="md-nav__link">
+      Kinematics - basic definitions
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../kinematics_deformation/" title="Analysis of deformation" class="md-nav__link">
+      Analysis of deformation
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../kinematics_motion/" title="Analysis of motion" class="md-nav__link">
+      Analysis of motion
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Thermodynamics
+      </label>
+    
+    <a href="./" title="Thermodynamics" class="md-nav__link md-nav__link--active">
+      Thermodynamics
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#review-of-thermodynamics" title="Review of Thermodynamics" class="md-nav__link">
+    Review of Thermodynamics
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-definitions" title="Basic definitions" class="md-nav__link">
+    Basic definitions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#first-law-of-thermodynamics" title="First law of thermodynamics" class="md-nav__link">
+    First law of thermodynamics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#second-law-of-thermodynamics" title="Second law of thermodynamics" class="md-nav__link">
+    Second law of thermodynamics
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#continuum-thermodynamics" title="Continuum Thermodynamics" class="md-nav__link">
+    Continuum Thermodynamics
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#review-of-thermodynamics" title="Review of Thermodynamics" class="md-nav__link">
+    Review of Thermodynamics
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-definitions" title="Basic definitions" class="md-nav__link">
+    Basic definitions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#first-law-of-thermodynamics" title="First law of thermodynamics" class="md-nav__link">
+    First law of thermodynamics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#second-law-of-thermodynamics" title="Second law of thermodynamics" class="md-nav__link">
+    Second law of thermodynamics
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#continuum-thermodynamics" title="Continuum Thermodynamics" class="md-nav__link">
+    Continuum Thermodynamics
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Thermodynamics</h1>
+                
+                <p>The central physical theory on which we base our development of continuum mechanics is <em>thermodynamics</em>. In the first half of this chapter, we will review the elements of thermodynamics as it applies to a general system interacting with an environment. Subsetequently, we will generalize and extend these notions to make them applicable for continuum mechanics.</p>
+<h2 id="review-of-thermodynamics">Review of Thermodynamics</h2>
+<p>The subject matter that we will review here is variously called <strong>equilibrium thermodynamics</strong>, or, more appropriately, <strong>thermostatics</strong>. The primary concern of thermodynamics is a <em>global</em> description of the behavior of a <em>system</em> interacting with an <em>environment</em>, possibly exchanging energy and/or mass in the process. We will formalize these notions below. One of the hallmarks of the thermodynamic description of a phenomena is its generality - it is applicable for <em>any</em> macroscopic phenomena.</p>
+<div class="admonition danger">
+<p class="admonition-title">Trivia</p>
+<p>There is no better way to summarize the status of thermodynamics among other theories of physics than the introduction provided by <em>Gerard Maugin</em> in his book <em>The thermomechanics of nonlinear irreversible behaviors: An introduction</em>:</p>
+<p>"<em>Perhaps, after all, the wise man's attitude towards thermodynamics should be to have nothing to do with it. To deal with thermodynamics is to look for trouble. This is not the citation of a famous scientist, but the result of a deep cogitation following mere observations. Why do we need to get involved in a field of knowledge which, within the last hundred years, has exhibited the largest number of schizophrenics and megalomaniacs, imbalanced scientists, paranoiacs, egocentrists, and probably insomniacs and sleepwalkers? Is there any other field of scientific activity such as this one where, apparently, each of the bricklayers has unhesitatingly revindicated an originality that [...] we may see but with confusion.</em></p>
+<p><em>For some thermodynamicists and for their enemies as well, thermodynamics is the science of everything, so that for the second category of individuals, it is, by mere logic, the science of nothing, and thus not a science at all; and the "everything" is naturally seen as a sign of megalomania from which some have not escaped. [...]</em>"</p>
+<p>The excerpts given above should give you an idea of the effect thermodynamics can have on you if you dig deeper. In any case, keep in mind that every thermodynamicist worth their salt has their own point of view, often a very strong one!</p>
+</div>
+<h3 id="basic-definitions">Basic definitions</h3>
+<p>A <strong>thermodynamic system</strong>, or just a <strong>system</strong>, is the part of the universe that we are interested in. The rest of the universe is called the <strong>environment</strong>. The implicit understanding in this description is that the system is in <em>contact</em> with its environment. We also say that the system <em>interacts</em> with its environment. The interaction of the system with the environment is understood to be through one of two mechanisms: <strong>work</strong> and <strong>heat</strong>. Both these are special kinds of energies; the difference is that <em>work</em> refers a controllable form of energy, while <em>heat</em> refers to the part of the energy that is uncontrollable and often associated with dissipative internal mechanisms in the system.</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>An important assumption that we will make throughout this course is that all interactions are <em>short-ranged</em> This means that there are no long range forces in the system, or in the interactions between the system and its environment.</p>
+</div>
+<p>A defining feature of the thermodynamic approach is the study of a complex system as a black box, without any detailed consideration of the microscopic constitution of the system. The system is thus described by means of measurable physical quantities called <strong>thermodynamic variables</strong>, also known as <strong>state variables</strong>. The thermodynamic variables together determine the <strong>thermodynamic state</strong>, also referred to as just the <strong>state</strong>, of the system. It is important to note, however, that there is no universal recipe to determine the thermodynamic variables to describe a system; it is contextual and depends entirely on the system being investigated. It is conventional to classify thermodynamic variables as being <strong>extensive</strong>, or <strong>intensive</strong>. An extensive state variable is one whose value is doubled if we double the system size, whereas an intensive variable is one which is independent of system size. We will see examples of these shortly. </p>
+<p>An important extensive state variable that is common to <em>all</em> thermodynamic systems is the <strong>internal energy</strong>, <script type="math/tex">E</script>. Loosely, put, this the internal energy of a system is a measure of the total energy that the system posseses. In addition to the internal energy, we will typically characterize the sytem by means of a finite number of extensive state variables, which we will denote as <script type="math/tex">Y_1, Y_2, \ldots, Y_n</script>.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>As a simple example, consider a gas enclosed in cylinder, one face of which is controlled by a piston. The state variables in this case are the internal energy, volume of the cylinder, and the number of particles in the gas (in appropriate unis). </p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Note</p>
+<p>The fact that the internal energy is an extensive variable is dependent on the assumption that all the interactions are short-ranged. In the presence of long-range interactions, the extensivity of the internal energy is not a valid assumption in general.</p>
+</div>
+<p>The system is said to be in <strong>thermodynamic equilibrium</strong> with its environment if the state variables of the system do not change with time. Implicit in this description of equilibrium is the choice of a <em>time scale</em> with respect to which the variation of the state variables is negligible.</p>
+<div class="admonition danger">
+<p class="admonition-title">Note</p>
+<p>The notion of thermodynamic equilibrium is distinct from the notion of mechanical equilibrium. The latter is characterized by a net balance of forces acting on the system. This is not true in thermodynamic equilibrium. </p>
+</div>
+<p>In addition to the internal energy, another extensive variable that is common to <em>all</em> thermodynamic systems is the <strong>entropy</strong> of the system, <script type="math/tex">S</script>. The best means to gain some intuition about entropy is from <em>statistical mechanics</em>. For the present purposes, it is sufficient to think of entropy loosely as a measure of disorder in the system, or, equivalently, a measure of how much the energy supplied to a system <em>degrades</em> to a form that is unusable. </p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>If you are really interested in the statistical mechanical underpinnings of the notion of entropy, you are welcome to register for the course <em>AE 731: Multiscale Modeling of Materials</em>. If you're tired of my lecturing and would rather prefer learning it on your own, you can consult the many excellent textbooks on statistical mechanics out there; for instance, a simple and elegant discussino of the notion of entropy from the statistical mechanical perspective can be found <a href="https://web.stanford.edu/~peastman/statmech/">here</a>.    </p>
+</div>
+<p>A fundamental postulate of equilibrium thermodynamics is that the entropy is a well defined function of the other extensive variables that characterize the system:
+<script type="math/tex; mode=display">S = \hat{S}(E,Y_1, \ldots, Y_n).</script>
+This equation is called the <strong>fundamental equation</strong> of the thermodynamic system. Further, we will assume that <script type="math/tex">\hat{S}</script> is a monotonically increasing function of <script type="math/tex">E</script>. This assumption permits us to invert the fundamental relation to obtain the internal energy <script type="math/tex">E</script> as a function of the entropy <script type="math/tex">S</script> and the other extensive variables of the system:
+<script type="math/tex; mode=display">E = \hat{E}(S, Y_1, \ldots, Y_n).</script>
+Both these forms of the fundamental equation are useful in practice.</p>
+<p>The <strong>temperature</strong> of the system, <script type="math/tex">T</script>, is defined either in terms of the function <script type="math/tex">\hat{E}</script> as
+<script type="math/tex; mode=display">T = \frac{\partial \hat{E}(S,Y_1, \ldots, Y_n)}{\partial S},</script>
+or in terms of the function <script type="math/tex">\hat{S}</script> as
+<script type="math/tex; mode=display">\frac{1}{T} = \frac{\partial \hat{S}(E, Y_1, \ldots, Y_n)}{\partial E}.</script>
+Both these definitions are equivalent. The temperature thus defined is also known as the <strong>absolute temperature</strong> of the system. Note that <script type="math/tex">T</script> is an intensive variable since both <script type="math/tex">E</script> and <script type="math/tex">S</script> are extensive variables.</p>
+<p>We will now briefly consider the partial derivatives of <script type="math/tex">\hat{E}</script> with respect to the other thermodynamic variables. We define the <strong>thermodynamic driving force</strong> <script type="math/tex">X_i</script>, where <script type="math/tex">1 \le i \le n</script>, as
+<script type="math/tex; mode=display">X_i = \frac{\partial \hat{E}(S, Y_1, \ldots, Y_n)}{\partial Y_i}.</script>
+The thermodynamic driving force <script type="math/tex">X_i</script> is said to be <strong>conjugate</strong> to the thermodynamic variable <script type="math/tex">Y_i</script>. It is helpful to think of <script type="math/tex">X_i</script> as the generalized force corresponding to the generalized displacement <script type="math/tex">Y_i</script>.</p>
+<p>Suppose now that the system is in a particular state, say <script type="math/tex">A</script>, and as a consequence of its interactions with the environment, it evolves to a different state <script type="math/tex">B</script>. The path followed by the system in the space of admissible thermodynamic variables in going from the state <script type="math/tex">A</script> to the state <script type="math/tex">B</script> is called a <strong>thermodynamic process</strong>. We will particularly be interested in <strong>reversible</strong> thermodynamic processes - these have the property that the process can be localy reversed in time, and further that the system is in thermodynamic equilibrium at every intermediate state of the process. It is convenient to think of a reversible thermodynamic process as a <strong>quasi-static</strong> process - this means that the process is carried out slow enough that the system is in equilibrium at every step of the process. A thermodynamic process that is not reversible is said to be <strong>irreversible</strong>.</p>
+<h3 id="first-law-of-thermodynamics">First law of thermodynamics</h3>
+<p>The <strong>first law of thermodynamics</strong> is essentially a statement of conservation of energy. Recall that the energy of a system is not necessarily constant since it interacts with the environment. But the sum of the energies of the system <em>and</em> the environment is a constant. We can alternatively state this is as follows: the change in energy of the system during a thermodynamic process that takes it from state <script type="math/tex">A</script> to state <script type="math/tex">B</script> is exactly equal to the energy supplied to, or, extracted from the system as a consequence of its interaction with the environment during this thermodynamic process. Since the only means by which a system can interact with its environment is through work and/or heat, we see that
+<script type="math/tex; mode=display">\Delta E_{AB} = W_{AB} + Q_{AB}.</script>
+Here,  <script type="math/tex">\Delta E_{AB}</script> is the change in the internal energy of the system as it moves from state <script type="math/tex">A</script> to state <script type="math/tex">B</script>. <script type="math/tex">W_{AB}</script> is the work done <em>on</em> the system by the environment durign the thermodynamic process <script type="math/tex">AB</script>, and <script type="math/tex">Q_{AB}</script> is the heat supplied to the system by the environment during the same thermodynamic process. It is important to note that <script type="math/tex">\Delta E_{AB} = E_B - E_A</script>. In other words, the change in internal energy is simply a difference of the initial and final internal energies, and does <em>not</em> depend on the particular details of the path connecting the states <script type="math/tex">A</script> and <script type="math/tex">B</script>. The terms <script type="math/tex">W_{AB}</script> and <script type="math/tex">Q_{AB}</script>, on the other hand, are typically <em>path-dependent</em> and need a detailed specification of the path from state <script type="math/tex">A</script> to state <script type="math/tex">B</script>. The work done in moving from state <script type="math/tex">A</script> to state <script type="math/tex">B</script> can be written as 
+<script type="math/tex; mode=display">W_{AB} = \sum_{i=1}^n \int_{A}^{B} X_i(S, Y_1, \ldots, Y_n) \, dY_i.</script>
+Here, <script type="math/tex">(S, Y_1, \ldots, Y_n)</script> is an intermediate state in the thermodynamic path connecting the states <script type="math/tex">A</script> and <script type="math/tex">B</script>. </p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>Notice the similarity of the expression with the expression of the work done in elementary mechanics as the line integral, along a specified path, of the inner product of the instantaneous force and the corresponding infinitesimal displacement.</p>
+</div>
+<h3 id="second-law-of-thermodynamics">Second law of thermodynamics</h3>
+<p>The <strong>second law of thermodynamics</strong> is more subtle law which states that the change in entropy <script type="math/tex">\Delta S_{AB}</script> of the system as it goes from state <script type="math/tex">A</script> to state <script type="math/tex">B</script> is always non-negative, <em>irrespective</em>  of whether the thermodynamic path <script type="math/tex">AB</script> is reversible or irreversible:
+<script type="math/tex; mode=display">\Delta S_{AB} \ge 0.</script>
+Here, <script type="math/tex">\Delta S_{AB} = S_B - S_A</script> denotes the total change in entropy of the system. If <script type="math/tex">Q_{AB}</script> denotes the total heat supplied to the system during the thermodynamic process <script type="math/tex">AB</script>, and if <script type="math/tex">T</script> denotes the temperature of the <em>environment</em> during the process <script type="math/tex">AB</script>, we can write the change in entropy <script type="math/tex">\Delta S_{AB}</script> as follows:
+<script type="math/tex; mode=display">\Delta S_{AB} = \frac{Q_{AB}}{T} + \Delta S_i, \qquad \Delta S_i \ge 0.</script>
+The change in entropy entirely due to the influx of heat is given by <script type="math/tex">Q_{AB}/T</script>, while <script type="math/tex">\Delta S_i</script> denotes internal irreversible production of entropy in the system as a consequence of the thermodynamic process. The fact that <script type="math/tex">\Delta S_i \ge 0</script> can be equivalently written as
+<script type="math/tex; mode=display">\Delta S_{AB} \ge \frac{Q_{AB}}{T}.</script>
+</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>A generalized version of this inequality, known as the <em>Clausius-Duhem inequality</em>, will serve as the primary statement of the second law of thermodynamics in our study of continuum thermodynamics.</p>
+</div>
+<p>In the special case when the process <script type="math/tex">AB</script> is reversible, <script type="math/tex">\Delta S_i = 0</script> and we can write the change in entropy as follows:
+<script type="math/tex; mode=display">\Delta S_{AB} = \frac{Q_{AB}}{T}.</script>
+Note the equality in this expression! Using this in conjunction with the first law of thermodynamics and the expression for the work done by the thermodynamic driving forces, we see that
+<script type="math/tex; mode=display">\Delta E_{AB} = \sum_{i=1}^n \int_{A}^{B} X_i(S, Y_1, \ldots, Y_n) \, dY_i + \frac{Q_{AB}}{T}.</script>
+This form of the first law is especially useful in deriving a number of equivalent <em>thermodynamic potentials</em> for reversible thermodynamic processes. We will define those potentials as and when we need them later on.</p>
+<h2 id="continuum-thermodynamics">Continuum Thermodynamics</h2>
+<p>...</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../kinematics_motion/" title="Analysis of motion" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Analysis of motion
+              </span>
+            </div>
+          </a>
+        
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.dc02f8ce.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      
+        <script src="../mathjaxhelper.js"></script>
+      
+    
+  </body>
+</html>
