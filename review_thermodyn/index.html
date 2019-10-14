@@ -523,8 +523,21 @@ where <script type="math/tex">P_m(t)</script> is mechanical power, and <script t
 Notice that the body force density is the body force <em>per unit mass</em>, while the surface force density is the surface force <em>per unit area</em>.</p>
 <p>As the final ingredient to formulating the first law of thermodynamics for continua, write the rate at which heat is added to the body is written as
 <script type="math/tex; mode=display">P_h(t) = \int_{B_t} \rho(\mathsf{x},t)r(\mathsf{x},t)\,dv - \int_{\partial B_t} h(\mathsf{x},t,\mathsf{n}(\mathsf{x},t))\,da.</script>
-Here, <script type="math/tex">r(\cdot,t):B_t \to \mathbb{R}</script> is the rate at which heat is produced inside the body, and <script type="math/tex">h(\mathsf{x},t,\mathsf{n}(\mathsf{x,t}))\Delta a</script> is the rate at which heat flows <em>out</em> of <script type="math/tex">B_t</script> into the environment through an infinitesimal area <script type="math/tex">\Delta a</script> centered at <script type="math/tex">\mathsf{x} \in \partial B_t</script>.</p>
-<p>Second law of thermodynamics...</p>
+Here, <script type="math/tex">r(\cdot,t):B_t \to \mathbb{R}</script> is the rate at which heat is produced inside the body, and <script type="math/tex">h(\mathsf{x},t,\mathsf{n}(\mathsf{x,t}))\Delta a</script> is the rate at which heat flows <em>out</em> of <script type="math/tex">B_t</script> into the environment through an infinitesimal area <script type="math/tex">\Delta a</script> centered at <script type="math/tex">\mathsf{x} \in \partial B_t</script>. </p>
+<p>Putting all this together, we can write the first law of thermodynamics for continua, <script type="math/tex">\dot{E}(t) = P_m(t) + P_h(t)</script>, as
+<script type="math/tex; mode=display">
+\begin{split}
+\frac{d}{dt} \int_{B_t} \rho(\mathsf{x},t)\left(e(\mathsf{x},t) + \frac{1}{2}\mathsf{v}(\mathsf{x},t)\cdot\mathsf{v}(\mathsf{x},t)\right)\,dv &= \int_{B_t} \rho(\mathsf{x},t)\mathsf{b}(\mathsf{x},t)\cdot\mathsf{v}(\mathsf{x},t)\,dv\\
+ &+ \int_{\partial B_t} \mathsf{t}(\mathsf{x},t,\mathsf{n}(\mathsf{x},t))\cdot\mathsf{v}(\mathsf{x},t)\,da\\
+ &+ \int_{B_t} \rho(\mathsf{x},t)r(\mathsf{x},t)\,dv\\
+ &- \int_{\partial B_t} h(\mathsf{x},t,\mathsf{n}(\mathsf{x},t))\,da.
+\end{split}
+</script>
+We will develop the pointwise version of the first law for continua later on. </p>
+<p>Let us now turn our attention to the second law of thermodynamics for continua. In exact analogy to the foregoing developments, we can generalize the statement of the second law in conventional thermodynamics, <script type="math/tex">\Delta S_{AB} \ge Q_{AB}/T</script>, as discussed earlier, as follows:
+<script type="math/tex; mode=display">\frac{d}{dt}\int_{B_t} \rho(\mathsf{x},t)\eta(\mathsf{x},t)\,dv \ge \int_{B_t} \frac{\rho(\mathsf{x},t)r(\mathsf{x},t)}{\theta(\mathsf{x},t)}\,dv - \int_{\partial B_t} \frac{h(\mathsf{x},t,\mathsf{n}(\mathsf{x},t))}{\theta(\mathsf{x},t)}\,da.</script>
+This form of the second law is also known as the <strong>Clausius-Duhem inequality</strong>. To understand the new terms introduced here, consider a small volume <script type="math/tex">\Delta v</script> centered at <script type="math/tex">\mathsf{x} \in B_t</script>. Then, <script type="math/tex">\eta(\mathsf{x},t)</script> is the <strong>entropy per unit masss</strong> such that the total entropy of the material in the volume <script type="math/tex">\Delta v</script> is given by <script type="math/tex">\rho(\mathsf{x},t)\eta(\mathsf{x},t)\Delta v</script>. The quantity <script type="math/tex">\theta(\mathsf{x},t)</script> denotes the <strong>absolute temperature</strong> of the material contained in the volume <script type="math/tex">\Delta v</script>.</p>
+<p>This completes our preliminary discussion of the first and second laws of thermodynamics adapted for continua. In the following, we will use the laws of thermodynamics as presented here to derive <em>all</em> the balance principles of continuum mechanics.</p>
                 
                   
                 
