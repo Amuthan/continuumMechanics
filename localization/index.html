@@ -375,7 +375,77 @@ Since this is true for any sub-region <script type="math/tex">\Omega \subseteq B
 <script type="math/tex; mode=display">\frac{Da(\mathsf{x},t)}{Dt} + a(\mathsf{x},t)\text{div }\mathsf{v}(\mathsf{x},t) = b(\mathsf{x},t) + \text{div }\mathsf{c}(\mathsf{x},t).</script>
 Note that this is a partial differential equation that is defined pointwise, unlike the global integral equation. The process of going from the integral equation to the corresponding differential equation is known as <strong>localization</strong>. </p>
 <h2 id="cauchys-localization-lemma">Cauchy's localization lemma</h2>
-<p>...</p>
+<p>We will now prove a very important result that will turn out to be veru useful in deriving the various balance principles of continuum mechanics later on. Let us consider the following integral equation
+<script type="math/tex; mode=display">\int_{\Omega} a(\mathsf{x},t)\,dv = \int_{\partial \Omega} \tilde{c}(\mathsf{x},t,\mathsf{n}(\mathsf{x},t))\,da.</script>
+Here, <script type="math/tex">\Omega \subseteq B_t</script> is an arbitrary open subset of the the current placement of the body <script type="math/tex">B_t</script>, <script type="math/tex">a(\cdot,t):B_t \to \mathbb{R}</script> is a scalar field, and <script type="math/tex">\tilde{c}(\cdot, t, \cdot):TB_t \to \mathbb{R}</script> is a scalar field on <script type="math/tex">TB_t</script>. This just means that given any <script type="math/tex">\mathsf{x} \in B_t</script> and <script type="math/tex">\mathsf{v} \in T_{\mathsf{x}}B_t</script>, <script type="math/tex">\tilde{c}(\mathsf{x},t,\mathsf{v}) \in \mathbb{R}</script>. In the integral equation displayed above, the quantity <script type="math/tex">\mathsf{n}(\mathsf{x},t)</script> stands for the unit normal to the surface <script type="math/tex">\partial \Omega</script> at <script type="math/tex">\mathsf{x} \in \partial \Omega</script>, as before. We will now localize this equation. Notice that we cannot directly apply the localization procedure introduced in the previous section since the surface integral involving the <script type="math/tex">\tilde{c}</script> field is not in the right form. </p>
+<p>The <strong>Cauchy localization lemma</strong> states that under the conditions specified earlier, there exists a <em>vector field</em> <script type="math/tex">\mathsf{c}(\cdot,t):B_t \to TB_t</script> such that 
+<script type="math/tex; mode=display">\tilde{c}(\mathsf{x},t,\mathsf{n}) = \mathsf{c}(\mathsf{x},t)\cdot\mathsf{n},</script>
+for every <script type="math/tex">\mathsf{x} \in B_t</script> and <script type="math/tex">\mathsf{n} \in T_{\mathsf{x}}B_t</script>.</p>
+<p>Before we look into the proof of the Cauchy localization lemma, let us note that this lemma immediately provides us with a means to localize the integral equation that we started with, as the following calculation shows:
+<script type="math/tex; mode=display">
+\begin{split}
+\int_{\Omega} a(\mathsf{x},t) &= \int_{\partial \Omega} \tilde{c}(\mathsf{x},t,\mathsf{n}(\mathsf{x},t))\\
+ &= \int_{\partial \Omega} \mathsf{c}(\mathsf{x},t)\cdot\mathsf{n}(\mathsf{x},t)\,a\\
+ &= \int_{\Omega} \text{div }\mathsf{c}(\mathsf{x},t)\,dv.
+\end{split}
+</script>
+This calculation thus allows us to localize the original integral equation to obtain the following differential equation:
+<script type="math/tex; mode=display">a(\mathsf{x},t) = \text{div }\mathsf{c}(\mathsf{x},t).</script>
+We thus see how the Cauchy localization lemma helps us localize certain kinds of integral equations.</p>
+<p>Let us now turn to a proof of the Cauchy localization lemma. The key idea that is exploited in the proof is the elementary fact that if a domain in <script type="math/tex">B_t</script> is shrunk to point, its volume goes to zero faster than its surface area. Let us see how this works in a more rigorous setting. For the purposes of this argument, let us consider a small volume <script type="math/tex">T</script> shaped like a tetrahdron, with one of its vertices at <script type="math/tex">\mathsf{x} \in B_t</script>, and three of its edges along the coordinate axes, as shown in the figure below.</p>
+<p><img alt="Cauchy tetrahedron" src="../pics/cauchy_tet.png" /></p>
+<p>The region <script type="math/tex">T</script> is sometimes called the <strong>Cauchy tetrahedron</strong>. Let <script type="math/tex">\mathsf{n}</script> be the normal vector to the face of the tetrahedron that intersects the three coordinate axes, as shown in the figure. We will denote this surface as <script type="math/tex">\partial T_n</script>. The face of the tetrahedron <script type="math/tex">T</script> whose normal is <script type="math/tex">-\mathsf{e}_i</script> will be denoted by <script type="math/tex">\partial T_i</script>, where <script type="math/tex">i = 1,2,3</script>, as also depicted in the figure. With these definitions in place, we see that
+<script type="math/tex; mode=display">\partial T = \partial T_n \cup_{i=1}^3 \partial T_i.</script>
+Let the length of the edges of <script type="math/tex">T</script> along the directions <script type="math/tex">\mathsf{e}_1,\mathsf{e}_2,\mathsf{e}_3</script> be <script type="math/tex">l_1,l_2,l_3</script>. It is convenient to define <script type="math/tex">l = \text{max}(l_1,l_2,l_3)</script>. In the limit when <script type="math/tex">l\to 0</script>, the Cauchy tetrahedron <script type="math/tex">T</script> shrinks to the point <script type="math/tex">\mathsf{x} \in B_t</script>.</p>
+<p>Let us now consider the integral equation
+<script type="math/tex; mode=display">\int_T a(\mathsf{x},t)\,dv = \int_{\partial T} \tilde{c}(\mathsf{x},t,\mathsf{n}(\mathsf{x},t))\,da</script>
+in the limit <script type="math/tex">l \to 0</script>. The surface integral in this equation can be additively decomposed as follows:
+<script type="math/tex; mode=display">
+\begin{split}
+\int_{\partial T} \tilde{c}(\mathsf{x},t,\mathsf{n}(\mathsf{x},t))\,da &= \int_{\partial T_n \cup_{i=1}^3 \partial T_i} \tilde{c}(\mathsf{x},t,\mathsf{n}(\mathsf{x},t))\,da\\
+&= \int_{\partial T_n} \tilde{c}(\mathsf{x},t,\mathsf{n})\,da + \sum_{i=1}^3 \int_{\partial T_i} \tilde{c}(\mathsf{x},t,-\mathsf{e}_i) \,da.
+\end{split}
+</script>
+Let us now evaluate the surface and volume integrals in the limit <script type="math/tex">l \to 0</script>. Using the mean value theorem, the surface integral can be approximated as 
+<script type="math/tex; mode=display">
+\int_{\partial T} \tilde{c}(\mathsf{x},t,\mathsf{n}(\mathsf{x},t))\,da \simeq \tilde{c}(\mathsf{x}^{(n)},t,\mathsf{n})\,\text{area}(\partial T_n) + \sum_{i=1}^3 \tilde{c}(\mathsf{x}^{(i)},t,-\mathsf{e}_i) \, \text{area}(\partial T_i).
+</script>
+Here, <script type="math/tex">\text{area}(S)</script> stands for the area of a surface <script type="math/tex">S</script> embedded in <script type="math/tex">B_t</script>, <script type="math/tex">\mathsf{x}^{(n)} \in \partial T_n</script>, and <script type="math/tex">\mathsf{x}^{(i)} \in \partial T_i</script>, where <script type="math/tex">i = 1,2,3</script>.</p>
+<p>The volume integral can also be approximated in the limit <script type="math/tex">l \to 0</script> using the mean value theorem as
+<script type="math/tex; mode=display">\int_T a(\mathsf{x},t)\,dv \simeq a(\xi,t) \, \text{vol}(T).</script>
+Here, <script type="math/tex">\text{vol}(T)</script> denotes the volume of the region <script type="math/tex">T</script>, and <script type="math/tex">\xi \in T</script>. </p>
+<p>Putting all these together, we see that the integral equation reduces to the following in the limit <script type="math/tex">l \to 0</script>:
+<script type="math/tex; mode=display">
+a(\xi,t) \, \text{vol}(T) = \tilde{c}(\mathsf{x}^{(n)},t,\mathsf{n})\,\text{area}(\partial T_n) + \sum_{i=1}^3 \tilde{c}(\mathsf{x}^{(i)},t,-\mathsf{e}_i) \, \text{area}(\partial T_i).
+</script>
+If <script type="math/tex">\mathsf{n} = \sum n_i \mathsf{e}_i</script>, then note that the areas of <script type="math/tex">\partial T_i</script> and <script type="math/tex">\partial T_n</script> are related, by simple geometric considerations, as
+<script type="math/tex; mode=display">n_i = \frac{\text{area}(\partial T_i)}{\text{area}(\partial T_n)}.</script>
+We therefore see that
+<script type="math/tex; mode=display">
+a(\xi,t) \frac{\text{vol}(T)}{\text{area}(\partial T_n)} = \tilde{c}(\mathsf{x}^{(n)},t,\mathsf{n}) + \sum_{i=1}^3 \tilde{c}(\mathsf{x}^{(i)},t,-\mathsf{e}_i)n_i.
+</script>
+In the limit <script type="math/tex">l \to 0</script>,
+<script type="math/tex; mode=display">\lim_{l \to 0} \frac{\text{vol}(T)}{\text{area}(\partial T_n)} = 0,</script>
+since volumes go to zero faster than surface areas. To appreciate why this is the case, note that <script type="math/tex">\text{vol}(T) \propto l^3</script>, whereas <script type="math/tex">\text{area}(\partial T_a) \propto l^2</script>, where <script type="math/tex">a = 1,2,3,n</script>. Further more, the following limits hold:
+<script type="math/tex; mode=display">\lim_{l \to 0} \xi = \lim_{l \to 0} \mathsf{x}^{(n)} = \lim_{l \to 0} \mathsf{x}^{(1)} = \lim_{l \to 0} \mathsf{x}^{(2)} = \lim_{l \to 0} \mathsf{x}^{(3)} = \mathsf{x}.</script>
+We thus finally obtain the following equation in the limit <script type="math/tex">l \to 0</script>:
+<script type="math/tex; mode=display">0 = \tilde{c}(\mathsf{x},t,\mathsf{n}) + \sum_{i=1}^3 \tilde{c}(\mathsf{x},t,-\mathsf{e}_i)n_i.</script>
+In the special case when <script type="math/tex">\mathsf{n} = \mathsf{e}_i</script>, we immediately obtain the following result:
+<script type="math/tex; mode=display">\tilde{c}(\mathsf{x},t,\mathsf{e}_i) = -\tilde{c}(\mathsf{x},t,-\mathsf{e}_i).</script>
+We thus finally obtain the following expression for <script type="math/tex">\tilde{c}(\mathsf{x},t,\mathsf{n})</script>:
+<script type="math/tex; mode=display">\begin{split}
+\tilde{c}(\mathsf{x},t,\mathsf{n}) &= -\sum_{i=1}^3 \tilde{c}(\mathsf{x},t,-\mathsf{e}_i)n_i\\
+ &= \sum_{i=1}^3 \tilde{c}(\mathsf{x},t,\mathsf{e}_i)n_i.
+\end{split}</script>
+Let us now define a vector field <script type="math/tex">\mathsf{c}(\cdot,t):B_t \to TB_t</script> as follows: for any <script type="math/tex">\mathsf{x} \in B_t</script>,
+<script type="math/tex; mode=display">\mathsf{c}(\mathsf{x},t) = \sum_{i=1}^3 \tilde{c}(\mathsf{x},t,\mathsf{e}_i)\mathsf{e}_i.</script>
+It follows immediately that
+<script type="math/tex; mode=display">\tilde{c}(\mathsf{x},t,\mathsf{n}) = \mathsf{c}(\mathsf{x},t)\cdot \mathsf{n},</script>
+thereby proving Cauchy's localization lemma.</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>The Cauchy localization lemma can also be extended to tensor fields in an entirely analogous manner. We will make use of this localization principle shortly to deduce the existence of both the <em>Cauchy stress tensor</em> and the <em>heat flux vector</em>.</p>
+</div>
                 
                   
                 
