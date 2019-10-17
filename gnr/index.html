@@ -40,7 +40,7 @@
     
     
       
-        <title>Introduction - Continuum Mechanics</title>
+        <title>Green-Naghdi-Rivlin theorem - Continuum Mechanics</title>
       
     
     
@@ -89,7 +89,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#overview-of-course-contents" tabindex="1" class="md-skip">
+      <a href="#green-naghdi-rivlin-gnr-theorem" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -114,7 +114,7 @@
               Continuum Mechanics
             </span>
             <span class="md-header-nav__topic">
-              Introduction
+              Green-Naghdi-Rivlin theorem
             </span>
           
         </div>
@@ -192,63 +192,11 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Introduction
-      </label>
-    
-    <a href="./" title="Introduction" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../intro/" title="Introduction" class="md-nav__link">
       Introduction
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#continuum-hypothesis" title="Continuum hypothesis" class="md-nav__link">
-    Continuum hypothesis
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#modeling-continua" title="Modeling continua" class="md-nav__link">
-    Modeling continua
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#outline" title="Outline" class="md-nav__link">
-    Outline
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
     
@@ -316,11 +264,70 @@
       
       
 
+  
 
-  <li class="md-nav__item">
-    <a href="../gnr/" title="Green-Naghdi-Rivlin theorem" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Green-Naghdi-Rivlin theorem
+      </label>
+    
+    <a href="./" title="Green-Naghdi-Rivlin theorem" class="md-nav__link md-nav__link--active">
       Green-Naghdi-Rivlin theorem
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#observer-transformations-and-objectivity" title="Observer transformations and objectivity" class="md-nav__link">
+    Observer transformations and objectivity
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mass-and-linear-momentum-balance" title="Mass and linear momentum balance" class="md-nav__link">
+    Mass and linear momentum balance
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#angular-momentum-balance" title="Angular momentum balance" class="md-nav__link">
+    Angular momentum balance
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-of-the-gnr-theorem" title="Summary of the GNR theorem" class="md-nav__link">
+    Summary of the GNR theorem
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
     
@@ -345,22 +352,29 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#continuum-hypothesis" title="Continuum hypothesis" class="md-nav__link">
-    Continuum hypothesis
+  <a href="#observer-transformations-and-objectivity" title="Observer transformations and objectivity" class="md-nav__link">
+    Observer transformations and objectivity
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#modeling-continua" title="Modeling continua" class="md-nav__link">
-    Modeling continua
+  <a href="#mass-and-linear-momentum-balance" title="Mass and linear momentum balance" class="md-nav__link">
+    Mass and linear momentum balance
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#outline" title="Outline" class="md-nav__link">
-    Outline
+  <a href="#angular-momentum-balance" title="Angular momentum balance" class="md-nav__link">
+    Angular momentum balance
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-of-the-gnr-theorem" title="Summary of the GNR theorem" class="md-nav__link">
+    Summary of the GNR theorem
   </a>
   
 </li>
@@ -382,31 +396,45 @@
               
                 
                 
-                <h1 id="overview-of-course-contents">Overview of course contents</h1>
-<p>Welcome to <em>AE 639: Continuum Mechanics</em>! In this course, we will learn the basic principles how to model the mechanical behavior of continua. These notes assume a prior background in linear algebra and Euclidean tensor analysis; an introduction to the relevant topics may be found <a href="https://amuthan.github.io/tensors-intro/">here</a>.</p>
-<h2 id="continuum-hypothesis">Continuum hypothesis</h2>
-<div class="admonition danger">
-<p class="admonition-title">WORK IN PROGRESS</p>
-<p>To be completed.</p>
+                <h1 id="green-naghdi-rivlin-gnr-theorem">Green-Naghdi-Rivlin (GNR) theorem</h1>
+<p>We will now study a central theorem in continuum mechanics that illustrates how the principle of (Euclidean) relativity in conjunction with the laws of thermodnamics yields <em>all</em> the balance principles of continuum mechanics. To understand this, we first need to understand the notion of <em>objectivity</em> of tensor fields. In the process of proving the Green-Naghdi-Rivlin theorem, we will also introduce the crucial notion of the <em>stress tensor</em>.</p>
+<h2 id="observer-transformations-and-objectivity">Observer transformations and objectivity</h2>
+<p>Recall from our discussion of kinematics that an observer is characterized by a <em>map</em> that assigns to each event in spacetime a unique coordinate in <script type="math/tex">\mathbb{R}^3\times\mathbb{R}</script>. 
+If two different observers, <script type="math/tex">\mathcal{O}</script> and <script type="math/tex">\mathcal{O}^+</script>, assign coordinates <script type="math/tex">\mathsf{x},t</script> and <script type="math/tex">\mathsf{x}^+,t^+</script>, respectively, for the same event, then the map 
+<script type="math/tex; mode=display">(\mathsf{x},t) \in \mathbb{R}^3\times\mathbb{R} \to (\mathsf{x}^+,t^+) \in \mathbb{R}^3\times\mathbb{R}</script>
+is called an <strong>observer transformation</strong>. Note that an observer transformation is a <em>diffeomorphism</em> of spacetime. This means that the map displayed above is continuously differentiable, and invertible, with the inverse also being continuously differentiable.</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>The reason for using the notation <script type="math/tex">(\mathsf{x}^+,t^+)</script> for the space and time coordinates for the second observer is simply to emphasize that we will shortly focus on a special class of observer transformations that can alternatively also be interpreted as a <em>superimposed rigid body motion</em>. </p>
 </div>
-<h2 id="modeling-continua">Modeling continua</h2>
-<div class="admonition danger">
-<p class="admonition-title">WORK IN PROGRESS</p>
-<p>To be completed.</p>
+<p>Let us now focus on a special class of observer transformations, namely those that preserve the distance between two points in space, and the time interval between two events. To make this concrete, suppose that we consider two events, which have spacetime coordinates <script type="math/tex">(\mathsf{x}_1,t_1)</script> and <script type="math/tex">(\mathsf{x}_2,t_2)</script> according to observer <script type="math/tex">\mathcal{O}</script>. Let the space and time coordinates of the same event with respect to another observer <script type="math/tex">\mathcal{O}^+</script> be <script type="math/tex">(\mathsf{x}_2^+,t_2^+)</script>. The requirement that the two observers measure the same distance between these two points and record the same time interval between these two events can be expressed using the following equations:
+<script type="math/tex; mode=display">
+\begin{split}
+\lVert \mathsf{x}_1 - \mathsf{x}_2 \rVert &= \lVert \mathsf{x}_1^+ - \mathsf{x}_2^+ \rVert,\\
+t_1 - t_2 &= t_1^+ - t_2^+.
+\end{split}
+</script>
+A general class of observer transformations that satisfies this requirement can be written as
+<script type="math/tex; mode=display">
+\begin{split}
+\mathsf{x}^+(\mathsf{x},t) &= \mathsf{c}(t) + \mathsf{Q}(t)\mathsf{x},\\
+t^+(\mathsf{x},t) &= t,
+\end{split}
+</script>
+as can be easily verified. Here, <script type="math/tex">\mathsf{c}(t) \in \mathbb{R}^3</script> and <script type="math/tex">\mathsf{Q}(t) \in SO(3)</script> for every <script type="math/tex">t \in \mathbb{R}</script>. For the sake of notational succinctness, we will write <script type="math/tex">\mathsf{x}^+</script> and <script type="math/tex">\mathsf{t}^+</script> for <script type="math/tex">\mathsf{x}^+(\mathsf{x},t)</script> and <script type="math/tex">t^+(\mathsf{x},t)</script>, respectively. Observer transformations of this form are called <strong>Euclidean transformations</strong>. In the special case when we insist that <script type="math/tex">\mathsf{c}(t) = \mathsf{c}_0t</script> for some constant vector <script type="math/tex">\mathsf{c}_0 \in \mathbb{R}^3</script>, and <script type="math/tex">\mathsf{Q}(t) = \mathsf{Q}_0</script> for some constant <script type="math/tex">\mathsf{Q}_0 \in SO(3)</script>, these observer transformations are called <strong>Galilean transformations</strong>. </p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>In special relativity, one considers observers who agree upon the <em>proper time interval</em> between two events. Given two events with coordinates <script type="math/tex">(\mathsf{x}_1,t_1)</script> and <script type="math/tex">(\mathsf{x}_2,t_2)</script> according to an observer, the <strong>proper time interval</strong> between these two events is defined as
+<script type="math/tex; mode=display">\Delta \tau = c^2(t_1 - t_2)^2 - \lVert \mathsf{x}_1 - \mathsf{x}_2\rVert^2.</script>
+Here, <script type="math/tex">c \in \mathbb{R}</script> stands for the velocity of light in vacuum. In special relativity, two consenting observers agree only upon the proper time interval. Notice that this does <em>not</em> require them to agree upon distances between two points in space, or the time time interval between two events, in sharp constrast to classical (Newtonian) physics.</p>
 </div>
-<p>The primary point of view that we will develop here is that the mechanics of continua is a sub-branch of thermodynamics. </p>
-<p>We will emphasize on two aspects in particular:</p>
-<ul>
-<li>Coordinate system invariance, and</li>
-<li>Observer invariance,</li>
-</ul>
-<p>of the first and second laws of thermodynamics.</p>
-<h2 id="outline">Outline</h2>
-<p>Kinematics</p>
-<p>Balance principles</p>
-<p>Constitutive behavior</p>
-<p>Initial and boundary value problems</p>
-<p>Variational principles</p>
+<p>Galilean transformations are used in the classical principle of relativity: the laws of classical physics remain invariant with respect to Galilean transformations. In continuum mechanics, we will <em>postulate</em> the invariance of the continuum analogues of the first and second laws of thermodynamics with respect to Euclidean transformations. This is the key idea behind the Green-Naghdi-Rivlin theorem. </p>
+<h2 id="mass-and-linear-momentum-balance">Mass and linear momentum balance</h2>
+<p>...</p>
+<h2 id="angular-momentum-balance">Angular momentum balance</h2>
+<p>...</p>
+<h2 id="summary-of-the-gnr-theorem">Summary of the GNR theorem</h2>
+<p>...</p>
                 
                   
                 
@@ -427,7 +455,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href=".." title="Home" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../localization/" title="Localization" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -436,25 +464,11 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Home
+                Localization
               </span>
             </div>
           </a>
         
-        
-          <a href="../kinematics_intro/" title="Kinematics - basic definitions" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Kinematics - basic definitions
-              </span>
-            </div>
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
-            </div>
-          </a>
         
       </nav>
     </div>
