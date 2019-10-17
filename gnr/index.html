@@ -293,9 +293,43 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#observer-transformations-and-objectivity" title="Observer transformations and objectivity" class="md-nav__link">
-    Observer transformations and objectivity
+  <a href="#observer-transformations" title="Observer transformations" class="md-nav__link">
+    Observer transformations
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objectivity" title="Objectivity" class="md-nav__link">
+    Objectivity
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scalar-fields" title="Scalar fields" class="md-nav__link">
+    Scalar fields
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vector-fields" title="Vector fields" class="md-nav__link">
+    Vector fields
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tensor-fields" title="Tensor fields" class="md-nav__link">
+    Tensor fields
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -352,9 +386,43 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#observer-transformations-and-objectivity" title="Observer transformations and objectivity" class="md-nav__link">
-    Observer transformations and objectivity
+  <a href="#observer-transformations" title="Observer transformations" class="md-nav__link">
+    Observer transformations
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objectivity" title="Objectivity" class="md-nav__link">
+    Objectivity
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scalar-fields" title="Scalar fields" class="md-nav__link">
+    Scalar fields
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vector-fields" title="Vector fields" class="md-nav__link">
+    Vector fields
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tensor-fields" title="Tensor fields" class="md-nav__link">
+    Tensor fields
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -398,7 +466,7 @@
                 
                 <h1 id="green-naghdi-rivlin-gnr-theorem">Green-Naghdi-Rivlin (GNR) theorem</h1>
 <p>We will now study a central theorem in continuum mechanics that illustrates how the principle of (Euclidean) relativity in conjunction with the laws of thermodnamics yields <em>all</em> the balance principles of continuum mechanics. To understand this, we first need to understand the notion of <em>objectivity</em> of tensor fields. In the process of proving the Green-Naghdi-Rivlin theorem, we will also introduce the crucial notion of the <em>stress tensor</em>.</p>
-<h2 id="observer-transformations-and-objectivity">Observer transformations and objectivity</h2>
+<h2 id="observer-transformations">Observer transformations</h2>
 <p>Recall from our discussion of kinematics that an observer is characterized by a <em>map</em> that assigns to each event in spacetime a unique coordinate in <script type="math/tex">\mathbb{R}^3\times\mathbb{R}</script>. 
 If two different observers, <script type="math/tex">\mathcal{O}</script> and <script type="math/tex">\mathcal{O}^+</script>, assign coordinates <script type="math/tex">\mathsf{x},t</script> and <script type="math/tex">\mathsf{x}^+,t^+</script>, respectively, for the same event, then the map 
 <script type="math/tex; mode=display">(\mathsf{x},t) \in \mathbb{R}^3\times\mathbb{R} \to (\mathsf{x}^+,t^+) \in \mathbb{R}^3\times\mathbb{R}</script>
@@ -417,11 +485,12 @@ t_1 - t_2 &= t_1^+ - t_2^+.
 A general class of observer transformations that satisfies this requirement can be written as
 <script type="math/tex; mode=display">
 \begin{split}
-\mathsf{x}^+(\mathsf{x},t) &= \mathsf{c}(t) + \mathsf{Q}(t)\mathsf{x},\\
+\mathsf{x}^+(\mathsf{x},t) &= \mathsf{c}(t) + \mathsf{Q}(t)(\mathsf{x} - \mathsf{x}_0),\\
 t^+(\mathsf{x},t) &= t,
 \end{split}
 </script>
-as can be easily verified. Here, <script type="math/tex">\mathsf{c}(t) \in \mathbb{R}^3</script> and <script type="math/tex">\mathsf{Q}(t) \in SO(3)</script> for every <script type="math/tex">t \in \mathbb{R}</script>. For the sake of notational succinctness, we will write <script type="math/tex">\mathsf{x}^+</script> and <script type="math/tex">\mathsf{t}^+</script> for <script type="math/tex">\mathsf{x}^+(\mathsf{x},t)</script> and <script type="math/tex">t^+(\mathsf{x},t)</script>, respectively. Observer transformations of this form are called <strong>Euclidean transformations</strong>. In the special case when we insist that <script type="math/tex">\mathsf{c}(t) = \mathsf{c}_0t</script> for some constant vector <script type="math/tex">\mathsf{c}_0 \in \mathbb{R}^3</script>, and <script type="math/tex">\mathsf{Q}(t) = \mathsf{Q}_0</script> for some constant <script type="math/tex">\mathsf{Q}_0 \in SO(3)</script>, these observer transformations are called <strong>Galilean transformations</strong>. </p>
+as can be easily verified. Here, <script type="math/tex">\mathsf{c}(t) \in \mathbb{R}^3</script>, 
+<script type="math/tex">\mathsf{x}_0 \in \mathbb{R}^3</script>, and <script type="math/tex">\mathsf{Q}(t) \in SO(3)</script> for every <script type="math/tex">t \in \mathbb{R}</script>. For the sake of notational succinctness, we will write <script type="math/tex">\mathsf{x}^+</script> and <script type="math/tex">\mathsf{t}^+</script> for <script type="math/tex">\mathsf{x}^+(\mathsf{x},t)</script> and <script type="math/tex">t^+(\mathsf{x},t)</script>, respectively. Observer transformations of this form are called <strong>Euclidean transformations</strong>. In the special case when we insist that <script type="math/tex">\mathsf{c}(t) = \mathsf{c}_0t</script> for some constant vector <script type="math/tex">\mathsf{c}_0 \in \mathbb{R}^3</script>, and <script type="math/tex">\mathsf{Q}(t) = \mathsf{Q}_0</script> for some constant <script type="math/tex">\mathsf{Q}_0 \in SO(3)</script>, these observer transformations are called <strong>Galilean transformations</strong>. </p>
 <div class="admonition info">
 <p class="admonition-title">Remark</p>
 <p>In special relativity, one considers observers who agree upon the <em>proper time interval</em> between two events. Given two events with coordinates <script type="math/tex">(\mathsf{x}_1,t_1)</script> and <script type="math/tex">(\mathsf{x}_2,t_2)</script> according to an observer, the <strong>proper time interval</strong> between these two events is defined as
@@ -429,6 +498,56 @@ as can be easily verified. Here, <script type="math/tex">\mathsf{c}(t) \in \math
 Here, <script type="math/tex">c \in \mathbb{R}</script> stands for the velocity of light in vacuum. In special relativity, two consenting observers agree only upon the proper time interval. Notice that this does <em>not</em> require them to agree upon distances between two points in space, or the time time interval between two events, in sharp constrast to classical (Newtonian) physics.</p>
 </div>
 <p>Galilean transformations are used in the classical principle of relativity: the laws of classical physics remain invariant with respect to Galilean transformations. In continuum mechanics, we will <em>postulate</em> the invariance of the continuum analogues of the first and second laws of thermodynamics with respect to Euclidean transformations. This is the key idea behind the Green-Naghdi-Rivlin theorem. </p>
+<h2 id="objectivity">Objectivity</h2>
+<p>We will now introduce a crucial concept called <strong>objectivity</strong> for scalar, vector and tensor fields. Throughout this discussion we will assume that we have two observers <script type="math/tex">\mathcal{O}</script> and <script type="math/tex">\mathcal{O}^+</script> who are related to each other according to a Euclidean transformation. We will use the same convention to denote space and time coordinates of an event according to these observers as in the previous section.</p>
+<h3 id="scalar-fields">Scalar fields</h3>
+<p>Let us start with the simple case of a scalar field <script type="math/tex">f:\mathbb{R}^3 \times \mathbb{R} \to \mathbb{R}</script>, as measured by the observer <script type="math/tex">\mathcal{O}</script>. Let us denote the same scalar field, as measured by the observer <script type="math/tex">\mathcal{O}^+</script>, as <script type="math/tex">f^+:\mathbb{R}^3\times\mathbb{R} \to \mathbb{R}</script>. The scalar field is said to be <strong>objective</strong> if 
+<script type="math/tex; mode=display">f(\mathsf{x},t) = f^+(\mathsf{x}^+,t^+).</script>
+To better appreciate the notion of objectivity, consider the temperature field <script type="math/tex">\hat{\Theta}_t:\mathcal{B} \to \mathbb{R}</script> of a continuum body <script type="math/tex">\mathcal{B}</script> at the current time instant <script type="math/tex">t</script>. As measured by the observer <script type="math/tex">\mathcal{O}</script>, the temperature at <script type="math/tex">\mathsf{x} \in B_t</script> can be written as <script type="math/tex">\theta(\mathsf{x},t)</script>. With respect to the observer <script type="math/tex">\mathcal{O}^+</script>, the temperature of the point <script type="math/tex">\mathsf{x}^+(\mathsf{x},t) \in B_t^+</script> is given by <script type="math/tex">\theta^+(\mathsf{x}^+,t^+)</script>. It is evident that both these observers measure the <em>same value</em> of the temperature at the same material point. Equivalently, we see that the temperature field is objective. </p>
+<h3 id="vector-fields">Vector fields</h3>
+<p>The spacetime diffeomorphism characterizing an observer transformation naturally induces a basis at each tangent space to <script type="math/tex">\mathbb{R}^3</script>. Let <script type="math/tex">(\mathsf{e}_i)</script> be a basis to the tangent space at <script type="math/tex">\mathsf{x} \in \mathbb{R}^3</script>, according to the observer <script type="math/tex">\mathcal{O}</script>. The corresponding basis <script type="math/tex">(\mathsf{e}_i^+)</script> of the tangent space <script type="math/tex">T_{\mathsf{x}^+}\mathbb{R}^3</script> according to the observer <script type="math/tex">\mathcal{O}^+</script> can be computed as follows:
+<script type="math/tex; mode=display">\mathsf{e}_i^+(\mathsf{x}^+,t^+) = \nabla \mathsf{x}^+(\mathsf{x},t) \cdot \mathsf{e}_i = \mathsf{Q}(t)\mathsf{e}_i.</script>
+</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>Note that <script type="math/tex">\mathsf{Q}(t):T_{\mathsf{x}}\mathbb{R}^3 \to T_{\mathsf{x}^+}\mathbb{R}^3</script>, and can be written as 
+<script type="math/tex; mode=display"> Q(t) = \sum  \mathsf{e}_i^+(\mathsf{x}^+,t^+) \otimes \mathsf{e}_i. </script> 
+It is easy to verify the orthogonality of <script type="math/tex">Q(t)</script> directly using this expression. Note that a similar expression applies for <script type="math/tex">\mathsf{Q}^T(t):T_{\mathsf{x}^+}\mathbb{R}^3 \to T_{\mathsf{x}}\mathbb{R}^3</script>.</p>
+</div>
+<p>A vector field <script type="math/tex">\mathsf{w}</script> on <script type="math/tex">\mathbb{R}^3</script> is said to be <strong>objective</strong> if 
+<script type="math/tex; mode=display">\mathsf{w}^+(\mathsf{x}^+,t^+) = \mathsf{Q}(t)\mathsf{w}(\mathsf{x},t).</script>
+To understand what this means, let us compute the local representation of the vector field according to both observers. According to <script type="math/tex">\mathcal{O}</script>, let
+<script type="math/tex; mode=display">\mathsf{w}(\mathsf{x},t) = \sum w_i(\mathsf{x},t)\mathsf{e}_i.</script>
+If <script type="math/tex">\mathsf{w}</script> is an objective vector field, then its representation with respect to <script type="math/tex">\mathcal{O}^+</script> is computed as
+<script type="math/tex; mode=display">\begin{split}
+\mathsf{w}^+(\mathsf{x}^+,t^+) &= \mathsf{Q}(t)\left(\sum w_i(\mathsf{x},t) \mathsf{e}_i\right)\\
+ &= \sum w_i(\mathsf{x},t) \mathsf{Q}(t)\mathsf{e}_i\\
+ &= \sum w_i(\mathsf{x},t) \mathsf{e}_i^+(\mathsf{x}^+,t^+).
+\end{split}</script>
+Comparing this with the coordinate representation 
+<script type="math/tex; mode=display">\mathsf{w}^+(\mathsf{x}^+,t^+) = \sum w_i^+(\mathsf{x}^+,t^+) \mathsf{e}_i^+(\mathsf{x}^+,t^+)</script>
+of the vector field according to the observer <script type="math/tex">\mathcal{O}^+</script>, we see that, for <script type="math/tex">i = 1,2,3</script>,
+<script type="math/tex; mode=display">w_i^+(\mathsf{x}^+,t^+) = w_i(\mathsf{x},t).</script>
+In other words, the components fields of an objective vector field are objective scalar fields. The physical intuition behind this is that if a vector field is objective, then a Euclidean transformation just <em>rotates</em> the basis vectors of each tangent space <em>uniformly</em>, but doesn't affect the components of an objective vector field with respect to these bases. In other words, <em>an objective vector field rotates along with the observer globally</em>. </p>
+<h3 id="tensor-fields">Tensor fields</h3>
+<p>The objectivity of tensor fields is defined in a manner analogous to that of vector fields. If <script type="math/tex">\mathsf{A}</script> is a tensor field of order <script type="math/tex">k</script> on <script type="math/tex">\mathbb{R}^3</script>, its component representation according to observer <script type="math/tex">\mathcal{O}</script> can be written as
+<script type="math/tex; mode=display">\mathsf{A}(\mathsf{x},t) = \sum A_{i_1\ldots i_k}(\mathsf{x},t) \, \mathsf{e}_{i_1} \otimes \ldots \otimes \mathsf{e}_{i_k}.</script>
+The tensor field <script type="math/tex">\mathsf{A}</script> is said to be <strong>objective</strong> if, according to the observer <script type="math/tex">\mathcal{O}^+</script> who is related to the observer <script type="math/tex">\mathcal{O}</script> by a Euclidean transformation, the tensor field admits the representation
+<script type="math/tex; mode=display">\mathsf{A}^+(\mathsf{x}^+,t^+) = \sum A_{i_1\ldots i_k}(\mathsf{x},t) \, \mathsf{e}_{i_1}^+(\mathsf{x}^+,t^+) \otimes \ldots \otimes \mathsf{e}_{i_k}^+(\mathsf{x}^+,t^+).</script>
+There are many equivalent ways of expressing this. For instance, the foregoing equation can be written as
+<script type="math/tex; mode=display">
+\mathsf{A}^+(\mathsf{x}^+,t^+) = \sum A_{i_1\ldots i_k}(\mathsf{x},t) \, \mathsf{Q}(t)\mathsf{e}_{i_1} \otimes \ldots \otimes \mathsf{Q}(t) \mathsf{e}_{i_k}.
+</script>
+In terms of the components of the tensor fields, we can express the condition for objectivity as
+<script type="math/tex; mode=display">A_{i_1\ldots i_k}^+(\mathsf{x}^+,t^+) = A_{i_1\ldots i_k}(\mathsf{x},t).</script>
+An analogous interpretation of the objectivity of tensor fields as in the case of vector fields should be evident.</p>
+<p>Owing to its practical utility, it is useful to consider the special case of a second order tensor field. In this case, the objectivity condition for a second order tensor field <script type="math/tex">\mathsf{A}</script> can be expressed compactly as follows:
+<script type="math/tex; mode=display">\mathsf{A}^+(\mathsf{x}^+,t^+) = \mathsf{Q}(t)\mathsf{A}(\mathsf{x},t)\mathsf{Q}^T(\mathsf{x}^+,t^+).</script>
+This can be easily verified by an explicit computation, and is left as a simple exercise. This form of the objectivity condition for second order tensors will be used extensively in the sequel.</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>To keep the notation manageable, we will often drop the arguments and write the objectivity condition for a second order tensor field as just <script type="math/tex">\mathsf{A}^+ = \mathsf{Q}\mathsf{A}\mathsf{Q}^T</script>.</p>
+</div>
 <h2 id="mass-and-linear-momentum-balance">Mass and linear momentum balance</h2>
 <p>...</p>
 <h2 id="angular-momentum-balance">Angular momentum balance</h2>
