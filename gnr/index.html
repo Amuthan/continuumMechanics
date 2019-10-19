@@ -341,16 +341,36 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#mass-and-linear-momentum-balance" title="Mass and linear momentum balance" class="md-nav__link">
-    Mass and linear momentum balance
+  <a href="#observer-invariance-of-the-second-law-of-thermodynamics" title="Observer invariance of the second law of thermodynamics" class="md-nav__link">
+    Observer invariance of the second law of thermodynamics
   </a>
   
 </li>
       
         <li class="md-nav__item">
+  <a href="#observer-invariance-of-the-first-law-of-thermodynamics" title="Observer invariance of the first law of thermodynamics" class="md-nav__link">
+    Observer invariance of the first law of thermodynamics
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mass-and-linear-momentum-balance" title="Mass and linear momentum balance" class="md-nav__link">
+    Mass and linear momentum balance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#angular-momentum-balance" title="Angular momentum balance" class="md-nav__link">
     Angular momentum balance
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -441,16 +461,36 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#mass-and-linear-momentum-balance" title="Mass and linear momentum balance" class="md-nav__link">
-    Mass and linear momentum balance
+  <a href="#observer-invariance-of-the-second-law-of-thermodynamics" title="Observer invariance of the second law of thermodynamics" class="md-nav__link">
+    Observer invariance of the second law of thermodynamics
   </a>
   
 </li>
       
         <li class="md-nav__item">
+  <a href="#observer-invariance-of-the-first-law-of-thermodynamics" title="Observer invariance of the first law of thermodynamics" class="md-nav__link">
+    Observer invariance of the first law of thermodynamics
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mass-and-linear-momentum-balance" title="Mass and linear momentum balance" class="md-nav__link">
+    Mass and linear momentum balance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#angular-momentum-balance" title="Angular momentum balance" class="md-nav__link">
     Angular momentum balance
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -597,7 +637,7 @@ We thus see that the velocity vector is still not objective, but the acceleratio
 <p><img alt="Traction vector" src="../pics/traction_vector.png" /></p>
 <p>We will take it as a basic postulate of continuum mechanics that this extension is always well-defined. The simplest means to appreciate this postulate is by going back to the spring mass analogy given earlier - any force applied on the surface atoms <em>percolates</em> to the interior as a consequence of the collective response of <em>all</em> the springs to the applied force. </p>
 <p>We are now in a position to state an important postulate: we will henceforth consider the traction vector field as being objective. This means that if two observers <script type="math/tex">\mathcal{O}</script> and <script type="math/tex">\mathcal{O}^+</script> who are related by a Euclidean transformation observe the same process, then
-<script type="math/tex; mode=display">\mathsf{t}^+(\mathsf{x}^+,t^+,\mathsf{n}^+(\mathsf{x}^+,t^+)) = \mathsf{Q}(t) \mathsf{t}(\mathsf{x},t,\mathsf{t}(\mathsf{x},t)).</script>
+<script type="math/tex; mode=display">\mathsf{t}^+(\mathsf{x}^+,t^+,\mathsf{n}^+(\mathsf{x}^+,t^+)) = \mathsf{Q}(t) \mathsf{t}(\mathsf{x},t,\mathsf{n}(\mathsf{x},t)).</script>
 To understand the rationale behind the postulate concerning the objectivity of the traction vector field, note that the traction vector represents the internal response of the continuum due to externally applied forces and energy supplied in the form of heat. Thus the postulate that the traction vector field is objective simply means that this internal response of the continuum is independent of observer transformations. </p>
 <div class="admonition info">
 <p class="admonition-title">Remark</p>
@@ -613,9 +653,118 @@ Here, <script type="math/tex">\mathsf{x}_0</script> is the coordinate of the fix
 Using the fact that <script type="math/tex">x^+ - x_0^+ = \mathsf{Q}(t)(x - x_0)</script>, it is easy to see that
 <script type="math/tex; mode=display">b^+ - a^+ = Q(b - a).</script>
 This is just the transformation rule postulated earlier. While this does not <em>prove</em> the postulate (which is why it is a postulate in the first place), it provides a simple means to appreciate why the postulate is formulated in its specific form.</p>
-<h2 id="mass-and-linear-momentum-balance">Mass and linear momentum balance</h2>
-<p>...</p>
-<h2 id="angular-momentum-balance">Angular momentum balance</h2>
+<h2 id="observer-invariance-of-the-second-law-of-thermodynamics">Observer invariance of the second law of thermodynamics</h2>
+<p>We have now all the necessary tools to study the consequences of requiring that the first and second laws of thermodynamics are invariant with respect to Euclidean observer transformations. We will start with the second law of thermodynamics since it is much easier to deal with. </p>
+<p>Let <script type="math/tex">\mathcal{O}</script> and <script type="math/tex">\mathcal{O}^+</script> be two observers who are related by a Euclidean transformation. Let us write the second law according to the observer <script type="math/tex">\mathcal{O}^+</script>:
+<script type="math/tex; mode=display">
+\frac{d}{dt^+}\int_{B_t^+} \rho^+(\mathsf{x}^+,t^+) \, dv^+ \ge \int_{B_t^+} \frac{\rho^+(\mathsf{x}^+,t^+)r^+(\mathsf{x}^+,t^+)}{\theta^+(\mathsf{x}^+,t^+)} \, dv^+ - \int_{\partial B_t^+} \frac{h^+(\mathsf{x}^+,t^+,\mathsf{n}^+(\mathsf{x}^+,t^+))}{\theta^+(\mathsf{x}^+,t^+)}\,da^+.
+</script>
+Let us now change the variables from <script type="math/tex">(\mathsf{x}^+,t^+)</script> to <script type="math/tex">(\mathsf{x},t)</script>. Since the second law involves only scalar fields, each of which is objective, the transformation of the integrands is trivial. The volume and area integrals transform according to the usual change of variables rules that we studied earlier. Specifically, note that for any scalar field <script type="math/tex">f:B_t \to \mathbb{R}</script>,
+<script type="math/tex; mode=display">\begin{split}
+\int_{B_t^+} f^+(\mathsf{x}^+,t^+)\eta^+(\mathsf{x}^+,t^+)\,dv^+ &= \int_{B_t} f(\mathsf{x},t) \text{det}(\mathsf{Q}(t))\,dv\\
+ &= \int_{B_t} f(\mathsf{x},t)\,dv.
+\end{split}</script>
+In deriving the last expression, we used the fact that <script type="math/tex">\mathsf{Q}(t)</script> is orthogonal.</p>
+<p>To understand how area integrals transform, let us revisit the change of area formula in the case of a Euclidean observer transformation:
+<script type="math/tex; mode=display">\mathsf{n}^+(\mathsf{x}^+,t^+)\Delta a^+ = \text{det}(\mathsf{Q}(t))\mathsf{Q}^{-T}\mathsf{n}(\mathsf{x},t)\Delta a.</script>
+Noting that <script type="math/tex">\mathsf{Q}^{-T}(t) = \mathsf{Q}(t)</script> and that <script type="math/tex">\mathsf{n}^+ = \mathsf{Q}\mathsf{n}</script>, it follows that <script type="math/tex">\Delta a^+ = \Delta a</script>. We can thus transform the area integral of a scalar field <script type="math/tex">g:B_t \to \mathbb{R}</script> as:
+<script type="math/tex; mode=display">\int_{\partial B_t^+} g^+(\mathsf{x}^+,t^+)\,da^+ = \int_{\partial B_t} g(\mathsf{x},t)\,da.</script>
+</p>
+<p>Putting all this together, we can transform the second law as observed by the observer <script type="math/tex">\mathcal{O}^+</script> as 
+<script type="math/tex; mode=display">\frac{d}{dt}\int_{B_t} \rho(\mathsf{x},t)\eta(\mathsf{x},t)\,dv \ge \int_{B_t} \frac{\rho(\mathsf{x},t)r(\mathsf{x},t)}{\theta(\mathsf{x},t)}\,dv - \int_{B_t} \frac{h(\mathsf{x},t,\mathsf{n}(\mathsf{x},t))}{\theta(\mathsf{x},t)}\,da.</script>
+But this is precisely the second law as recorded by the observer <script type="math/tex">\mathcal{O}</script>. We thus see that the second law of thermodynamics is naturally invariant with respect to Euclidean observer transformations. In other words, there are no additional restrictions on the various scalar fields in the second law as a consequence of Euclidean observer invariance.</p>
+<h2 id="observer-invariance-of-the-first-law-of-thermodynamics">Observer invariance of the first law of thermodynamics</h2>
+<p>Unlike the second law of thermodynamics, we will see shortly that requiring the first law to be invariant with respect to Euclidean observer transformations yields very important and new information regarding the various continuum fields. In particular, we will see that the principles of conservation of mass, linear momentum and angular momentum, <em>all</em> follow from this basic invariance requirement. This remarkable result is known as the <strong>Green-Naghdi-Rivlin theorem</strong>. We will develop this in two stages: we will first study the consequences of requiring the first laws to be invariant with respect to observers who are moving relative to each other with a constant velocity, and subsequently with respect to observers who are rotating with respect to each other.  </p>
+<h3 id="mass-and-linear-momentum-balance">Mass and linear momentum balance</h3>
+<p>Let us first consider the case when the observers <script type="math/tex">\mathcal{O}</script> and <script type="math/tex">\mathcal{O}^+</script> are related to each other according to the following transformation:
+<script type="math/tex; mode=display">\mathsf{x}^+ = \mathsf{x} + \mathsf{c}_0 t, \quad t^+ = t.</script>
+Here <script type="math/tex">\mathsf{c}_0\in\mathbb{R}^3</script> is a constant vector. Note that this is the constant velocity with which the two observers are moving relative to each other. Note also that <script type="math/tex">\mathsf{Q}(t) = \mathsf{I}</script> in this case.</p>
+<p>Let us write the first law of thermodynamics according to the observer <script type="math/tex">\mathcal{O}^+</script>:
+<script type="math/tex; mode=display">\begin{split}
+\frac{d}{dt^+}\int_{B_t^+} \rho^+\left(e^+ + \frac{1}{2}\mathsf{v}^+\cdot\mathsf{v}^+\right)\,dv^+ &= \int_{B_t^+} \rho^+ \mathsf{b}^+\cdot\mathsf{v}^+\,dv^+ + \int_{\partial B_t^+} \mathsf{t}^+\cdot\mathsf{v}^+\,da^+\\
+ & + \int_{B_t^+} \rho^+r^+\,dv^+ - \int_{\partial B_t^+} h^+\,da^+.
+\end{split}</script>
+Note that we have dropped all the arguments in the equation above to keep the notation manageable. Let us now transform the coordinates from <script type="math/tex">(\mathsf{x}^+,t^+)</script> to <script type="math/tex">(\mathsf{x},t)</script>. Using the transformation rules derived earlier, we seee that all the scalar fields remain invariant, and the vector fields involved transform as follows:
+<script type="math/tex; mode=display">\begin{split}
+\mathsf{v}^+ &= \mathsf{v} + \mathsf{c}_0,\\
+\mathsf{a}^+ &= \mathsf{a},\\
+\mathsf{b}^+ &= \mathsf{b},\\
+\mathsf{t}^+ &= \mathsf{t}.
+\end{split}</script>
+Using this, we can write the first law as follows:
+<script type="math/tex; mode=display">\begin{split}
+\frac{d}{dt}\int_{B_t} \rho\left(e + \frac{1}{2}((\mathsf{v} + \mathsf{c}_0)\cdot(\mathsf{v} + \mathsf{c}_0)\right)dv &= \int_{B_t} \rho \mathsf{b} \cdot (\mathsf{v} + \mathsf{c}_0) \, dv\\
+ & + \int_{\partial B_t} \mathsf{t} \cdot (\mathsf{v} + \mathsf{c}_0)\, da\\
+ & + \int_{B_t} \rho r \,dv - \int_{\partial B_t} h\,da.
+\end{split}</script>
+Let us now consider the first law of thermodynamics according to the observer <script type="math/tex">\mathcal{O}</script>:
+<script type="math/tex; mode=display">\frac{d}{dt}\int_{B_t} \rho\left(e + \frac{1}{2}\mathsf{v}\cdot\mathsf{v}\right)\,dv = \int_{B_t} \rho\mathsf{b}\cdot\mathsf{v}\,dv + \int_{\partial B_t}\mathsf{t}\cdot\mathsf{v}\,da + \int_{B_t} \rho r \, dv - \int_{\partial B_t} h\,da.</script>
+Since this equation and the transformed equation of the first law according to the observer <script type="math/tex">\mathcal{O}^+</script> that we presented earlier, we immediately get the following equation:
+<script type="math/tex; mode=display">
+\frac{d}{dt}\int_{B_t} \rho\left(\mathsf{v}\cdot\mathsf{c}_0 + \frac{1}{2}\mathsf{c}_0\cdot\mathsf{c}_0\right)dv = \int_{B_t} \mathsf{b}\cdot\mathsf{c}_0\,dv + \int_{\partial B_t} \mathsf{t}\cdot\mathsf{c}_0\,da.
+</script>
+Since this equation is true for arbitrary <script type="math/tex">\mathsf{c}_0 \in \mathbb{R}^3</script>, writing the same equation for <script type="math/tex">-\mathsf{c}_0</script> and adding the two equations, we get
+<script type="math/tex; mode=display">\frac{1}{2}\mathsf{c}_0\cdot\mathsf{c}_0\frac{d}{dt}\int_{B_t} \rho\,dv = 0 \quad\Rightarrow\quad \frac{d}{dt}\int_{B_t} \rho(\mathsf{x},t)\,dv = 0.</script>
+We thus see that the total mass contained in the region <script type="math/tex">B_t</script> is conserved. But this is precisely the law of conservation of mass. Taking the time derivative inside the integral, we see that
+<script type="math/tex; mode=display">\int_{B_t} \left(\frac{D\rho}{Dt} + \rho\,\text{div }\mathsf{v}\right) = 0.</script>
+Using the localization lemma, we get the familiar mass continuity equation
+<script type="math/tex; mode=display">\frac{D\rho(\mathsf{x},t)}{Dt} + \rho(\mathsf{x},t)\,\text{div }\mathsf{v}(\mathsf{x},t) = 0.</script>
+Notice how the simple requirement that the first law of thermodynamics is invariant with respect to observers moving relative to each other with a constant velocity has already yielded the mass conservation equation!</p>
+<p>We're not done yet. Using the mass continuity equation in conjunction with the Reynolds' transport theorem, we see that, for any arbitray <script type="math/tex">\mathsf{c}_0 \in \mathbb{R}^3</script>, 
+<script type="math/tex; mode=display">\int_{B_t} \rho \frac{D\mathsf{v}}{Dt}\cdot\mathsf{c}_0\,dv = \int_{B_t} \mathsf{b}\cdot\mathsf{c}_0\,dv + \int_{\partial B_t} \mathsf{t}\cdot\mathsf{c}_0\,da.</script>
+Note that we cannot directly localize this integral equation on account of the surface integral. Let us now look into this; in the process we will develop a crucial notion in continuum mechanics, that of the <em>stress tensor</em>. The kernel of the surface term <script type="math/tex">\mathsf{t}(\mathsf{x},t,\mathsf{n}(\mathsf{x},t))\cdot\mathsf{c}_0</script> is a function of <script type="math/tex">\mathsf{x},t,\mathsf{n}</script>. The Cauchy localization lemma immediately implies the existence of a vector field <script type="math/tex">\mathsf{t}_{\mathsf{c}_0}</script> on <script type="math/tex">B_t</script> such that 
+<script type="math/tex; mode=display">\mathsf{t}(\mathsf{x},t,\mathsf{n}(\mathsf{x},t))\cdot\mathsf{c}_0 = \mathsf{t}_{\mathsf{c}_0}(\mathsf{x},t)\cdot\mathsf{n}(\mathsf{x},t),</script>
+<em>for every</em> <script type="math/tex">\mathsf{c}_0 \in \mathbb{R}^3</script>. To understand how the vector field <script type="math/tex">\mathsf{t}_{\mathsf{c}_0}</script> depends on <script type="math/tex">\mathsf{c}_0</script>, consider any arbitrary <script type="math/tex">\mathsf{c}_0,\mathsf{c}_1 \in \mathbb{R}^3</script> and <script type="math/tex">a \in \mathbb{R}</script>, and note that
+<script type="math/tex; mode=display">\begin{split}
+\mathsf{t}_{\mathsf{c}_0 + a\mathsf{c}_1}(\mathsf{x},t)\cdot\mathsf{n}(\mathsf{x},t) &= \mathsf{t}(\mathsf{x},t,\mathsf{n}(\mathsf{x},t))\cdot(\mathsf{c}_0 + a\mathsf{c}_1)\\
+ &= \mathsf{t}(\mathsf{x},t,\mathsf{n}(\mathsf{x},t))\cdot\mathsf{c}_0 + a \mathsf{t}(\mathsf{x},t,\mathsf{n}(\mathsf{x},t))\cdot\mathsf{c}_1\\
+ &= \mathsf{t}_{\mathsf{c}_0}(\mathsf{x},t)\cdot\mathsf{n}(\mathsf{x},t) + a\mathsf{t}_{\mathsf{c}_1}(\mathsf{x},t)\cdot\mathsf{n}(\mathsf{x},t).
+\end{split}</script>
+We thus see that <script type="math/tex">\mathcal{t}_{\mathsf{c}_0}</script> is a linear function of <script type="math/tex">\mathsf{c}_0</script>. This implies that there exists a linear map <script type="math/tex">\sigma(\mathsf{x}, t):T_{\mathsf{x}}B_t \to T_{\mathsf{x}}B_t</script> such that
+<script type="math/tex; mode=display">
+\mathsf{t}_{\mathsf{c}_0}(\mathsf{x},t) = \sigma^T(\mathsf{x},t)\mathsf{c}_0.
+</script>
+</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>Note that if <script type="math/tex">\sigma</script> is a linear map, so is <script type="math/tex">\sigma^T</script>. The reason for using the transpose of <script type="math/tex">\sigma</script> in the equation <script type="math/tex">\mathsf{t}_{\mathsf{c}_0}(\mathsf{x},t) = \sigma^T(\mathsf{x},t)\mathsf{c}_0</script> is primarily a matter of convention so that the components of <script type="math/tex">\sigma</script> with respect to a chosen basis has the familiar interpretation used in engineering. </p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>Note that the Cauchy localization lemma only shows the existence of a linear map of the form <script type="math/tex">\sigma(\mathsf{x},t):T_{\mathsf{x}}\mathbb{R}^3 \to T_{\mathsf{x}}\mathbb{R}^3</script>. However, in our case, since <script type="math/tex">B_t</script> is an open subset of <script type="math/tex">\mathbb{R}^3</script>, we have the natural identity <script type="math/tex">T_{\mathsf{x}}B_t \equiv T_{\mathsf{x}}\mathbb{R}^3</script>. The reason for preferring <script type="math/tex">T_{\mathsf{x}}B_t</script> over <script type="math/tex">T_{\mathsf{x}}\mathbb{R}^3</script> will become evident soon.</p>
+</div>
+<p>The linear map, or equivalently, the second order tensor, <script type="math/tex">\sigma(\mathsf{x},t)</script> is called the <strong>Cauchy stress tensor</strong>. With this definition, we see that for every <script type="math/tex">\mathsf{c},\mathsf{n} \in T_{\mathsf{x}}B_t</script>, 
+<script type="math/tex; mode=display">
+\mathsf{t}(\mathsf{x},t,\mathsf{n})\cdot\mathsf{c} = \sigma^T(\mathsf{x},t)\mathsf{c} \cdot \mathsf{n} = \mathsf{c} \cdot \sigma(\mathsf{x},t)\mathsf{n}.
+</script>
+Since this is true for every <script type="math/tex">\mathsf{c} \in T_{\mathsf{x}}B_t</script>, we obtain the following expression relating the traction vector and the Cauchy stress tensor:
+<script type="math/tex; mode=display">\mathsf{t}(\mathsf{x},t,\mathsf{n}) = \sigma(\mathsf{x},t)\mathsf{n}.</script>
+This equation tells us that the Cauchy stress tensor allows us to compute the surface force acting on any infinitesimal area with a prescribed unit normal. </p>
+<p>To understand what the Cauchy stress tensor means, let us consider the component representation of the equation <script type="math/tex">\mathsf{t}(\mathsf{x},t,\mathsf{n}) = \sigma(\mathsf{x},t)\mathsf{n}</script> with respect to an orthonormal basis <script type="math/tex">(\mathsf{e}_i)</script> of <script type="math/tex">T_{\mathsf{x}}B_t</script>:
+<script type="math/tex; mode=display">
+t_i(\mathsf{x},t,\mathsf{n}) = \sum \sigma_{ij}(\mathsf{x},t) n_j,
+</script>
+where
+<script type="math/tex; mode=display">\sigma(\mathsf{x},t) = \sum \sigma_{ij}(\mathsf{x},t) \mathsf{e}_i \otimes \mathsf{e}_j</script>
+is the coordinate representation of the Cauchy stress tensor. To physically interpret the components of the Cauchy stress tensor, consider a cube with one of its vertices at <script type="math/tex">\mathsf{x}\in B_t</script> as shown below:</p>
+<p><img alt="Cauchy stress tensor" src="../pics/cauchy_stress_cube.png" /></p>
+<p>We thus see that <script type="math/tex">\sigma_{ij}(\mathsf{x},t)</script> represents the force along the <script type="math/tex">i^{\text{th}}</script> coordinate axis on an infinitesimal area element at <script type="math/tex">\mathsf{x} \in B_t</script> whose normal is along the <script type="math/tex">j^{\text{th}}</script> coordinate axis.  </p>
+<p>Returning back to our discussion of the invariance of the first law of thermodynamics with respect to Euclidean observer transformations, let us use the Cauchy stress tensor to localize the equation 
+<script type="math/tex; mode=display">\int_{B_t} \rho \frac{D\mathsf{v}}{Dt}\cdot\mathsf{c}_0\,dv = \int_{B_t} \mathsf{b}\cdot\mathsf{c}_0\,dv + \int_{\partial B_t} \mathsf{t}\cdot\mathsf{c}_0\,da.</script>
+Using the fact that <script type="math/tex">\mathsf{t} = \sigma\mathsf{n}</script> and using the divergence theorem, we see that
+<script type="math/tex; mode=display">\begin{split}
+\int_{\partial B_t} \mathsf{t}\cdot\mathsf{c}_0 \,da &= \int_{\partial B_t} \mathsf{c}_0 \cdot \sigma \mathsf{n}\,da\\
+&= \int_{B_t} \text{div}(\mathsf{c}_0\cdot\sigma)\,dv.
+\end{split}</script>
+Using this result, and the fact that <script type="math/tex">\mathsf{c}_0</script> is a constant vector, we obtain the following integral relation:
+<script type="math/tex; mode=display">\int_{B_t} \left(\rho\frac{D\mathsf{v}}{Dt} - \mathsf{b} - \text{div }\sigma\right)\cdot\mathsf{c}_0\,dv = 0.</script>
+The localization lemma immediately yields the following differential equation:
+<script type="math/tex; mode=display">
+\rho(\mathsf{x},t)\frac{D\mathsf{v}(\mathsf{x},t)}{Dt} = \mathsf{b}(\mathsf{x},t) + \text{div }\sigma(\mathsf{x},t).
+</script>
+This equation is the continuum analogue of Newton's second laws <script type="math/tex">ma = F</script>, and is hence called the <strong>linear momentum balance</strong> equation. The means to understand this physically is as follows. As a consequence of the application of external forces (both body forces and surface tractions), the continuum responds by generating <em>generalized internal forces</em>, which we have modeled using the Cauchy stress tensor. The term <script type="math/tex">\mathsf{b}(\mathsf{x},t) + \text{div }\sigma(\mathsf{x},t)</script> thus represents the net force acting at an <em>interior</em> point <script type="math/tex">\mathsf{x}\in B_t</script>. This net force is equal to its acceleration <script type="math/tex">\rho(\mathsf{x},t)\mathsf{a}(\mathsf{x},t)</script>.</p>
+<p>We have thus obtained <em>both</em> the balance of mass and balance of linear momentum from the first law of thermodynamics by merely insisting that the first law is invariant with respect to two observers who are in relative motion with respect to each other with a constant velocity!</p>
+<h3 id="angular-momentum-balance">Angular momentum balance</h3>
 <p>...</p>
 <h2 id="summary-of-the-gnr-theorem">Summary of the GNR theorem</h2>
 <p>...</p>

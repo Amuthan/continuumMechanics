@@ -380,7 +380,7 @@ In practice, this assumption is not really a limitation since its validity stems
 <p>To achieve the desired localization, we make use of the divergence theorem that we studied earlier: for any open <script type="math/tex">\Omega \subseteq B_t</script>,
 <script type="math/tex; mode=display">\int_{\partial \Omega} \mathsf{c}(\mathsf{x},t)\cdot\mathsf{n}(\mathsf{x},t)\,da = \int_{\Omega} \text{div }\mathsf{c}(\mathsf{x},t)],dv.</script>
 Using this in conjunction with the integral equation presented earlier, we get
-<script type="math/tex; mode=display">\frac{d}{dt} \int_{\Omega} a(\mathsf{x},t) \,dv = \int_{\Omega} b(\mathsf{x},t) \, dv + \int_{\Omega} \text{div }\mathsf{c}(\mathsf{x},t)],dv.</script>
+<script type="math/tex; mode=display">\frac{d}{dt} \int_{\Omega} a(\mathsf{x},t) \,dv = \int_{\Omega} b(\mathsf{x},t) \, dv + \int_{\Omega} \text{div }\mathsf{c}(\mathsf{x},t)\,dv.</script>
 Taking the time derivative on the left hand side inside the integral, using techniques outlined earlier, we see that the following is true for <em>any</em> open subset <script type="math/tex">\Omega \subseteq B_t</script>:
 <script type="math/tex; mode=display">\int_{\Omega} \left(\frac{Da(\mathsf{x},t)}{Dt} + a(\mathsf{x},t)\text{div }\mathsf{v}(\mathsf{x},t) - b(\mathsf{x},t) - \text{div }\mathsf{c}(\mathsf{x},t)\right)dv = 0.</script>
 Since this is true for any sub-region <script type="math/tex">\Omega \subseteq B_t</script>, let us choose <script type="math/tex">\Omega</script> to be an infinitesimally small volume centered at <script type="math/tex">\mathsf{x} \in B_t</script>. A simple application of the mean value theorem immediately yields the following <em>local</em> version of the integral equation
@@ -397,7 +397,7 @@ for every <script type="math/tex">\mathsf{x} \in B_t</script> and <script type="
 <script type="math/tex; mode=display">
 \begin{split}
 \int_{\Omega} a(\mathsf{x},t) &= \int_{\partial \Omega} \tilde{c}(\mathsf{x},t,\mathsf{n}(\mathsf{x},t))\\
- &= \int_{\partial \Omega} \mathsf{c}(\mathsf{x},t)\cdot\mathsf{n}(\mathsf{x},t)\,a\\
+ &= \int_{\partial \Omega} \mathsf{c}(\mathsf{x},t)\cdot\mathsf{n}(\mathsf{x},t)\,da\\
  &= \int_{\Omega} \text{div }\mathsf{c}(\mathsf{x},t)\,dv.
 \end{split}
 </script>
