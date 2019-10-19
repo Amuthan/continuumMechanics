@@ -334,6 +334,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#objectivity-of-continuum-fields" title="Objectivity of continuum fields" class="md-nav__link">
+    Objectivity of continuum fields
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#mass-and-linear-momentum-balance" title="Mass and linear momentum balance" class="md-nav__link">
     Mass and linear momentum balance
   </a>
@@ -423,6 +430,13 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objectivity-of-continuum-fields" title="Objectivity of continuum fields" class="md-nav__link">
+    Objectivity of continuum fields
+  </a>
   
 </li>
       
@@ -548,6 +562,57 @@ This can be easily verified by an explicit computation, and is left as a simple 
 <p class="admonition-title">Remark</p>
 <p>To keep the notation manageable, we will often drop the arguments and write the objectivity condition for a second order tensor field as just <script type="math/tex">\mathsf{A}^+ = \mathsf{Q}\mathsf{A}\mathsf{Q}^T</script>.</p>
 </div>
+<h2 id="objectivity-of-continuum-fields">Objectivity of continuum fields</h2>
+<p>As should be clear now, we would ideally like the various scalar, vector and tensor fields that enter a continuum description of the first and second laws of thermodynamics need to be objective. The reason is that this enforces observer invariance of the various continuum fields involved. Let us now make this notion formally precise. As before, we will be dealing with two observers <script type="math/tex">\mathcal{O}</script> and <script type="math/tex">\mathcal{O}^+</script> who are related according to a Euclidean transformation.</p>
+<p>To begin with, we will <em>postulate</em> that <em>all</em> the scalar fields involved in the first and second laws of thermodynamics are objective.  To be specific, we postulate the following relations:
+<script type="math/tex; mode=display">\begin{split}
+\rho^+(\mathsf{x}^+,t^+) &= \rho(\mathsf{x},t),\\
+e^+(\mathsf{x}^+,t^+) &= e(\mathsf{x},t),\\
+r^+(\mathsf{x}^+,t^+) &= r(\mathsf{x},t),\\
+\eta^+(\mathsf{x}^+,t^+) &= \eta(\mathsf{x},t),\\
+\theta^+(\mathsf{x}^+,t^+) &= \theta(\mathsf{x},t),\\
+h^+(\mathsf{x}^+,t^+,\mathsf{n}^+(\mathsf{x}^+,t^+)) &= h(\mathsf{x},t,\mathsf{n}(\mathsf{x},t)).
+\end{split}</script>
+Notice how the unit normal figures in the last expression. Since a unit normal is an element of the appropriate tangent space, it transforms objectively: <script type="math/tex">\mathsf{n}^+(\mathsf{x}^+,t^+) = \mathsf{Q}(t)\mathsf{n}(\mathsf{x},t)</script>.</p>
+<p>Let us now turn to the various vector fields that figure in the first law of thermodynamics. To start with, consider the simple case of a particle moving in three dimensional space such that at time <script type="math/tex">t \in I \subseteq \mathbb{R}</script>, the particle occupies position <script type="math/tex">\mathsf{x}(t)\in\mathbb{R}^3</script>, according to observer <script type="math/tex">\mathcal{O}</script>. The velocity and acceleration of this particle, as observed by <script type="math/tex">\mathcal{O}</script> are given by <script type="math/tex">\dot{\mathsf{x}}(t) = d\mathsf{x}(t)/dt</script> and <script type="math/tex">\ddot{\mathsf{x}}(t) = d^2\mathsf{x}(t)/dt^2</script>, respectively. Let us now compute how the motion of the same particle according to an observer <script type="math/tex">\mathcal{O}^+</script> who is related to <script type="math/tex">\mathcal{O}</script> by a general Euclidean transformation,
+<script type="math/tex; mode=display">\mathsf{x}^+(\mathsf{x},t) = \mathsf{c}(t) + \mathsf{Q}(t)\mathsf{x}, \qquad t^+ = t,</script>
+looks like. The position, velocity and acceleration of the same particle as observed by <script type="math/tex">\mathcal{O}^+</script> can be easily computed as
+<script type="math/tex; mode=display">\begin{split}
+\mathsf{x}^+(t) &= \mathsf{c}(t) + \mathsf{Q}(t)\mathsf{x}(t),\\
+\mathsf{v}^+(t) &= \dot{\mathsf{c}}(t) + \dot{\mathsf{Q}}(t)\mathsf{x}(t) + \mathsf{Q}(t)\mathsf{v}(t),\\
+\mathsf{a}^+(t) &= \ddot{\mathsf{c}}(t) + \ddot{\mathsf{Q}}(t)\mathsf{x}(t) + 2\dot{\mathsf{Q}}(t)\mathsf{v}(t) + \mathsf{Q}(t)\mathsf{a}(t).
+\end{split}</script>
+</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>Notice the close similarity between the first equation in the list of three equations above, and the Euclidean transformation relation observers <script type="math/tex">\mathcal{O}</script> and <script type="math/tex">\mathcal{O}^+</script>. In the former, <script type="math/tex">\mathsf{x}(t)</script> is a time dependent trajectory of a particle in three dimensional space. In the latter, <script type="math/tex">\mathsf{x}</script> stands for a generic point in space, and has no time dependence at all. The meaning of equations like these should always be inferred carefully from the appropriate context.</p>
+</div>
+<p>Note that neither the velocity, nor the acceleration of the particle, are objective vector fields in general. In the special case of a Galilean transformation, howevever, when <script type="math/tex">\mathsf{c}(t) = \mathsf{c}_0 t</script> for some constant <script type="math/tex">\mathsf{c}_0 \in \mathbb{R}^3</script>, and when <script type="math/tex">\mathsf{Q}(t) = \mathsf{Q}_0</script> for some constant rotation map <script type="math/tex">\mathsf{Q}_0 \in SO(3)</script>, we see that
+<script type="math/tex; mode=display">\begin{split}
+\mathsf{v}^+(t) &= \mathsf{c}_0 + \mathsf{Q}_0\mathsf{v}(t),\\
+\mathsf{a}^+(t) &= \mathsf{Q}_0\mathsf{a}(t).
+\end{split}</script>
+We thus see that the velocity vector is still not objective, but the acceleration is in fact an objective vector. This is the familiar result in elementary classical physics that if two observers are moving relative to each other with a constant velocity, then they will measure the same acceleration of any moving body they observe, but disagree on the velocity.</p>
+<p>Let us now move on to the other vector fields appearing in the first law of thermodynamics. Let us look at the surface traction first. Recall that the traction vector was introducted to model the surface force on a continuum. Thus, given any small areal <script type="math/tex">\Delta a</script> centered at <script type="math/tex">\mathsf{x} \in \partial B_t</script> with normal <script type="math/tex">\mathsf{n}(\mathsf{x},t)</script>, we modeled the force acting on this small area as <script type="math/tex">\mathsf{t}(\mathsf{x},t,\mathsf{n}(\mathsf{x},t))\Delta a</script>. We will now <em>extend</em> the traction defined on the surface <script type="math/tex">\partial B_t</script> to the whole of <script type="math/tex">B_t</script> so that given any <script type="math/tex">\mathsf{x} \in B_t</script> and <script type="math/tex">\mathsf{n} \in T_{\mathsf{x}}B_t</script>, we have uniquely defined vector <script type="math/tex">\mathsf{t}(\mathsf{x},t,\mathsf{n}) \in T_{\mathsf{x}}B_t</script>. The idea behind this extension is that we can compute a force on every infinitesimal area at every point in the continuum, as shown in the following figure:</p>
+<p><img alt="Traction vector" src="../pics/traction_vector.png" /></p>
+<p>We will take it as a basic postulate of continuum mechanics that this extension is always well-defined. The simplest means to appreciate this postulate is by going back to the spring mass analogy given earlier - any force applied on the surface atoms <em>percolates</em> to the interior as a consequence of the collective response of <em>all</em> the springs to the applied force. </p>
+<p>We are now in a position to state an important postulate: we will henceforth consider the traction vector field as being objective. This means that if two observers <script type="math/tex">\mathcal{O}</script> and <script type="math/tex">\mathcal{O}^+</script> who are related by a Euclidean transformation observe the same process, then
+<script type="math/tex; mode=display">\mathsf{t}^+(\mathsf{x}^+,t^+,\mathsf{n}^+(\mathsf{x}^+,t^+)) = \mathsf{Q}(t) \mathsf{t}(\mathsf{x},t,\mathsf{t}(\mathsf{x},t)).</script>
+To understand the rationale behind the postulate concerning the objectivity of the traction vector field, note that the traction vector represents the internal response of the continuum due to externally applied forces and energy supplied in the form of heat. Thus the postulate that the traction vector field is objective simply means that this internal response of the continuum is independent of observer transformations. </p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>Another way of rationalizing this is to note that when viewed from the atomistic viewpoint, the energy of a collection of atoms, called an <em>interatomic potential</em>, can only depend on the relative positions of the atoms, and not on their absolute positions, if the energy is to describe a physically realistic internal energy that is invariant with respect to translations and rotations. Since Euclidean transformations do not change the relative positions of the atoms, it makes sense to postulate that the traction vector field is objective. Note that the need to make this a <em>postulate</em> is simply because the continuum is a mathematical construct, and the behavior of dynamical fields defined on the continuum need to be postulated based on the behavior of their true atomistic counterparts.</p>
+</div>
+<p>Finally, let us turn to the body force density. Rather than talk about the body force density <script type="math/tex">\mathsf{b}</script> directly, we will consider instead the quantity <script type="math/tex">\mathsf{b} - \mathsf{a}</script>, and postulate that this quantity is objective. Thus, from the point of view of two observers <script type="math/tex">\mathcal{O}</script> and <script type="math/tex">\mathcal{O}^+</script> who are related by a Euclidean transformation, we postulate that
+<script type="math/tex; mode=display">\mathsf{b}^+(\mathsf{x}^+,t^+) - \mathsf{a}^+(\mathsf{x}^+,t^+) = \mathsf{Q}(t)(\mathsf{b}(\mathsf{x},t) - \mathsf{a}(\mathsf{x},t)).</script>
+Recall that we studied the transformation rules for the spatial accleration (which is <em>not</em> an objective vector field) earlier. Using that in conjunction with the equation presented above gives the observer transformation rule for the body force density.</p>
+<p>To understand the idea behind this postulate, it is helpful to consider a very simple system of a mass connected by a spring to a stationary point. Assuming the spring to be linear with a spring constant <script type="math/tex">k</script>, the equation governing the dynamics of the mass when subject to a force <script type="math/tex">mb</script>, according to observer <script type="math/tex">\mathcal{O}</script>, is given by
+<script type="math/tex; mode=display">mb - k(x - x_0) = ma.</script>
+Here, <script type="math/tex">\mathsf{x}_0</script> is the coordinate of the fixed point to which the spring is attached. The same equation takes the following form according to an observer <script type="math/tex">\mathcal{O}^+</script> who is related to <script type="math/tex">\mathcal{O}</script> by a Euclidean transformation:
+<script type="math/tex; mode=display">mb^+ - k(x^+ - x_0^+) = ma^+.</script>
+Using the fact that <script type="math/tex">x^+ - x_0^+ = \mathsf{Q}(t)(x - x_0)</script>, it is easy to see that
+<script type="math/tex; mode=display">b^+ - a^+ = Q(b - a).</script>
+This is just the transformation rule postulated earlier. While this does not <em>prove</em> the postulate (which is why it is a postulate in the first place), it provides a simple means to appreciate why the postulate is formulated in its specific form.</p>
 <h2 id="mass-and-linear-momentum-balance">Mass and linear momentum balance</h2>
 <p>...</p>
 <h2 id="angular-momentum-balance">Angular momentum balance</h2>
