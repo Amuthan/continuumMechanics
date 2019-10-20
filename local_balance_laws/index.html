@@ -40,7 +40,7 @@
     
     
       
-        <title>Introduction - Continuum Mechanics</title>
+        <title>Local balance laws - Continuum Mechanics</title>
       
     
     
@@ -89,7 +89,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#overview-of-course-contents" tabindex="1" class="md-skip">
+      <a href="#local-form-of-balance-principles" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -114,7 +114,7 @@
               Continuum Mechanics
             </span>
             <span class="md-header-nav__topic">
-              Introduction
+              Local balance laws
             </span>
           
         </div>
@@ -192,63 +192,11 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Introduction
-      </label>
-    
-    <a href="./" title="Introduction" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../intro/" title="Introduction" class="md-nav__link">
       Introduction
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#continuum-hypothesis" title="Continuum hypothesis" class="md-nav__link">
-    Continuum hypothesis
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#modeling-continua" title="Modeling continua" class="md-nav__link">
-    Modeling continua
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#outline" title="Outline" class="md-nav__link">
-    Outline
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
     
@@ -328,11 +276,56 @@
       
       
 
+  
 
-  <li class="md-nav__item">
-    <a href="../local_balance_laws/" title="Local balance laws" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Local balance laws
+      </label>
+    
+    <a href="./" title="Local balance laws" class="md-nav__link md-nav__link--active">
       Local balance laws
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#local-form-of-the-first-law-of-thermodynamics" title="Local form of the first law of thermodynamics" class="md-nav__link">
+    Local form of the first law of thermodynamics
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#local-form-of-the-second-law-of-thermodynamics" title="Local form of the second law of thermodynamics" class="md-nav__link">
+    Local form of the second law of thermodynamics
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
     
@@ -357,22 +350,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#continuum-hypothesis" title="Continuum hypothesis" class="md-nav__link">
-    Continuum hypothesis
+  <a href="#local-form-of-the-first-law-of-thermodynamics" title="Local form of the first law of thermodynamics" class="md-nav__link">
+    Local form of the first law of thermodynamics
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#modeling-continua" title="Modeling continua" class="md-nav__link">
-    Modeling continua
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#outline" title="Outline" class="md-nav__link">
-    Outline
+  <a href="#local-form-of-the-second-law-of-thermodynamics" title="Local form of the second law of thermodynamics" class="md-nav__link">
+    Local form of the second law of thermodynamics
   </a>
   
 </li>
@@ -394,31 +380,90 @@
               
                 
                 
-                <h1 id="overview-of-course-contents">Overview of course contents</h1>
-<p>Welcome to <em>AE 639: Continuum Mechanics</em>! In this course, we will learn the basic principles how to model the mechanical behavior of continua. These notes assume a prior background in linear algebra and Euclidean tensor analysis; an introduction to the relevant topics may be found <a href="https://amuthan.github.io/tensors-intro/">here</a>.</p>
-<h2 id="continuum-hypothesis">Continuum hypothesis</h2>
-<div class="admonition danger">
-<p class="admonition-title">WORK IN PROGRESS</p>
-<p>To be completed.</p>
+                <h1 id="local-form-of-balance-principles">Local form of balance principles</h1>
+<p>The Green-Nagdhi-Rivlin theorem, in conjunction with the various localization lemmas presented earlier, allowed us to derive the balance laws associated with mass, linear momentum and angular momentum. We will now use these balance laws to develop the local version of the first and second laws of thermodynamics. We will subsequently present the Lagrangian version of all the balance principles of continuum mechanics.</p>
+<h2 id="local-form-of-the-first-law-of-thermodynamics">Local form of the first law of thermodynamics</h2>
+<p>Recall that the first law of thermodynamics for continua takes the following form:
+<script type="math/tex; mode=display">\begin{split}
+\frac{d}{dt} \int_{B_t} \rho(\mathsf{x},t)\left(e(\mathsf{x},t) + \frac{1}{2}\mathsf{v}(\mathsf{x},t)\cdot\mathsf{v}(\mathsf{x},t)\right)\,dv &= \int_{B_t} \rho(\mathsf{x},t)\mathsf{b}(\mathsf{x},t)\cdot\mathsf{v}(\mathsf{x},t)\,dv\\
+ &+ \int_{\partial B_t} \mathsf{t}(\mathsf{x},t,\mathsf{n}(\mathsf{x},t))\cdot\mathsf{v}(\mathsf{x},t)\,da\\
+ &+ \int_{B_t} \rho(\mathsf{x},t)r(\mathsf{x},t)\,dv\\
+ &- \int_{\partial B_t} h(\mathsf{x},t,\mathsf{n}(\mathsf{x},t))\,da.
+\end{split}</script>
+Using the relation between the traction vector and the Cauchy stress tensor, and the Reynolds' transport theorem, we see that the first law can be written as
+<script type="math/tex; mode=display">
+\int_{B_t}\left(\left(\rho\frac{De}{Dt} + \rho (\mathsf{a} - \mathsf{b})\cdot\mathsf{v} - \text{div }(\mathsf{v}\cdot\sigma)\right) - \rho r\right)dv = -\int_{\partial B_t} h\,da.
+</script>
+Note that this equation has the familiar "<em>volume integral =  surface integral</em>" structure, which suggests a use of the Cauchy tetrahedron argument to localize it. A straightforward application of the Cauch localization lemma informs us that thre exists a vector field <script type="math/tex">\mathsf{q}(\mathsf{x},t)</script> in <script type="math/tex">B_t</script> such that for any <script type="math/tex">\mathsf{x} \in B_t</script> and <script type="math/tex">\mathsf{n} \in T_{\mathsf{x}}B_t</script>, 
+<script type="math/tex; mode=display">h(\mathsf{x},t,\mathsf{n}) = \mathsf{q}(\mathsf{x},)\cdot\mathsf{n}.</script>
+The vector field <script type="math/tex">\mathsf{q}</script> is called the <strong>heat flux</strong>. Using the definition of the heat flux and the divergence theorem, we see that
+<script type="math/tex; mode=display">\begin{split}
+\int_{\partial B_t} h\,da &= \int_{\partial B_t} \mathsf{q}\cdot\mathsf{n} \,da\\
+ &= \int_{B_t} \text{div }\mathsf{q}\,dv.
+\end{split}</script>
+Substituting this in the integral form of the first law, we get
+<script type="math/tex; mode=display">
+\int_{B_t}\left(\left(\rho\frac{De}{Dt} + \rho (\mathsf{a} - \mathsf{b})\cdot\mathsf{v} - \text{div }(\mathsf{v}\cdot\sigma)\right) - (\rho r - \text{div }\mathsf{q})\right)dv = 0.
+</script>
+The localization lemma then allows us to express this as the following partial differential equation:
+<script type="math/tex; mode=display">
+\rho\frac{De}{Dt} + \rho (\mathsf{a} - \mathsf{b})\cdot\mathsf{v} - \text{div }(\mathsf{v}\cdot\sigma) = \rho r - \text{div }\mathsf{q}.
+</script>
+This equation can be simplified by noting that 
+<script type="math/tex; mode=display">\begin{split}
+\text{div }(\mathsf{v}\cdot\sigma) &= \sum \frac{\partial}{\partial x_j}(v_i \sigma_{ij})\\
+&= \sum v_i \frac{\partial \sigma_{ij}}{\partial x_j} + \frac{\partial v_i}{\partial x_j}\sigma_{ij}\\
+&= \mathsf{v} \cdot \text{div }\sigma + \sigma \cdot \text{grad }\mathsf{v}.
+\end{split}</script>
+Using this in the local form of the first law in conjunction with the linear momentum balance relation, we get the following local form of the first law of thermodynamics:
+<script type="math/tex; mode=display">
+\rho\frac{De}{Dt} = \sigma \cdot \text{grad }\mathsf{v} + \rho r - \text{div }\mathsf{q}.
+</script>
+Using the fact that the Cauchy stress tensor is symmetric, we can write the term <script type="math/tex">\sigma \cdot \text{grad }\mathsf{v}</script> as 
+<script type="math/tex; mode=display">\begin{split}
+\sigma \cdot \text{grad }\mathsf{v} &= \frac{1}{2}(\sigma + \sigma^T)\cdot \text{grad }\mathsf{v}\\
+ &= \sigma \cdot \frac{1}{2}(\text{grad }\mathsf{v} + (\text{grad }\mathsf{v})^T)\\
+ &= \sigma \cdot \mathsf{d},
+\end{split}</script>
+where <script type="math/tex">\mathsf{d}(\mathsf{x},t):T_{\mathsf{x}}B_t \to T_{\mathsf{x}}B_t</script>, defined as
+<script type="math/tex; mode=display">
+\mathsf{d}(\mathsf{x},t) = \frac{1}{2}\left(\text{grad }\mathsf{v}(\mathsf{x},t) + (\text{grad }\mathsf{v}(\mathsf{x},t))^T\right),
+</script>
+is the <strong>rate of deformation</strong> tensor. Using this, we obtain the final expression for the local form of the first law of thermodynamics as 
+<script type="math/tex; mode=display">
+\rho(\mathsf{x},t)\frac{De(\mathsf{x},t)}{Dt} = \sigma(\mathsf{x},t)\cdot\mathsf{d}(\mathsf{x},t) + \rho(\mathsf{x},t)r(\mathsf{x},t) - \text{div }\mathsf{q}(\mathsf{x},t).
+</script>
+This is also called the <strong>energy balance</strong> equation for obvious reasons.</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>Notice how the energy balance principle does not explicitly involve the body force and spatial acceleration terms.</p>
 </div>
-<h2 id="modeling-continua">Modeling continua</h2>
+<h2 id="local-form-of-the-second-law-of-thermodynamics">Local form of the second law of thermodynamics</h2>
+<p>Let us now turn to the second law of thermodynamics. Recall that the Clausius-Duhem inequality reads
+<script type="math/tex; mode=display">\frac{d}{dt}\int_{B_t} \rho(\mathsf{x},t)\eta(\mathsf{x},t)\,dv \ge \int_{B_t} \frac{\rho(\mathsf{x},t)r(\mathsf{x},t)}{\theta(\mathsf{x},t)}\,dv - \int_{\partial B_t} \frac{h(\mathsf{x},t,\mathsf{n}(\mathsf{x},t))}{\theta(\mathsf{x},t)}\,da.</script>
+It is a straightforward exercise to localize the second law. Using the  relation <script type="math/tex">\mathsf{h} = \mathsf{q}\cdot\mathsf{n}</script> and the divergence theorem, we see that
+<script type="math/tex; mode=display">
+\frac{d}{dt}\int_{B_t} \rho(\mathsf{x},t)\eta(\mathsf{x},t)\,dv \ge \int_{B_t} \left(\frac{\rho(\mathsf{x},t)r(\mathsf{x},t)}{\theta(\mathsf{x},t)} - \text{div }\left(\frac{\mathsf{q}}{\theta}\right)\right)\,dv.
+</script>
+The localization lemma then yields the following local form of the second law of thermodynamics:
+<script type="math/tex; mode=display">
+\rho\theta\frac{D\eta}{Dt} \ge \rho r - \text{div }\left(\mathsf{q}{\theta}\right).
+</script>
+This expression can be simplified by noting the following relations:
+<script type="math/tex; mode=display">\begin{split}
+\text{div }\frac{\mathsf{q}}{\theta} &= \sum \frac{\partial}{\partial x_i}\left(\frac{q_i}{\theta}\right)\\
+ &= \frac{1}{\theta}]\sum \frac{\partial q_i}{\partial x_i} - \sum \frac{q_i}{\theta^2}\frac{\partial \theta}{\partial x_i}\\
+ &= \frac{1}{\theta}\text{div }\mathsf{q} - \frac{\mathsf{q}}{\theta^2}\cdot\text{grad }\theta.
+\end{split}</script>
+We can thus express the local form of the second law as
+<script type="math/tex; mode=display">
+\rho(\mathsf{x},t)\theta(\mathsf{x},t)\frac{D\eta(\mathsf{x},t)}{Dt} \ge \rho(\mathsf{x},t)r(\mathsf{x},t) - \text{div }\mathsf{q}(\mathsf{x},t) + \frac{\mathsf{q}(\mathsf{x},t)}{\theta(\mathsf{x},t)}\cdot\text{grad }\theta(\mathsf{x},t).
+</script>
+This is also known as the <strong>entropy inequality</strong>, or the <strong>dissipation inequality</strong>.</p>
 <div class="admonition danger">
-<p class="admonition-title">WORK IN PROGRESS</p>
-<p>To be completed.</p>
+<p class="admonition-title">Work in progress!</p>
+<p>...</p>
 </div>
-<p>The primary point of view that we will develop here is that the mechanics of continua is a sub-branch of thermodynamics. </p>
-<p>We will emphasize on two aspects in particular:</p>
-<ul>
-<li>Coordinate system invariance, and</li>
-<li>Observer invariance,</li>
-</ul>
-<p>of the first and second laws of thermodynamics.</p>
-<h2 id="outline">Outline</h2>
-<p>Kinematics</p>
-<p>Balance principles</p>
-<p>Constitutive behavior</p>
-<p>Initial and boundary value problems</p>
-<p>Variational principles</p>
                 
                   
                 
@@ -439,7 +484,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href=".." title="Home" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../gnr/" title="Green-Naghdi-Rivlin theorem" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -448,25 +493,11 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Home
+                Green-Naghdi-Rivlin theorem
               </span>
             </div>
           </a>
         
-        
-          <a href="../kinematics_intro/" title="Kinematics - basic definitions" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Kinematics - basic definitions
-              </span>
-            </div>
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
-            </div>
-          </a>
         
       </nav>
     </div>
