@@ -305,15 +305,42 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#eulerian-spatial-balance-laws" title="Eulerian spatial balance laws" class="md-nav__link">
+    Eulerian spatial balance laws
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#local-form-of-the-first-law-of-thermodynamics" title="Local form of the first law of thermodynamics" class="md-nav__link">
     Local form of the first law of thermodynamics
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#local-form-of-the-second-law-of-thermodynamics" title="Local form of the second law of thermodynamics" class="md-nav__link">
     Local form of the second law of thermodynamics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary-of-balance-principles" title="Summary of balance principles" class="md-nav__link">
+    Summary of balance principles
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lagrangian-form-of-balance-principles" title="Lagrangian form of balance principles" class="md-nav__link">
+    Lagrangian form of balance principles
   </a>
   
 </li>
@@ -350,15 +377,42 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#eulerian-spatial-balance-laws" title="Eulerian spatial balance laws" class="md-nav__link">
+    Eulerian spatial balance laws
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#local-form-of-the-first-law-of-thermodynamics" title="Local form of the first law of thermodynamics" class="md-nav__link">
     Local form of the first law of thermodynamics
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#local-form-of-the-second-law-of-thermodynamics" title="Local form of the second law of thermodynamics" class="md-nav__link">
     Local form of the second law of thermodynamics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary-of-balance-principles" title="Summary of balance principles" class="md-nav__link">
+    Summary of balance principles
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lagrangian-form-of-balance-principles" title="Lagrangian form of balance principles" class="md-nav__link">
+    Lagrangian form of balance principles
   </a>
   
 </li>
@@ -382,7 +436,9 @@
                 
                 <h1 id="local-form-of-balance-principles">Local form of balance principles</h1>
 <p>The Green-Nagdhi-Rivlin theorem, in conjunction with the various localization lemmas presented earlier, allowed us to derive the balance laws associated with mass, linear momentum and angular momentum. We will now use these balance laws to develop the local version of the first and second laws of thermodynamics. We will subsequently present the Lagrangian version of all the balance principles of continuum mechanics.</p>
-<h2 id="local-form-of-the-first-law-of-thermodynamics">Local form of the first law of thermodynamics</h2>
+<h2 id="eulerian-spatial-balance-laws">Eulerian spatial balance laws</h2>
+<p>Notice that all the discussion so far is concerned with a spatial description of the various continuum fields. We will now summarize them and cast them in a form that highlights their physical significance.</p>
+<h3 id="local-form-of-the-first-law-of-thermodynamics">Local form of the first law of thermodynamics</h3>
 <p>Recall that the first law of thermodynamics for continua takes the following form:
 <script type="math/tex; mode=display">\begin{split}
 \frac{d}{dt} \int_{B_t} \rho(\mathsf{x},t)\left(e(\mathsf{x},t) + \frac{1}{2}\mathsf{v}(\mathsf{x},t)\cdot\mathsf{v}(\mathsf{x},t)\right)\,dv &= \int_{B_t} \rho(\mathsf{x},t)\mathsf{b}(\mathsf{x},t)\cdot\mathsf{v}(\mathsf{x},t)\,dv\\
@@ -438,7 +494,7 @@ This is also called the <strong>energy balance</strong> equation for obvious rea
 <p class="admonition-title">Remark</p>
 <p>Notice how the energy balance principle does not explicitly involve the body force and spatial acceleration terms.</p>
 </div>
-<h2 id="local-form-of-the-second-law-of-thermodynamics">Local form of the second law of thermodynamics</h2>
+<h3 id="local-form-of-the-second-law-of-thermodynamics">Local form of the second law of thermodynamics</h3>
 <p>Let us now turn to the second law of thermodynamics. Recall that the Clausius-Duhem inequality reads
 <script type="math/tex; mode=display">\frac{d}{dt}\int_{B_t} \rho(\mathsf{x},t)\eta(\mathsf{x},t)\,dv \ge \int_{B_t} \frac{\rho(\mathsf{x},t)r(\mathsf{x},t)}{\theta(\mathsf{x},t)}\,dv - \int_{\partial B_t} \frac{h(\mathsf{x},t,\mathsf{n}(\mathsf{x},t))}{\theta(\mathsf{x},t)}\,da.</script>
 It is a straightforward exercise to localize the second law. Using the  relation <script type="math/tex">\mathsf{h} = \mathsf{q}\cdot\mathsf{n}</script> and the divergence theorem, we see that
@@ -452,7 +508,7 @@ The localization lemma then yields the following local form of the second law of
 This expression can be simplified by noting the following relations:
 <script type="math/tex; mode=display">\begin{split}
 \text{div }\frac{\mathsf{q}}{\theta} &= \sum \frac{\partial}{\partial x_i}\left(\frac{q_i}{\theta}\right)\\
- &= \frac{1}{\theta}]\sum \frac{\partial q_i}{\partial x_i} - \sum \frac{q_i}{\theta^2}\frac{\partial \theta}{\partial x_i}\\
+ &= \frac{1}{\theta}\sum \frac{\partial q_i}{\partial x_i} - \sum \frac{q_i}{\theta^2}\frac{\partial \theta}{\partial x_i}\\
  &= \frac{1}{\theta}\text{div }\mathsf{q} - \frac{\mathsf{q}}{\theta^2}\cdot\text{grad }\theta.
 \end{split}</script>
 We can thus express the local form of the second law as
@@ -460,6 +516,133 @@ We can thus express the local form of the second law as
 \rho(\mathsf{x},t)\theta(\mathsf{x},t)\frac{D\eta(\mathsf{x},t)}{Dt} \ge \rho(\mathsf{x},t)r(\mathsf{x},t) - \text{div }\mathsf{q}(\mathsf{x},t) + \frac{\mathsf{q}(\mathsf{x},t)}{\theta(\mathsf{x},t)}\cdot\text{grad }\theta(\mathsf{x},t).
 </script>
 This is also known as the <strong>entropy inequality</strong>, or the <strong>dissipation inequality</strong>.</p>
+<h3 id="summary-of-balance-principles">Summary of balance principles</h3>
+<p>We have now derived all the fundamental balance principles of continuum mechanics starting from the first and second laws of thermodynamics. Recall that we obtained these balance laws by postulating the invariance of the first and second laws of thermodynamics with respect to Euclidean observer transformations. Let us now summarize these balance principles:</p>
+<table>
+<thead>
+<tr>
+<th>Balance law</th>
+<th>Local form</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mass</td>
+<td>
+<script type="math/tex">\dot{\rho}(\mathsf{x},t) + \rho(\mathsf{x},t)\,\text{div }\mathsf{v}(\mathsf{x},t) = 0</script>
+</td>
+</tr>
+<tr>
+<td>Linear momentum</td>
+<td>
+<script type="math/tex">\rho(\mathsf{x},t)\dot{\mathsf{v}}(\mathsf{x},t) = \rho(\mathsf{x},t)\mathsf{b}(\mathsf{x},t) - \text{div }\sigma(\mathsf{x},t)</script>
+</td>
+</tr>
+<tr>
+<td>Angular momentum</td>
+<td>
+<script type="math/tex">\sigma(\mathsf{x},t) = \sigma^T(\mathsf{x},t)</script>
+</td>
+</tr>
+<tr>
+<td>Energy</td>
+<td>
+<script type="math/tex">\rho(\mathsf{x},t)\dot{e}(\mathsf{x},t) = \sigma(\mathsf{x},t)\cdot\mathsf{d}(\mathsf{x},t) + \rho(\mathsf{x},t)r(\mathsf{x},t) - \text{div }\mathsf{q}(\mathsf{x},t)</script>
+</td>
+</tr>
+<tr>
+<td>Entropy</td>
+<td>
+<script type="math/tex">\rho(\mathsf{x},t)\theta(\mathsf{x},t)\dot{\eta}(\mathsf{x},t) \ge \rho(\mathsf{x},t)r(\mathsf{x},t) - \text{div }\mathsf{q}(\mathsf{x},t) + \left(\mathsf{q}(\mathsf{x},t)\cdot\text{grad }\theta(\mathsf{x},t)\right)/\theta(\mathsf{x},t)</script>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>In all the equations displayed above, an overdot represents the <em>material time derivative</em>. This is a convention often used in continuum mechanics. Just to reiterate, the quantity <script type="math/tex">\dot{\rho}(\mathsf{x},t)</script> denotes the material time derivative of the mass density, and not the partiat time derivative of the mass density. </p>
+</div>
+<p>All the balance equations displayed above can be written in the following form:
+<script type="math/tex; mode=display">\frac{\partial \chi(\mathsf{x},t)}{\partial t} + \text{div }\phi(\mathsf{x},t) = \varsigma(\mathsf{x},t).</script>
+Here, <script type="math/tex">\chi</script> is a physical <strong>field</strong> variable, <script type="math/tex">\phi</script> is the <strong>flux</strong> associated with the field <script type="math/tex">\chi</script>, and <script type="math/tex">\varsigma</script> is a <strong>source</strong> term for the field <script type="math/tex">\chi</script>. The entropy inequality can also be written in the following form:
+<script type="math/tex; mode=display">\frac{\partial \chi(\mathsf{x},t)}{\partial t} + \text{div }\phi(\mathsf{x},t) \ge \varsigma(\mathsf{x},t).</script>
+Notice the formal similarity of this inequality with that of the other balance equalities. The various field, flux and source terms are listed below:</p>
+<table>
+<thead>
+<tr>
+<th>Physical variable</th>
+<th>Field</th>
+<th>Flux</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mass</td>
+<td>
+<script type="math/tex">\rho</script>
+</td>
+<td>
+<script type="math/tex">\rho\mathsf{v}</script>
+</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Linear momentum</td>
+<td>
+<script type="math/tex">\rho\mathsf{v}</script>
+</td>
+<td>
+<script type="math/tex">\rho\,\mathsf{v}\otimes\mathsf{v} - \sigma</script>
+</td>
+<td>
+<script type="math/tex">\rho\mathsf{b}</script>
+</td>
+</tr>
+<tr>
+<td>Angular momentum</td>
+<td>
+<script type="math/tex">\mathsf{x} \times \rho\mathsf{v}</script>
+</td>
+<td>
+<script type="math/tex">\mathsf{x} \times (\rho\,\mathsf{v}\otimes\mathsf{v} - \sigma)</script>
+</td>
+<td>
+<script type="math/tex">\mathsf{x}\times\rho\mathsf{b}</script>
+</td>
+</tr>
+<tr>
+<td>Energy</td>
+<td>
+<script type="math/tex">\rho\left(e + \frac{1}{2}\mathsf{v}\cdot\mathsf{v}\right)</script>
+</td>
+<td>
+<script type="math/tex">\rho\left(e + \frac{1}{2}\mathsf{v}\cdot\mathsf{v}\right)\,\mathsf{v} + \mathsf{q} - \mathsf{v}\cdot\sigma</script>
+</td>
+<td>
+<script type="math/tex">\rho r + \rho \mathsf{v}\cdot\mathsf{b}</script>
+</td>
+</tr>
+<tr>
+<td>Entropy</td>
+<td>
+<script type="math/tex">\rho\eta</script>
+</td>
+<td>
+<script type="math/tex">\rho\eta\,\mathsf{v} + q/\theta</script>
+</td>
+<td>
+<script type="math/tex">\rho r/\theta</script>
+</td>
+</tr>
+</tbody>
+</table>
+<p>This form of expressing the balance principles is known as the <strong>master balance equation/inequality</strong>. This form is especially convenient to provide a nice physical interpretation to the balance principles. The master form of the balance principles informs us that the rate at which a continuum field variable evolves in a small volume inside the continuum is a consequence of the influx of a corresponding  flux variable across the surface of the volume element, and as a consequence of an internal source term for this field variable. </p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>The master form of the balance principles is especially useful for the <em>control volume</em> methods in fluid dynamics.</p>
+</div>
+<h2 id="lagrangian-form-of-balance-principles">Lagrangian form of balance principles</h2>
 <div class="admonition danger">
 <p class="admonition-title">Work in progress!</p>
 <p>...</p>
