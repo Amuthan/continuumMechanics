@@ -765,9 +765,99 @@ The localization lemma immediately yields the following differential equation:
 This equation is the continuum analogue of Newton's second laws <script type="math/tex">ma = F</script>, and is hence called the <strong>linear momentum balance</strong> equation. The means to understand this physically is as follows. As a consequence of the application of external forces (both body forces and surface tractions), the continuum responds by generating <em>generalized internal forces</em>, which we have modeled using the Cauchy stress tensor. The term <script type="math/tex">\mathsf{b}(\mathsf{x},t) + \text{div }\sigma(\mathsf{x},t)</script> thus represents the net force acting at an <em>interior</em> point <script type="math/tex">\mathsf{x}\in B_t</script>. This net force is equal to its acceleration <script type="math/tex">\rho(\mathsf{x},t)\mathsf{a}(\mathsf{x},t)</script>.</p>
 <p>We have thus obtained <em>both</em> the balance of mass and balance of linear momentum from the first law of thermodynamics by merely insisting that the first law is invariant with respect to two observers who are in relative motion with respect to each other with a constant velocity!</p>
 <h3 id="angular-momentum-balance">Angular momentum balance</h3>
-<p>...</p>
+<p>In the previous section, we obtained both the mass and linear momentum conservation equations as a consequence of the invariance of the first law of thermodynamics with respect to Euclidean transformations characterized by a constant velocity relative motion of the observers.  Let us now consider the consequences of the first law being invariant with respect to observers <script type="math/tex">\mathcal{O}, \mathcal{O}^+</script> whose relative orientations change with time:
+<script type="math/tex; mode=display">\mathsf{x}^+ = \mathsf{Q}(t)\mathsf{x}, \qquad t^+ = t.</script>
+Note that this implies in particular that the velocity transforms as follows:
+<script type="math/tex; mode=display">\mathsf{v}^+ = \mathsf{Q}(t)\mathsf{v} + \dot{\mathsf{Q}}(t)\mathsf{x}.</script>
+Before we get into the implications of this Euclidean observer transformation, let us note a few consequences of the fact that <script type="math/tex">\mathsf{Q}(t)</script> is orthogonal. First, note that
+<script type="math/tex; mode=display">\mathsf{Q}^T(t)\mathsf{Q}(t) = \mathsf{I} \quad\Rightarrow\quad \dot{\mathsf{Q}}^T(t)\mathsf{Q}(t) + \mathsf{Q}^T(t)\dot{\mathsf{Q}}(t) = \mathsf{0}.</script>
+Defining the linear map <script type="math/tex">\Omega(t):\mathbb{R}^3 \to \mathbb{R}^3</script> as
+<script type="math/tex; mode=display">\Omega(t) = \dot{\mathsf{Q}}^T(t)\mathsf{Q}(t),</script>
+it is evident that <script type="math/tex">\Omega(t)</script> is skew-symmetric: <script type="math/tex">\Omega^T(t) = -\Omega(t)</script>.</p>
+<p>Let us now look into the first law of thermodynamics according to the observer <script type="math/tex">\mathcal{O}^+</script>:
+<script type="math/tex; mode=display">\begin{split}
+\frac{d}{dt^+}\int_{B_t^+} \rho^+\left(e^+ + \frac{1}{2}\mathsf{v}^+\cdot\mathsf{v}^+\right)\,dv^+ &= \int_{B_t^+} \rho^+ \mathsf{b}^+\cdot\mathsf{v}^+\,dv^+ + \int_{\partial B_t^+} \mathsf{t}^+\cdot\mathsf{v}^+\,da^+\\
+ & + \int_{B_t^+} \rho^+r^+\,dv^+ - \int_{\partial B_t^+} h^+\,da^+.
+\end{split}</script>
+Let us rewrite this using the Reynolds' transport theorem:
+<script type="math/tex; mode=display">\begin{split}
+\frac{d}{dt^+}\int_{B_t^+} \rho^+ e^+ \, dv + \int_{B_t^+} \rho^+ \mathsf{a}^+\cdot\mathsf{v}^+ \, dv^+ &= \int_{B_t^+} \rho^+ \mathsf{b}^+\cdot\mathsf{v}^+\,dv^+ + \int_{\partial B_t^+} \mathsf{t}^+\cdot\mathsf{v}^+\,da^+\\
+ & + \int_{B_t^+} \rho^+r^+\,dv^+ - \int_{\partial B_t^+} h^+\,da^+.
+\end{split}</script>
+</p>
+<p>Changing coordinates from <script type="math/tex">(\mathsf{x}^+,t^+)</script> to <script type="math/tex">(\mathsf{x},t)</script>, and using the corresponding transformation rules for the various continuum fields, we get the following equation:
+<script type="math/tex; mode=display">\begin{split}
+\frac{d}{dt}\int_{B_t} \rho e \,dv + \int_{B_t} \rho\mathsf{Q}(\mathsf{a} - \mathsf{b})\cdot(\mathsf{Q}\mathsf{v} + \dot{\mathsf{Q}}\mathsf{x})\,dv &= \int_{\partial B_t} \mathsf{Q}\mathsf{t} \cdot (\mathsf{Q}\mathsf{v} + \dot{\mathsf{Q}}\mathsf{x}) \, da\\
+& + \int_{B_t} \rho r \,dv - \int_{\partial B_t} h \, da.
+\end{split}</script>
+Using the fact that <script type="math/tex">\mathsf{Q}(t)</script> is orthogonal and the definition of <script type="math/tex">\Omega(t)</script>, we can simplify the term <script type="math/tex">\mathsf{Q}\mathsf{t} \cdot (\mathsf{Q}\mathsf{v} + \dot{\mathsf{Q}}\mathsf{x})</script> as follows:
+<script type="math/tex; mode=display">\begin{split}
+\mathsf{Q}\mathsf{t} \cdot (\mathsf{Q}\mathsf{v} + \dot{\mathsf{Q}}\mathsf{x}) &= \mathsf{t}\cdot\mathsf{Q}^T(\mathsf{Q}\mathsf{v} + \dot{\mathsf{Q}}\mathsf{x})\\
+&= \mathsf{t}\cdot(\mathsf{v} + \Omega \mathsf{x}).
+\end{split}</script>
+The term <script type="math/tex">\mathsf{Q}(\mathsf{a} - \mathsf{b})\cdot(\mathsf{Q}\mathsf{v} + \dot{\mathsf{Q}}\mathsf{x})</script> can be simplified similarly. Putting all this in the first law, we get
+<script type="math/tex; mode=display">\begin{split}
+\frac{d}{dt}\int_{B_t} \rho e \, dv + \int_{B_t} \rho(\mathsf{a} - \mathsf{b})\cdot(\mathsf{v} + \Omega\mathsf{x})\,dv &= \int_{\partial B_t} \mathsf{t} \cdot (\mathsf{v} + \Omega\mathsf{x}) \, da\\
+& + \int_{B_t} \rho r \,dv - \int_{\partial B_t} h \, da.
+\end{split}</script>
+Comparing this with the first law of thermodynamics according to the observer <script type="math/tex">\mathcal{O}</script>, in conjunction with the Reynolds' transport theorem,
+<script type="math/tex; mode=display">\frac{d}{dt}\int_{B_t} \rho e \, dv + \int_{B_t} \rho(\mathsf{a} - \mathsf{b})\cdot\mathsf{v}\,dv = \int_{\partial B_t}\mathsf{t}\cdot\mathsf{v}\,da + \int_{B_t} \rho r \, dv - \int_{\partial B_t} h\,da,</script>
+we immediately get the following equation:
+<script type="math/tex; mode=display">
+\int_{B_t} \rho(\mathsf{a} - \mathsf{b})\cdot\Omega\mathsf{x}\,dv = \int_{\partial B_t} \mathsf{t}\cdot\Omega\mathsf{x}\,da.
+</script>
+Let us now express the surface traction in terms of the Cauchy stress tensor, and the divergence theorem, to transform the surface integral in the right hand side into a volume integral as follows:
+<script type="math/tex; mode=display">\begin{split}
+\int_{B_t} \rho(\mathsf{a} - \mathsf{b})\cdot\Omega\mathsf{x}\,dv &= \int_{\partial B_t} \Omega\mathsf{x}\cdot\sigma\mathsf{n}\,da\\
+ &= \int_{B_t} \text{div }(\Omega \mathsf{x} \cdot \sigma)\,dv.
+\end{split}</script>
+To proceed further, let us simplify the expression <script type="math/tex">\text{div }(\Omega\mathsf{x}\cdot\sigma)</script>. It is helpful to temporarily adopt a Cartesian coordinate system for this purpose:
+<script type="math/tex; mode=display">\begin{split}
+\text{div }(\Omega\mathsf{x}\cdot\sigma) &= \sum \frac{\partial}{\partial x_j}(\Omega_{ik}x_k\sigma_{ij})\\
+ &= \sum \Omega_{ij}\sigma_{ij} + \sum W_{ik}x_k\frac{\partial \sigma_{ij}}{\partial x_j}\\
+ &= \sigma \cdot \Omega + \Omega \mathsf{x} \cdot \text{div }\sigma.
+\end{split}</script>
+Using this in the result, we see that
+<script type="math/tex; mode=display">
+\int_{B_t} \Omega\mathsf{x}\cdot(\rho\mathsf{a} - \rho\mathsf{b} - \text{div }\sigma)\,dv = \int_{B_t} \sigma \cdot \Omega \,dv.
+</script>
+The term on the left hand side of this equation vanishes on account of the balance of linear momentum that was discussed earlier. We thus arrive at the following equation:
+<script type="math/tex; mode=display">\int_{B_t} \sigma \cdot \Omega\, dv = 0.</script>
+The localization principle immediately yields the relation 
+<script type="math/tex; mode=display">\sigma \cdot \Omega = 0,</script>
+for <em>every</em> skew-symmetric map <script type="math/tex">\Omega</script>. Noting that the skew-symmetry of <script type="math/tex">\Omega</script> permits us to write <script type="math/tex">\Omega = (\Omega - \Omega^T)/2</script>, we see that
+<script type="math/tex; mode=display">0 = \sigma \cdot \Omega = \frac{1}{2}\sigma \cdot (\Omega - \Omega^T),</script>
+and hence that
+<script type="math/tex; mode=display">\sigma\cdot\Omega^T = \sigma\cdot\Omega.</script>
+Noting that <script type="math/tex">\sigma\cdot\Omega^T = \sigma^Tcdot\Omega</script>, as can be verified with a simple calculation in a Cartesian coordinate setting, we see that
+<script type="math/tex; mode=display">(\sigma - \sigma^T)\cdot\Omega = 0.</script>
+Since this is true for <em>every</em> skew-symmetry <script type="math/tex">\Omega</script>, it follows that
+<script type="math/tex; mode=display">\sigma = \sigma^T.</script>
+Thus, the requirement for the invariance of the first law of thermodynamics with respect to Eulidean observer transformation characterized by a rotation implies that the Cauchy stress tensor is symmetric. By looking at the implication of this result on a small cube centered at a point inside the continuum, we see that this states the fact that the net angular momentum of the cube is zero. For this reason, the symmetry of the Cauchy stress tensor is often called the <strong>balance of angular momentum</strong> equation.  </p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>A tacit assumtion that we have made throughout our discussion is that, unlike a body force density, there is <em>body couple density</em>. This fact turns out to be crucial in the symmetry of the Cauchy stress tensor. It is indeed possible to formulate continuum theories that do not make this assumption. One of the advantages of the approach we have adopted here is that it is straightforward to study such generalized continua using the principles presented here.</p>
+</div>
 <h2 id="summary-of-the-gnr-theorem">Summary of the GNR theorem</h2>
-<p>...</p>
+<p>The <strong>Green-Naghdi-Rivlin theorem</strong> essentially states the equivalence between the balance principles of continuum mechanics, namely the <em>mass conservation equation</em>,
+<script type="math/tex; mode=display">\frac{D\rho(\mathsf{x},t)}{Dt} + \rho(\mathsf{x},t)\,\text{div }\mathsf{v}(\mathsf{x},t) = 0,</script>
+the <em>linear momentum balance equation</em>,
+<script type="math/tex; mode=display">\rho(\mathsf{x},t)\frac{D \mathsf{v}(\mathsf{x},t)}{Dt} = \rho(\mathsf{x},t)\mathsf{b}(\mathsf{x},t) - \text{div }\sigma(\mathsf{x},t),</script>
+and the <em>angular momentum balance equation</em>,
+<script type="math/tex; mode=display">\sigma = \sigma^T,</script>
+with the <em>invariance</em> of the first and second laws of thermodynamics,
+<script type="math/tex; mode=display">\begin{split}
+\frac{d}{dt} \int_{B_t} \rho(\mathsf{x},t)\left(e(\mathsf{x},t) + \frac{1}{2}\mathsf{v}(\mathsf{x},t)\cdot\mathsf{v}(\mathsf{x},t)\right)\,dv &= \int_{B_t} \rho(\mathsf{x},t)\mathsf{b}(\mathsf{x},t)\cdot\mathsf{v}(\mathsf{x},t)\,dv\\
+ &+ \int_{\partial B_t} \mathsf{t}(\mathsf{x},t,\mathsf{n}(\mathsf{x},t))\cdot\mathsf{v}(\mathsf{x},t)\,da\\
+ &+ \int_{B_t} \rho(\mathsf{x},t)r(\mathsf{x},t)\,dv\\
+ &- \int_{\partial B_t} h(\mathsf{x},t,\mathsf{n}(\mathsf{x},t))\,da,\\
+\frac{d}{dt}\int_{B_t} \rho(\mathsf{x},t)\eta(\mathsf{x},t)\,dv \ge \int_{B_t} \frac{\rho(\mathsf{x},t)r(\mathsf{x},t)}{\theta(\mathsf{x},t)}\,dv &- \int_{\partial B_t} \frac{h(\mathsf{x},t,\mathsf{n}(\mathsf{x},t))}{\theta(\mathsf{x},t)}\,da,
+\end{split}</script>
+with respect to Euclidean observer transformations. This is a profound observation and is conceptually similar to the idea behind <em>Noether's theorem</em> in physics that shows that symmetries and conservation laws are essentially two sides of the same coin.</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>The approach taken to derive the balance principles for continua from the invariance of the laws of thermodynamics with respect to Euclidean observer transformations is admittedly more complex than the approach taken in typical engineering treatments of continuum mechanics. While the engineering approach is certainly easier to follows, the approach we have adopted is ultimately more powerful and provides more insight into the nature of the balance principles. Moreover, the derivation of balance principles for generalized continua, and/or other classes of space-time diffeomorphisms, say the one used in special relativity, is much more straightforward using the Green-Naghdi-Rivlin approach. </p>
+</div>
                 
                   
                 
