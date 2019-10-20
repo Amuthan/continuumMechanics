@@ -343,6 +343,26 @@
     Lagrangian form of balance principles
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mass-balance" title="Mass balance" class="md-nav__link">
+    Mass balance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#first-law-of-thermodynamics" title="First law of thermodynamics" class="md-nav__link">
+    First law of thermodynamics
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
       
@@ -414,6 +434,26 @@
   <a href="#lagrangian-form-of-balance-principles" title="Lagrangian form of balance principles" class="md-nav__link">
     Lagrangian form of balance principles
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mass-balance" title="Mass balance" class="md-nav__link">
+    Mass balance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#first-law-of-thermodynamics" title="First law of thermodynamics" class="md-nav__link">
+    First law of thermodynamics
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -643,9 +683,152 @@ Notice the formal similarity of this inequality with that of the other balance e
 <p>The master form of the balance principles is especially useful for the <em>control volume</em> methods in fluid dynamics.</p>
 </div>
 <h2 id="lagrangian-form-of-balance-principles">Lagrangian form of balance principles</h2>
+<p>Our study of the balance principles of continuum mechanics has thus far been in the Eulerian setting. When we are intereted in the mechanics of solids, it helps to reformulate the balance principles in the Lagrangian setting. The reason why a Lagrangian formulation is more useful in the study of solids is that the magnitude of the deformation is often small enough in deformation processes involving solids in comparison to that of a fluid that we can effectively <em>tag</em> particles based on their reference positions.</p>
+<p>Throughout this discussion, we will suppose that we are equipped with an initial configuration <script type="math/tex">\chi_0:\mathcal{B}\to\mathbb{R}^3</script> that places the body <script type="math/tex">\mathcal{B}</script> in the region <script type="math/tex">B_0 \subseteq\mathbb{R}^3</script>. The current configuration <script type="math/tex">\chi_t:\mathcal{B}\to\mathbb{R}^3</script> places the body at <script type="math/tex">B_t \subseteq \mathbb{R}^3</script> at the current instant of time, and <script type="math/tex">\varphi_t:B_0 \to B_t</script> defined as <script type="math/tex">\varphi_t = \chi_t \circ \chi_0^{-1}</script> denotes the deformation map.</p>
+<h3 id="mass-balance">Mass balance</h3>
+<p>Let us start with the mass continuity equation. We studied the mass continuity equation in the context of our discussion of kinematics; let us revisit this now. Let us define the Lagrangian form of the material density, <script type="math/tex">\rho_0(\cdot,t):B_0 \to \mathbb{R}</script>, using the the physical requirement that the mass in <script type="math/tex">B_0</script> is identical to the mass in <script type="math/tex">B_t</script>:
+<script type="math/tex; mode=display">\int_{B_0} \rho_0(\mathsf{X},t)\,dV = \int_{B_t} \rho(\mathsf{x},t)\,dv.</script>
+Taking time derivatives on both sides, we see that
+<script type="math/tex; mode=display">\begin{split}
+\frac{d}{dt}\int_{B_0} \rho_0(\mathsf{X},t)\,dV &= \frac{d}{dt}\int_{B_t} \rho(\mathsf{x},t) \, dv\\
+ &= \int_{B_t} \left(\frac{D\rho(\mathsf{x},t)}{Dt} + \rho(\mathsf{x},t)\text{div }\mathsf{v}(\mathsf{x},t)\right)\,dv\\
+ &= 0.
+\end{split}</script>
+This informs us, using the standard localization argument, that
+<script type="math/tex; mode=display">\frac{\partial \rho_0(\mathsf{X},t)}{\partial t} = 0 \quad\Rightarrow\quad \rho_0(\mathsf{X},t) = \rho_0(\mathsf{X},0) = \rho_0(\mathsf{X}).</script>
+In the last step, the quantity <script type="math/tex">\rho_0(\mathsf{X})</script> is introduced as a compact notation for <script type="math/tex">\rho_0(\mathsf{X},0</script>. The Lagrangian form of the mass balance thus recovers the <em>obvious</em> result that the initial mass density does not evolve with time. </p>
+<h3 id="first-law-of-thermodynamics">First law of thermodynamics</h3>
+<p>Let us now look at the balance of energy in integral form. This can be written in integral form, using the expressions derived earlier, as follows:
+<script type="math/tex; mode=display">
+\int_{B_t} \rho\frac{De}{Dt}\,dv = \int_{B_t} \sigma \cdot \mathsf{d} \, dv + \int_{B_t} \rho r \, dv - \int_{\partial B_t} \mathsf{q}\cdot\mathsf{n}\,da.
+</script>
+To cast this in Lagrangian form, we need to define the Lagrangian version of the various quantities involved. To begin with, let us define the Lagrangian version of the energy density <script type="math/tex">E(\cdot,t):B_0 \to \mathbb{R}</script> as
+<script type="math/tex; mode=display">E(\mathsf{X},t) = e(\mathsf{x},t),</script>
+where <script type="math/tex">\mathsf{X} \in B_0</script> and <script type="math/tex">\mathsf{x} = \varphi(\mathsf{X},t) \in B_t</script>. Using this, we see that
+<script type="math/tex; mode=display">\int_{B_t} \rho\frac{De}{Dt}\,dv = \int_{B_0} \rho \frac{DE}{Dt} JdV = \int_{B_0} \rho_0\frac{\partial E}{\partial t}\,dV.</script>
+Notice how we have used the volume transformation rule and the mass continuity equation <script type="math/tex">\rho_0 = \rho J</script> in deriving this.</p>
+<p>The term in the energy equation involving the heat source can be similarly expressed in Lagrangian form as
+<script type="math/tex; mode=display">\int_{B_t} \rho r \, dv = \int_{B_0} \rho_0 R \, dV,</script>
+where we have introduced the Lagrangian heat source term using the definition <script type="math/tex">R(\mathsf{X},t) = r(\mathsf{x},t)</script>.</p>
+<p>Let us now turn to the term
+<script type="math/tex; mode=display">\int_{B_t} \sigma \cdot \mathsf{d}\,dv = \int_{B_t} \sigma \cdot \text{grad }\mathsf{v}\,dv.</script>
+To compute the Lagrangian version of this, begin by recalling from our discussion of kinematics that
+<script type="math/tex; mode=display">\dot{\mathsf{F}} = (\text{grad }\mathsf{v})\mathsf{F} \quad\Rightarrow\quad \text{grad }\mathsf{v} = \dot{\mathsf{F}}\mathsf{F}^{-1}.</script>
+We thus see that
+<script type="math/tex; mode=display">\begin{split}
+\int_{B_t} \sigma(\mathsf{x},t)\cdot\mathsf{d}(\mathsf{x},t)\,dv &= \int_{B_0} \sigma(\varphi_t(\mathsf{X}),t)\cdot\dot{\mathsf{F}}(\mathsf{X},t)\mathsf{F}^{-1}(\varphi_t(\mathsf{X}),t)\,J(\mathsf{X},t)dV\\
+ &= \int_{B_0} J(\mathsf{X},t)\sigma(\varphi_t(\mathsf{X}),t)\mathsf{F}^{-T}(\mathsf{X},t)\cdot\dot{\mathsf{F}}(\mathsf{X},t)\,dV.
+\end{split}</script>
+To understand the last step, note that
+<script type="math/tex; mode=display">\begin{split}
+\sigma \cdot \dot{\mathsf{F}}\mathsf{F}^{-1} &= \mathsf{F}^{-T}\dot{\mathsf{F}}^T\cdot\sigma^T\\
+ &= \dot{\mathsf{F}}^T\cdot\mathsf{F}^{-1}\sigma\\
+ &= \sigma\mathsf{F}^{-T}\cdot\dot{\mathsf{F}}.
+\end{split}</script>
+Notice how the symmetry of the Cauchy stress tensor is used here. Let us now introduce the <strong>first Piola-Kirchhoff stress tensor</strong>, <script type="math/tex">\mathsf{P}(\mathsf{X},t):T_{\mathsf{X}B_0} \to T_{\mathsf{x}}B_t</script> as follows:
+<script type="math/tex; mode=display">
+\mathsf{P}(\mathsf{X},t) = J(\mathsf{X},t)\sigma(\varphi_t(\mathsf{X}),t)\mathsf{F}^{-T}(\mathsf{X},t).
+</script>
+Before proceeding further, let us quickly consider the Cartesian coordinate representation of the first Piola-Kirchhoff stress tensor. If <script type="math/tex">(\mathsf{e}_i)</script> and <script type="math/tex">(\mathsf{E}_I</script> are orthonormal bases of <script type="math/tex">T_{\mathsf{x}}B_t</script> and <script type="math/tex">T_{\mathsf{X}}B_0</script>, respectively, then
+<script type="math/tex; mode=display">
+\mathsf{P}(\mathsf{X},t) = \sum P_{iJ}(\mathsf{X},t)\,\mathsf{e}_i \otimes \mathsf{E}_J, \qquad \sigma(\mathsf{x},t) = \sum \sigma_{ij}(\mathsf{x},t)\,\mathsf{e}_i \otimes \mathsf{e}_j.
+</script>
+The components of the first Piola-Kirchhoff and Cauchy stress tensors are related as follows:
+<script type="math/tex; mode=display">
+P_{iJ} = \sum J\sigma_{ij}F^{-T}_{jJ}.
+</script>
+The arguments of the various quantities in the equation above are suppressed for notational convenience. Note that since <script type="math/tex">\mathsf{P}(\mathsf{X},t)</script> is a linear map between two <em>different</em> vector spaces , it is not equivalent to a tensor in the conventional sense of the term. It is sometimes called a <em>two-point tensor</em>. Note also that for this same reason, it doesn't make sense to </p>
+<p>Returning back to the term involving the Cauchy stress tensor in the energy equation, we see that
+<script type="math/tex; mode=display">
+\int_{B_t} \sigma(\mathsf{x},t)\cdot\mathsf{d}(\mathsf{x},t)\,dv = \int_{B_0} \mathsf{P}(\mathsf{X},t)\cdot\dot{\mathsf{F}}(\mathsf{X},t)\,dV.
+</script>
+There is yet another way to express this term in Lagrangian form. To derive this, note that
+<script type="math/tex; mode=display">\begin{split}
+\mathsf{d} &= \frac{1}{2}\left(\text{grad }\mathsf{v} + (\text{grad }\mathsf{v})^T\right)\\
+ &= \frac{1}{2}\left(\dot{\mathsf{F}}\mathsf{F}^{-1} + \mathsf{F}^{-T}\dot{\mathsf{F}}^T\right).
+\end{split}</script>
+It follows that
+<script type="math/tex; mode=display">\mathsf{F}^T\mathsf{d}\mathsf{F} = \frac{1}{2}\left(\mathsf{F}^T\dot{\mathsf{F}} + \dot{\mathsf{F}}^T\mathsf{F}\right) = \mathsf{D},</script>
+where <script type="math/tex">\mathsf{D} = \dot{\mathsf{C}}/2</script> is the Lagrangian rate of deformation tensor. Inverting this relation, we get
+<script type="math/tex; mode=display">\mathsf{d} = \mathsf{F}^{-T}\mathsf{D}\mathsf{F}^{-1}.</script>
+Using this in the term involving the stress tensor in the energy equation, we see that
+<script type="math/tex; mode=display">\begin{split}
+\int_{B_t} \sigma \cdot \mathsf{d}\,dv &= \int_{B_0} \sigma \cdot \mathsf{F}^{-T}\mathsf{D}\mathsf{F}^{-1}J\,dV\\
+&= \int_{B_0} J\mathsf{F}^{-1}\sigma\mathsf{F}^{-T}\cdot\mathsf{D}\,dV.
+\end{split}</script>
+Introducing the <strong>second Piola-Kirchhorff stress tensor</strong> <script type="math/tex">\mathsf{S}(\mathsf{X},t):T_{\mathsf{X}}B_0 \to T_{\mathsf{X}}B_0</script> as
+<script type="math/tex; mode=display">
+\mathsf{S}(\mathsf{X},t) = J(\mathsf{X},t)\mathsf{F}^{-1}(\varphi_t(\mathsf{X}),t)\sigma(\varphi_t(\mathsf{X}),t)\mathsf{F}^{-T}(\mathsf{X},t),
+</script>
+it follows that
+<script type="math/tex; mode=display">\int_{B_t} \sigma\cdot\mathsf{d}\,dv = \int_{B_0} \mathsf{S}\cdot\mathsf{D}\,dV.</script>
+Note that the second Piola-Kirchhoff stress tensor can be expressed in  terms of the Cartesian coordinate system introduced earlier as 
+<script type="math/tex; mode=display">
+\mathsf{S}(\mathsf{X},t) = \sum S_{IJ}(\mathsf{X},t)\,\mathsf{E}_I \otimes \mathsf{E}_J,
+</script>
+where the component fields can be computed in terms of the Cauchy stress tensor and the deformation gradient using a procedure similar to the one employed in the context of the first Piola-Kirchhoff stress tensor. Note that the second Piola-Kirchhoff stress tensor is symmetric: <script type="math/tex">\mathsf{S}^T = \mathsf{S}</script>.</p>
+<p>Let us collect together the results involving the first and second Piola-Kirchhoff stress tensors that we have derived so far:
+<script type="math/tex; mode=display">
+\int_{B_t} \sigma \cdot \mathsf{d}\,dv = \int_{B_0} \mathsf{P} \cdot \dot{\mathsf{F}}\,dV = \int_{B_0} \mathsf{S}\cdot\mathsf{D}\,dV.
+</script>
+In terms of the Cartesian coordinate system introduced earlier, this can be written as follows:
+<script type="math/tex; mode=display">
+\sum \int_{B_t} \sigma_{ij}d_{ij}\,dv = \sum \int_{B_0} P_{iJ}\dot{F}_{iJ}\,dV = \sum \int_{B_0} S_{IJ}D_{IJ}\,dV.
+</script>
+We see that there is a natural pairing between specific stress and strain rate measures: <script type="math/tex">(\sigma,\mathsf{d})</script>, <script type="math/tex">\mathsf{P},\dot{\mathsf{F}})</script> and <script type="math/tex">(\mathsf{S},\mathsf{D})</script>. The stress and strain rate measures in each pair are said to be <strong>conjugate</strong> to each other. This observation will turn out to be crucial when we discuss constitutive relations later on.</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>Noting that <script type="math/tex">\mathsf{D} = \dot{\mathsf{C}}/2 = \dot{\mathsf{E}}</script>, where <script type="math/tex">\mathsf{E}</script> is the Lagrangian strain tensor, we see that
+<script type="math/tex; mode=display">\mathsf{P}\cdot\dot{\mathsf{F}} = \mathsf{S}\cdot\dot{\mathsf{E}}.</script>
+But note that it is <em>not</em> true that the rate of deformation tensor <script type="math/tex">\mathsf{d}</script> is the material time derivative of the Eulerian strain tensor <script type="math/tex">\mathsf{e}</script>. In fact, it can be shown that
+<script type="math/tex; mode=display">\dot{\mathsf{e}} = \mathsf{d} - (\text{grad }\mathsf{v})^T\mathsf{e} - \mathsf{e}\,\text{grad }\mathsf{v}.</script>
+It is left as an exercise to verify this.</p>
+</div>
+<p>It is possible to gain some physical intuition regarding the meaning of the first and second Piola-Kirchhoff stress tensors by considering the force acting on an elementary area <script type="math/tex">\Delta a</script> with normal <script type="math/tex">\mathsf{n}</script> centered at <script type="math/tex">\mathsf{x} \in B_t</script>. Let <script type="math/tex">\Delta A</script> be the elementary area at <script type="math/tex">\mathsf{X} = \varphi_t(\mathsf{x}) \in B_0</script> with normal <script type="math/tex">\mathsf{N}</script>. The force acting on the elementary area <script type="math/tex">\Delta a</script> is given by <script type="math/tex">\sigma \mathsf{n} \Delta a</script>. Using the Piola transform, namely <script type="math/tex">\mathsf{n}\Delta a = J\mathsf{F}^{-T}\mathsf{N}\Delta A</script>, we see that
+<script type="math/tex; mode=display">
+\sigma \mathsf{n} \Delta a = J\sigma \mathsf{F}^{-T}\mathsf{N}\Delta A = \mathsf{P}\mathsf{N}\Delta A.
+</script>
+We thus see that the first Piola-Kirchhoff stress tensor is the force acting on an area element in the <em>current configuration</em> per unit <em>referential area</em>. To understand what the second Piola-Kirchhoff stress tensor means in this setting, note that <script type="math/tex">\mathsf{F}^{-1}\mathsf{P}\mathsf{N}\Delta A = \mathsf{S}\mathsf{N}\Delta A</script> is the force acting on the area element <script type="math/tex">\Delta A</script> per unit referential area. The idea behind this conclusion is that if <script type="math/tex">\mathsf{t}</script> is the force acting on the area element <script type="math/tex">\Delta a</script>, then the <strong>pull-back</strong> of this force that yields the force acting on the area <script type="math/tex">\Delta A</script> is given by <script type="math/tex">\mathsf{F}^{-1}\mathsf{T}</script>, or, equivalently, <script type="math/tex">\mathsf{t} = \mathsf{F}\mathsf{T}</script>.</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>Note that it is sufficient to think of the physical content of the stress tensor in terms of the interpretation of the Cauchy stress tensor given earlier, and to view the first and second Piola-Kirchhoff stress tensors as special mathematical transforms of the Cauchy stress tensor, along the lines of the foregoing calculations. </p>
+</div>
+<p>Let us now turn to the final term in the energy equation, namely 
+<script type="math/tex; mode=display">\int_{\partial B_t} \mathsf{q}\cdot\mathsf{n}\,da.</script>
+To obtain the Lagrangian version of this equation, let us use the Piola transform introduced in the context of area transformation rules eariler to get
+<script type="math/tex; mode=display">\begin{split}
+\int_{\partial B_t} \mathsf{q}\cdot\mathsf{n}\,da &= \int_{\partial B_0} \mathsf{q} \cdot J\mathsf{F}^{-T}\mathsf{N}\,dA\\
+ &= \int_{\partial B_0} J\mathsf{F}^{-1}\mathsf{q}\cdot\mathsf{N}\,dA.
+\end{split}</script>
+Let us introduce the <strong>Lagrangian heat flux</strong> vector field <script type="math/tex">\mathsf{Q}(\mathsf{X},t):T_{\mathsf{X}}B_0 \to T_{\mathsf{X}}B_0</script> as follows:
+<script type="math/tex; mode=display">\mathsf{Q}(\mathsf{X},t) = J(\mathsf{X},t)\mathsf{F}^{-1}(\varphi_t(\mathsf{X}),t)\mathsf{q}(\varphi_t(\mathsf{X}),t).</script>
+Recall that <script type="math/tex">\mathsf{Q}</script> is just the Piola transform of <script type="math/tex">\mathsf{q}</script>. </p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>Note that the symbol <script type="math/tex">\mathsf{Q}</script> has been used earlier to denote an orthogonal map. In practice, the specific meaning of a symbol like <script type="math/tex">\mathsf{Q}</script> is always evident from the context.</p>
+</div>
+<p>Using this definition, we can write the heat flux term as
+<script type="math/tex; mode=display">\int_{\partial B_t} \mathsf{q}\cdot\mathsf{n}\,da = \int_{B_0}\mathsf{Q}\cdot\mathsf{N}\,dA.</script>
+Using the divergence theorem, we see that
+<script type="math/tex; mode=display">
+\int_{\partial B_0} \mathsf{Q}\cdot\mathsf{N}\,dA = \int_{B_0} \text{DIV }\mathsf{Q}\,dV.
+</script>
+Putting all this together and using the localization principle, we finally obtain the Lagrangian form of the energy equation as
+<script type="math/tex; mode=display">
+\rho_0(\mathsf{X})\frac{\partial \mathsf{E}(\mathsf{X},t)}{\partial t} = \mathsf{P}(\mathsf{X},t)\cdot\dot{\mathsf{F}}(\mathsf{X},t) + \rho_0(\mathsf{X},t)R(\mathsf{X},t) - \text{DIV }\mathsf{Q}(\mathsf{X},t),
+</script>
+or, equivalently, as
+<script type="math/tex; mode=display">
+\rho_0(\mathsf{X})\frac{\partial \mathsf{E}(\mathsf{X},t)}{\partial t} = \mathsf{S}(\mathsf{X},t)\cdot\mathsf{D}(\mathsf{X},t) + \rho_0(\mathsf{X},t)R(\mathsf{X},t) - \text{DIV }\mathsf{Q}(\mathsf{X},t).
+</script>
+</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>Notice how the <em>nonlinear</em> material time derivative that appeared in the spatial formulation gets replaced by a simpler and <em>linear</em> partial derivative in the Lagrangian form.</p>
+</div>
 <div class="admonition danger">
-<p class="admonition-title">Work in progress!</p>
-<p>...</p>
+<p class="admonition-title">WORK IN PROGRESS!</p>
+<p>To be completed.</p>
 </div>
                 
                   

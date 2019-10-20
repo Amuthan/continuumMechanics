@@ -668,13 +668,13 @@ Both these forms are useful in applications. We will also present an alternative
 <h2 id="reynolds-transport-theorem">Reynolds' transport theorem</h2>
 <p>To conclude our discussion of time derivatives of various quantities related to the motion and deformation of a body in three dimensional space, let us consider material time derivatives of the form
 <script type="math/tex; mode=display">
-\frac{D}{Dt} \int_{B_t} f(\mathsf{x},t) \, dv.
+\frac{d}{dt} \int_{B_t} f(\mathsf{x},t) \, dv.
 </script>
 Here, <script type="math/tex">f:\mathbb{R}^3 \times I \to \mathbb{R}</script> is a scalar field. Note that both the integrand <script type="math/tex">f(\mathsf{x},t)</script> and the domain of integration <script type="math/tex">B_t = \varphi_t(B_0)</script> are functions of time. The reason for studying such integrals will become evident soon. In short, we will see that <em>all</em> the <em>balance principles</em> of continuum mechanics that we will study later on will be expressed primarily in an integral form; the rationale behind this will be explained when we study balance principles in continuum mechanics.</p>
 <p>The standard procedure to evaluate the material time derivatives of time dependent integrals of the form presented above is to first <em>pull back</em> the integral to the reference placement using the change of variables formula for integration, and take the partial time derivative of the Lagrangian form of the integral. Let us work this out in detail:
 <script type="math/tex; mode=display">
 \begin{split}
-\frac{D}{Dt} \int_{B_t} f(\mathsf{x},t) \, dv &= \frac{D}{Dt}\int_{B_0} f(\varphi(\mathsf{X},t),t) J(\mathsf{X},t) \, dV\\
+\frac{d}{dt} \int_{B_t} f(\mathsf{x},t) \, dv &= \frac{d}{dt}\int_{B_0} f(\varphi(\mathsf{X},t),t) J(\mathsf{X},t) \, dV\\
  &= \int_{B_0} \frac{\partial}{\partial t}\left(f(\varphi(\mathsf{X},t),t) J(\mathsf{X},t)\right)\, dV\\
  &= \int_{B_0} \left(\frac{Df(\mathsf{x},t)}{Dt} + f(\mathsf{x},t)\,\text{div }\mathsf{v}(\mathsf{x},t)\right)J(\mathsf{X},t)\,dV\\
  &= \int_{B_t} \left(\frac{Df(\mathsf{x},t)}{Dt} + f(\mathsf{x},t)\,\text{div }\mathsf{v}(\mathsf{x},t)\right) \, dv.
@@ -689,13 +689,13 @@ At a later time <script type="math/tex">t</script>, the mass contained the in th
 <script type="math/tex; mode=display">\int_{\Omega_t} \rho(\mathsf{x},t)\,dv.</script>
 Since we expect this mass to be exactly identical to the mass contained in the initial volume <script type="math/tex">\Omega_0</script>, we expect the material time derivative of the mass contained in <script type="math/tex">\Omega_t</script> to be zero. Let us verify this:
 <script type="math/tex; mode=display">
-\frac{D}{Dt}\int_{\Omega_t} \rho(\mathsf{x},t)\,dv = \int_{\Omega_t} \left(\frac{D\rho(\mathsf{x},t)}{Dt} + \rho(\mathsf{x},t)\,\text{div }\mathsf{v}(\mathsf{x},t)\right) \, dv = 0.
+\frac{d}{dt}\int_{\Omega_t} \rho(\mathsf{x},t)\,dv = \int_{\Omega_t} \left(\frac{D\rho(\mathsf{x},t)}{Dt} + \rho(\mathsf{x},t)\,\text{div }\mathsf{v}(\mathsf{x},t)\right) \, dv = 0.
 </script>
 In the equation above, the last identity follows from the mass continuity equation derived earlier. We thus see that mass continuity equation expresses the simple idea that the mass contained an <em>arbitrary</em> volume of the body does not change if we follow the volume during the motion and deformation of the body. </p>
 </div>
 <p>Finally, n the special case when the integrand is of the form <script type="math/tex">\rho f</script>, where <script type="math/tex">\rho</script> is the mass density and <script type="math/tex">f</script> is a scalar field, we can use the mass continuity equation to simplify the material time derivative of the integral as follows:
 <script type="math/tex; mode=display">
-\frac{D}{Dt}\int_{B_t} \rho(\mathsf{x},t)f(\mathsf{x},t)\,dv = \int_{B_t} \rho(\mathsf{x},t)\frac{Df(\mathsf{x},t)}{Dt}\,dv.
+\frac{d}{dt}\int_{B_t} \rho(\mathsf{x},t)f(\mathsf{x},t)\,dv = \int_{B_t} \rho(\mathsf{x},t)\frac{Df(\mathsf{x},t)}{Dt}\,dv.
 </script>
 It is left as a simple exercise to verify this. This important result is known as the <strong>Reynolds' transport theorem</strong>, and will play a key role in our study of the balance principles of continuum mechanics.</p>
                 
