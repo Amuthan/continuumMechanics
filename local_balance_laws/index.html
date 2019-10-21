@@ -360,8 +360,36 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#linear-momentum-balance" title="Linear momentum balance" class="md-nav__link">
+    Linear momentum balance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#angular-momentum-balance" title="Angular momentum balance" class="md-nav__link">
+    Angular momentum balance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#second-law-of-thermodynamics" title="Second law of thermodynamics" class="md-nav__link">
+    Second law of thermodynamics
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-of-lagrangian-balance-laws" title="Summary of Lagrangian balance laws" class="md-nav__link">
+    Summary of Lagrangian balance laws
+  </a>
   
 </li>
       
@@ -452,8 +480,36 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#linear-momentum-balance" title="Linear momentum balance" class="md-nav__link">
+    Linear momentum balance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#angular-momentum-balance" title="Angular momentum balance" class="md-nav__link">
+    Angular momentum balance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#second-law-of-thermodynamics" title="Second law of thermodynamics" class="md-nav__link">
+    Second law of thermodynamics
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-of-lagrangian-balance-laws" title="Summary of Lagrangian balance laws" class="md-nav__link">
+    Summary of Lagrangian balance laws
+  </a>
   
 </li>
       
@@ -826,9 +882,192 @@ or, equivalently, as
 <p class="admonition-title">Remark</p>
 <p>Notice how the <em>nonlinear</em> material time derivative that appeared in the spatial formulation gets replaced by a simpler and <em>linear</em> partial derivative in the Lagrangian form.</p>
 </div>
+<h3 id="linear-momentum-balance">Linear momentum balance</h3>
+<p>We have derived the Lagrangian version of the mass and energy balance equations so far. Let us now turn to the balance of linear momentum. We will need the following additional definition: the Lagrangian body force density <script type="math/tex">\mathsf{B}(\cdot,t):B_0 \to TB_t</script> in the usual manner as
+<script type="math/tex; mode=display">\mathsf{B}(\mathsf{X},t) = \mathsf{b}(\varphi_t(\mathsf{X}), t).</script>
+Let us now write the inegral form of the linear momentum balance as follows:
+<script type="math/tex; mode=display">\begin{split}
+\int_{B_t} \rho \frac{D\mathsf{v}}{Dt}\,dv &= \int_{B_t} \rho\mathsf{b}\,dv + \int_{B_t} \text{div }\sigma\,dv\\
+&= \int_{B_t} \rho\mathsf{b}\,dv + \int_{\partial B_t} \sigma\mathsf{n}\,da.
+\end{split}</script>
+</p>
 <div class="admonition danger">
-<p class="admonition-title">WORK IN PROGRESS!</p>
-<p>To be completed.</p>
+<p class="admonition-title">Note</p>
+<p>Notice that the equation above involves the inegration of vector fields. As remarked earlier, integration of vector fields is well-defined only in the Euclidean setting. Since we deal only with Euclidean spaces in this course, we are justified writing an integral equation involving vector fields as above.</p>
+</div>
+<p>Let us now cast this equation in Lagrangian form using the standard procedure:
+<script type="math/tex; mode=display">\begin{split}
+\int_{B_0} \rho_0\frac{\partial \mathsf{V}}{\partial t}\,dV &= \int_{B_0} \rho_0\mathsf{B}\,dV + \int_{\partial B_0} J\sigma\mathsf{F}^{-T}\mathsf{N}\,dA\\
+ &= \int_{B_0} \rho_0\mathsf{B}\,dV + \int_{\partial B_0} \mathsf{P}\mathsf{N}\,dA\\
+ &= \int_{B_0} \rho_0\mathsf{B}\,dV + \int_{B_0} \text{DIV }\mathsf{P}\,dV.
+\end{split}</script>
+The localization lemma then yields the local form of the linear momentum balance equation in Lagrangian form as
+<script type="math/tex; mode=display">
+\rho_0(\mathsf{X})\frac{\partial \mathsf{V}(\mathsf{X},t)}{\partial t} = \rho_0(\mathsf{X})\mathsf{B}(\mathsf{X},t) + \text{DIV }\mathsf{P}(\mathsf{X},t).
+</script>
+Notice again how the time derivative on the left hand side is a simple partial derivative in sharp contrast to the nonlinear material time derivative in the spatial form of the linear momentum balance equation.</p>
+<h3 id="angular-momentum-balance">Angular momentum balance</h3>
+<p>Let us now look at the Lagrangian form of the angular momentum balance principle. Recall that this takes a particularly simple form in the Eulerian setting, namely <script type="math/tex">\sigma = \sigma^T</script>. Using the definitions of the first and second Piola-Kirchhoff stress tensors, it is clear that
+<script type="math/tex; mode=display">
+J^{-1}\mathsf{P}\mathsf{F}^T = J^{-1}\mathsf{F}\mathsf{P}^T \quad\Rightarrow\quad \mathsf{P}\mathsf{F}^T = \mathsf{F}\mathsf{P}^T,
+</script>
+and
+<script type="math/tex; mode=display">
+J^{-1}\mathsf{F}\mathsf{S}\mathsf{F}^T = J^{-1}\mathsf{F}\mathsf{S}^T \quad\Rightarrow\quad \mathsf{S} = \mathsf{S}^.
+</script>
+We thus see that the second Piola-Kirchhoff stress tensor is symmetric. Note that it doesn't make sense to talk about the symmetry or antisymmetry of the first Piola-Kirchhoff stress tensor since as a linear map it acts between different vector spaces.</p>
+<h3 id="second-law-of-thermodynamics">Second law of thermodynamics</h3>
+<p>Finally, let us work out the Lagrangian form of the second law of thermodynamics. Following the same procedure as before to define the Lagrangian version of the various scalar fields, let us define the Lagrangian entropy density <script type="math/tex">N(\cdot,t):B_0 \to \mathbb{R}</script> and the Lagrangian absolute temperature <script type="math/tex">\Theta(\cdot,t):B_0 \to \mathbb{R}</script> as
+<script type="math/tex; mode=display">N(\mathsf{X},t) = \eta(\mathsf{x},t), \qquad \Theta(\mathsf{X},t) = \theta(\mathsf{x},t),</script>
+where <script type="math/tex">\mathsf{X} \in B_0</script> and <script type="math/tex">\mathsf{x} = \varphi(\mathsf{X},t) \in B_t</script>. The integral form of the second law, namely the Clausius-Duhem inequality, reads
+<script type="math/tex; mode=display">\int_{B_t} \rho\frac{D\eta}{Dt} \,dv \ge \int_{B_t} \frac{\rho r}{\theta} \,dv - \int_{\partial B_t} \frac{\mathsf{q}}{\theta}\cdot\mathsf{n}\,da.</script>
+Using the defintion of the Lagrangian version of all the quantities involved in this equation, it is straightforward to verify that this can be cast in the following Lagrangian form:
+<script type="math/tex; mode=display">
+\int_{B_0} \rho_0\frac{\partial N}{\partial T} \,dV \ge \int_{B_0} \frac{\rho_0 R}{\Theta}\,dV - \int_{\partial B_0} \frac{\mathsf{Q}}{\Theta}\cdot\mathsf{N}\,dA.
+</script>
+The standard localization argument then results in the following Lagrangian form of the second law of thermodynamics:
+<script type="math/tex; mode=display">
+\rho_0(\mathsf{X})\frac{\partial N(\mathsf{X},t)}{\partial t} \ge \frac{\rho_0(\mathsf{X})R(\mathsf{X},t)}{\Theta(\mathsf{X},t)} - \text{DIV }\left(\frac{\mathsf{Q}(\mathsf{X},t)}{\Theta(\mathsf{X},t)}\right),
+</script>
+or, equivalently as
+<script type="math/tex; mode=display">
+\rho_0\Theta\frac{\partial N}{\partial t} \ge \rho_0 R - \text{DIV }\mathsf{Q} + \frac{\mathsf{Q}}{\Theta}\cdot\text{GRAD }\Theta.
+</script>
+This latter form is especially useful in applications. </p>
+<h2 id="summary-of-lagrangian-balance-laws">Summary of Lagrangian balance laws</h2>
+<p>Let us now summarize the Lagrangian version of the balance principles of continuum mechanics that we just derived:</p>
+<table>
+<thead>
+<tr>
+<th>Balance law</th>
+<th>Local form</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mass</td>
+<td>
+<script type="math/tex">\dot{\rho}(\mathsf{X},t) = 0</script>
+</td>
+</tr>
+<tr>
+<td>Linear momentum</td>
+<td>
+<script type="math/tex">\rho_0 \dot{V} = \rho_0 B + \text{DIV }\mathsf{P}</script>
+</td>
+</tr>
+<tr>
+<td>Angular momentum</td>
+<td>
+<script type="math/tex">\mathsf{P}\mathsf{F}^T = \mathsf{F}^T\mathsf{P}</script>
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<script type="math/tex">\mathsf{S} = \mathsf{S}^T</script>
+</td>
+</tr>
+<tr>
+<td>Energy</td>
+<td>
+<script type="math/tex">\rho\dot{E} = \mathsf{P}\cdot\dot{\mathsf{F}} + \rho_0 R - \text{DIV }\mathsf{Q}</script>
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<script type="math/tex">\rho_0\dot{E} = \mathsf{S}\cdot\dot{\mathsf{E}} + \rho_0 R - \text{DIV }\mathsf{Q}</script>
+</td>
+</tr>
+<tr>
+<td>Entropy</td>
+<td>
+<script type="math/tex">\rho_0 \Theta \dot{N} \ge \rho_0 R - \text{DIV }\mathsf{Q} + \frac{\mathsf Q}{\Theta}\cdot\text{GRAD }\Theta</script>
+</td>
+</tr>
+</tbody>
+</table>
+<p>In all the equations displayed above, an overdot represents the material time derivative, which in the case of Lagrangian variables is just the partial time derivative. It is worth reiterating that the nonlinearity present in the convective part of the material time derivative in the Eulerian form of the balance laws is conspicuously absent in the Lagrangian formulation. This has significant implications on whether, and how easily, we can solve these equations when provided with the appropriate initial and boundary conditions.</p>
+<p>As before, we can also rewrite this in the form a master balance equation,
+<script type="math/tex; mode=display">\frac{\partial \chi_0}{\partial t} + \text{DIV }\Phi = \Sigma,</script>
+or an inequality of the form
+<script type="math/tex; mode=display">\frac{\partial \chi_0}{\partial t} + \text{DIV }\Phi \ge \Sigma,</script>
+where <script type="math/tex">\chi_0</script>, <script type="math/tex">\Phi</script> and <script type="math/tex">\Sigma</script> are the Lagrangian versions of the field, flux and source variables. The master form of the balance laws are summarized in the table below:</p>
+<table>
+<thead>
+<tr>
+<th>Physical variable</th>
+<th>Field</th>
+<th>Flux</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mass</td>
+<td>
+<script type="math/tex">\rho_0</script>
+</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Linear momentum</td>
+<td>
+<script type="math/tex">\rho_0 \mathsf{V}</script>
+</td>
+<td>
+<script type="math/tex">-\mathsf{P}</script>
+</td>
+<td>
+<script type="math/tex">\rho_0 \mathsf{B}</script>
+</td>
+</tr>
+<tr>
+<td>Angular momentum</td>
+<td>
+<script type="math/tex">\varphi \times \rho_0 V</script>
+</td>
+<td>
+<script type="math/tex">-\varphi \times \mathsf{P}</script>
+</td>
+<td>
+<script type="math/tex">\varphi \times \rho_0 \mathsf{B}</script>
+</td>
+</tr>
+<tr>
+<td>Energy</td>
+<td>
+<script type="math/tex">\rho_0 \left(E + \frac{1}{2}\mathsf{V}\cdot\mathsf{V}\right)</script>
+</td>
+<td>
+<script type="math/tex">\mathsf{Q} - \mathsf{V}\cdot\mathsf{P}</script>
+</td>
+<td>
+<script type="math/tex">\rho_0 R + \rho_0 \mathsf{V} \cdot \mathsf{B}</script>
+</td>
+</tr>
+<tr>
+<td>Entropy</td>
+<td>
+<script type="math/tex">\rho_0 N</script>
+</td>
+<td>
+<script type="math/tex">\mathsf{Q}/\Theta</script>
+</td>
+<td>
+<script type="math/tex">\rho_0 R/\Theta</script>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Notice how the Lagrangian version of the master balance laws are significantly simpler than their Eulerian counterparts. </p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>The cross product term <script type="math/tex">\varphi \times \mathsf{P}</script> in the angular momentum balance law displayed above means the following: for any constant <script type="math/tex">\mathsf{C} \in T_{\mathsf{X}}B_0</script>,
+<script type="math/tex; mode=display">(\varphi(\mathsf{X},t)\times\mathsf{P}(\mathsf{X},t))\mathsf{C} = \varphi(\mathsf{X},t) \times (\mathsf{P}(\mathsf{X},t)\mathsf{C}).</script>
+Note that <script type="math/tex">\varphi \times \mathsf{P}</script> is also a two-point tensor, like <script type="math/tex">\mathsf{P}</script>.</p>
 </div>
                 
                   
