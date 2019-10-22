@@ -40,7 +40,7 @@
     
     
       
-        <title>Introduction - Continuum Mechanics</title>
+        <title>Constitutive modeling - Continuum Mechanics</title>
       
     
     
@@ -89,7 +89,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#overview-of-course-contents" tabindex="1" class="md-skip">
+      <a href="#general-principles-of-constitutive-modeling" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -114,7 +114,7 @@
               Continuum Mechanics
             </span>
             <span class="md-header-nav__topic">
-              Introduction
+              Constitutive modeling
             </span>
           
         </div>
@@ -192,63 +192,11 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Introduction
-      </label>
-    
-    <a href="./" title="Introduction" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../intro/" title="Introduction" class="md-nav__link">
       Introduction
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#continuum-hypothesis" title="Continuum hypothesis" class="md-nav__link">
-    Continuum hypothesis
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#modeling-continua" title="Modeling continua" class="md-nav__link">
-    Modeling continua
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#outline" title="Outline" class="md-nav__link">
-    Outline
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
     
@@ -340,11 +288,56 @@
       
       
 
+  
 
-  <li class="md-nav__item">
-    <a href="../constitutive_modeling/" title="Constitutive modeling" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Constitutive modeling
+      </label>
+    
+    <a href="./" title="Constitutive modeling" class="md-nav__link md-nav__link--active">
       Constitutive modeling
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#need-for-constitutive-modeling" title="Need for constitutive modeling" class="md-nav__link">
+    Need for constitutive modeling
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#restrictions-on-the-form-of-constitutive-relations" title="Restrictions on the form of constitutive relations" class="md-nav__link">
+    Restrictions on the form of constitutive relations
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
     
@@ -369,22 +362,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#continuum-hypothesis" title="Continuum hypothesis" class="md-nav__link">
-    Continuum hypothesis
+  <a href="#need-for-constitutive-modeling" title="Need for constitutive modeling" class="md-nav__link">
+    Need for constitutive modeling
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#modeling-continua" title="Modeling continua" class="md-nav__link">
-    Modeling continua
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#outline" title="Outline" class="md-nav__link">
-    Outline
+  <a href="#restrictions-on-the-form-of-constitutive-relations" title="Restrictions on the form of constitutive relations" class="md-nav__link">
+    Restrictions on the form of constitutive relations
   </a>
   
 </li>
@@ -406,31 +392,42 @@
               
                 
                 
-                <h1 id="overview-of-course-contents">Overview of course contents</h1>
-<p>Welcome to <em>AE 639: Continuum Mechanics</em>! In this course, we will learn the basic principles how to model the mechanical behavior of continua. These notes assume a prior background in linear algebra and Euclidean tensor analysis; an introduction to the relevant topics may be found <a href="https://amuthan.github.io/tensors-intro/">here</a>.</p>
-<h2 id="continuum-hypothesis">Continuum hypothesis</h2>
-<div class="admonition danger">
-<p class="admonition-title">WORK IN PROGRESS</p>
-<p>To be completed.</p>
+                <h1 id="general-principles-of-constitutive-modeling">General principles of constitutive modeling</h1>
+<p>We will now introduce the topic of <em>constitutive modeling</em>, in a simplified setting. The purpose here is to introduce certain general principles that <em>all</em> constitutive models must obey. We will revisit many of the notions presented here later on, in the context of <em>hyperelasticity</em>.</p>
+<h2 id="need-for-constitutive-modeling">Need for constitutive modeling</h2>
+<p>The discussion of continuum mechanics so far has been general enough to accomodate <em>any</em> kind of continuum body. How do we bring about <em>material specificity</em> in our study of continuum mechanics? To understand this better, suppose that we have a cylindrical block of material that we pull at both ends with a known force. It is intuitively clear that the response of the cylindrical block will be very different depending on whether it is made of steel or rubbber. However, the kinematical description of the process and the application of the various balance principles remain the same. So how do we add material-specific information to our theory? This is precisely what constitutive modeling is all about.</p>
+<p>Let us now look at the same problem from a purely mathematical viewpoint. To keep the discussion simple, let us focus on the case when there is no heat exchange between the body and its environment, and there are no internal sources of heat. </p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>Though we are considering the simple case here where there is no internal or external heat transfer, the conclusions we draw can be extended with suitable modifications to the case when they are present. Indeed, we will look into <em>thermoelastic constitutive models</em> later on, in the context of <em>thermoelasticity</em>. </p>
 </div>
-<h2 id="modeling-continua">Modeling continua</h2>
-<div class="admonition danger">
-<p class="admonition-title">WORK IN PROGRESS</p>
-<p>To be completed.</p>
+<p>In this simple case, we only need to care about the balance of mass, linear momentum and angular momentum:
+<script type="math/tex; mode=display">\begin{split}
+\text{Mass: } & \frac{D\rho(\mathsf{x},t)}{Dt} + \rho(\mathsf{x},t)\,\text{div }\mathsf{v}(\mathsf{x},t) = 0,\\
+\text{Linear momentum: }& \rho(\mathsf{x},t)\frac{D \mathsf{v}(\mathsf{x},t)}{Dt} = \rho(\mathsf{x},t)\mathsf{b}(\mathsf{x},t) - \text{div }\sigma(\mathsf{x},t),\\
+\text{Angular momentum: }& \sigma = \sigma^T.
+\end{split}</script>
+The equations listed above represent a set of 7 distinct equations: one for the mass density, three for the velocity, and three for the stress tensor. </p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>Note that though the stress tensor has nine components, there are only three distinct equations that provide us with non-trivial information. To see this, let us suppose we are working within a Cartesian coordinate setting. Then, the three distinct equations are: <script type="math/tex">\sigma_{12} = \sigma_{21}</script>, <script type="math/tex">\sigma_{13} = \sigma_{31}</script> and <script type="math/tex">\sigma_{23} = \sigma_{32}</script>. Notice that the <em>diagonal</em> equations <script type="math/tex">\sigma_{ii} = \sigma_{ii}</script>, where <script type="math/tex">i = 1,2,3</script> do not contribute any new information. There are only three off-diagonal equations since the equation <script type="math/tex">\sigma_{ij} = \sigma_{ji}</script> is identical to <script type="math/tex">\sigma_{ji} = \sigma_{ij}</script>.</p>
 </div>
-<p>The primary point of view that we will develop here is that the mechanics of continua is a sub-branch of thermodynamics. </p>
-<p>We will emphasize on two aspects in particular:</p>
-<ul>
-<li>Coordinate system invariance, and</li>
-<li>Observer invariance,</li>
-</ul>
-<p>of the first and second laws of thermodynamics.</p>
-<h2 id="outline">Outline</h2>
-<p>Kinematics</p>
-<p>Balance principles</p>
-<p>Constitutive behavior</p>
-<p>Initial and boundary value problems</p>
-<p>Variational principles</p>
+<p>We however have 13 unknown quantities: one for the scalar mass density, three for the spatial velocity, and nine for the Cauchy stress tensor. We thus need 6 more equations for <em>closure</em>. </p>
+<p>Equivalently, we can eliminate the equation <script type="math/tex">\sigma = \sigma^T</script> by considering only symmetric stress tensors. In this case, we have 6 unknowns for the stress tensor, 3 unknowns for the velocity, and 1 unknown for the mass density; this sums up to 10 unknown fields. The number of equations available reduce to 4: one for the mass density, and three for the velocity. We still need 6 equations for closure, as before. Constitutive models fill in this gap by providing a material specific set of additional equations that allow us to solve the balance principles, once we have the appropriate initial and boundary conditions.</p>
+<p>How do we specify these six additional equations? What we control are the externally applied body forces and surface tractions. We saw earlier that the continuum responds to this by developing <em>internal forces</em>, namely stresses. It is clear that what differentiates one material from another is the nature of this internal response. In other words, we can, as a first attempt at a constitutive model, think of a general relation of the form
+<script type="math/tex; mode=display">\sigma(\mathsf{x},t) = \hat{\sigma}(\rho, \mathsf{F}, \mathsf{v}, \text{grad }\mathsf{v}, \mathsf{x}, t).</script>
+For now, the only restriction we have is that <script type="math/tex">\hat{\sigma}</script> should yield a symmetric tensor, so that we have 6 additional equations that close the equations supplied by the balance principles. An equation of this form is called a <strong>constitutive model</strong>, or a <strong>constitutive relation</strong>. </p>
+<p>Different materials behave differently; this is captured by the various choices we have in formulating a constitutive model. Thus, as mentioned before, constitutive models bring in <em>material specificity</em> to the balance principles. Note that the balance principles themselves are <em>universal</em> in the sense that they are applicable for any kind of continuum object.</p>
+<p>An important point to keep in mind is that unlike balance principles, constitutive relations <em>cannot</em> be derived from purely thermodynamic considerations alone. This is because of the fact that thermodynamics, by its very nature, is the study of complex systems <em>without</em> any consideration of their internal constitution. It is thus outside the purview of thermodynamics to deduce facts about the internal response of the system of interest. From the viewpoint of continuum mechanics, a constitutive relation can be thought of as an additional postulate. In practice, tehre are two marjor sources to obtain constitutive relations - the first is, of course, by fitting experimental data with model certain mathematical models, and the second is to deduce the constitutive behavior from a detailed microscopic consideration of the system. In this course, we will adopt the view that constitutive relations are provided to us for various kinds of materials.</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>The companion course <em>AE 731: Multiscale modeling of materials</em> will contain some discussion of how microscopic constitutive behavior emerges starting from a detailed microscopic analysis of certain classes of solids. </p>
+</div>
+<h2 id="restrictions-on-the-form-of-constitutive-relations">Restrictions on the form of constitutive relations</h2>
+<div class="admonition danger">
+<p class="admonition-title">WORK IN PROGRESS!</p>
+<p>To be completed...</p>
+</div>
                 
                   
                 
@@ -451,7 +448,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href=".." title="Home" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../local_balance_laws/" title="Local balance laws" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -460,25 +457,11 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Home
+                Local balance laws
               </span>
             </div>
           </a>
         
-        
-          <a href="../kinematics_intro/" title="Kinematics - basic definitions" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Kinematics - basic definitions
-              </span>
-            </div>
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
-            </div>
-          </a>
         
       </nav>
     </div>
