@@ -328,6 +328,40 @@
     Restrictions on the form of constitutive relations
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#principle-of-causality" title="Principle of causality" class="md-nav__link">
+    Principle of causality
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#principle-of-homogeneity" title="Principle of homogeneity" class="md-nav__link">
+    Principle of homogeneity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#principle-of-local-action" title="Principle of local action" class="md-nav__link">
+    Principle of local action
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#principle-of-material-frame-indifference" title="Principle of material frame indifference" class="md-nav__link">
+    Principle of material frame indifference
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
       
@@ -372,6 +406,40 @@
   <a href="#restrictions-on-the-form-of-constitutive-relations" title="Restrictions on the form of constitutive relations" class="md-nav__link">
     Restrictions on the form of constitutive relations
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#principle-of-causality" title="Principle of causality" class="md-nav__link">
+    Principle of causality
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#principle-of-homogeneity" title="Principle of homogeneity" class="md-nav__link">
+    Principle of homogeneity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#principle-of-local-action" title="Principle of local action" class="md-nav__link">
+    Principle of local action
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#principle-of-material-frame-indifference" title="Principle of material frame indifference" class="md-nav__link">
+    Principle of material frame indifference
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -424,6 +492,106 @@ For now, the only restriction we have is that <script type="math/tex">\hat{\sigm
 <p>The companion course <em>AE 731: Multiscale modeling of materials</em> will contain some discussion of how microscopic constitutive behavior emerges starting from a detailed microscopic analysis of certain classes of solids. </p>
 </div>
 <h2 id="restrictions-on-the-form-of-constitutive-relations">Restrictions on the form of constitutive relations</h2>
+<p>Desptite the fact that thermodynamics cannot help us formulate the constitutive law associated with a given material, there are very general principles that place restrictions on the <em>form</em> of any constitutive relation we may use. We will now see some of the more important of these constraints.</p>
+<h3 id="principle-of-causality">Principle of causality</h3>
+<p>The first constraint that we will impose on constitutive behavior is that the the response of a material at a given instant of time cannot depend on what happens at a future instant of time. This <em>obvious</em> constraint is called the <strong>principle of causality</strong>, or the <strong>principle of determinism</strong>.</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>Note however that it is perfectly admissible for the response of a continuum at the current instant of time can depend on its entire history. We will, however, only consider constitutive relations whose response at a given time instant depend only on the values of the variousl field variables at the same instant.</p>
+</div>
+<h3 id="principle-of-homogeneity">Principle of homogeneity</h3>
+<p>A constitutive relation is said to be <strong>spatially homogeneous</strong> if the material response is the same at <em>every</em> point of the continuum. The simplest way to understand this is by resorting to the ball spring analogy provided earlier. The principle of homogeneity can be roughly translated as the view that the value of spring constant of a spring in a particular region of the body is the same as the value of the spring constant of another spring in a different location. In other words, we assume that the <em>same</em> material is present throughout the continuum.</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>It is possible to study to study continua that are spatially heterogeneous too. In fact, there is an important sub-branch of solid mechanics called <em>mircromechanics</em> where the absence of material homogeneity plays an important role. We will, however, not deal with spatially inhomogeneous continua in this course.</p>
+</div>
+<p>We will also assume that the material response of continua is <strong>homogeneous in time</strong>. This means that the material behavior does not evolve with time. Using the spring mass analogy, this simply means that the spring constants do not change with time. </p>
+<p>It is important to note that neither spatial homogeneity nor homogeneity in time imply that the continuum does not have spatial gradients in the various physical fields, or that these fields do not evolve with respect to time. The principle of homogeneity simply states that the constitutive behavior does not depend on space and time explicitly. Thus, in place of an equation like
+<script type="math/tex; mode=display">\sigma = \hat{\sigma}(\Xi, \mathsf{x},t),</script>
+the principle of homogeneity requires that 
+<script type="math/tex; mode=display">\sigma = \hat{\sigma}(\Xi).</script>
+Here <script type="math/tex">\Xi</script> could represent one or more of the many kinematic fields. We will see some concrete examples shortly.</p>
+<h3 id="principle-of-local-action">Principle of local action</h3>
+<p>The <strong>principle of local action</strong> states that material response at a given point in the continuum depends <em>only</em> on the values of the field variables <em>at that point</em>. For instance, suppose that we have a constitutive relation of the form
+<script type="math/tex; mode=display">\sigma = \hat{\sigma}(\Xi),</script>
+where <script type="math/tex">\Xi</script> is some field variable, say the rate of deformation tensor. In general, what this means is that for <script type="math/tex">\mathsf{x} \in B_t</script>,
+<script type="math/tex; mode=display">\sigma(\mathsf{x},t) = \hat{\sigma}(\Xi(\mathsf{x}',t;\mathsf{x})),</script>
+for any <script type="math/tex">\mathsf{x}' \in B_{t}</script>. In other words, the response at <script type="math/tex">\mathsf{x} \in B_t</script> at time <script type="math/tex">t</script> could depend on the response at a different point <script type="math/tex">\mathsf{x}' \in B_{t}</script>. The principle of local action restricts the constitutive relations to be of the form
+<script type="math/tex; mode=display">\sigma(\mathsf{x},t) = \hat{\sigma}(\Xi(\mathsf{x},t)).</script>
+Such constitutive models are said to be <strong>local</strong>. </p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>There are many important classes of materials where the constitutive behavior is <em>non-local</em>. It is possible to extend the laws of continuum mechanics for such materials, but we will not be studying them in this course.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>An example of the <em>form</em> that a constitutive model obeying the priniciples of causality, homogeneity and locality has is given, for example, by
+<script type="math/tex; mode=display">\sigma(\mathsf{x},t) = \hat{\sigma}(\rho(\mathsf{x},t),\mathsf{F}(\mathsf{X},t),\text{grad }\mathsf{v}(\mathsf{x},t)),</script>
+where <script type="math/tex">\mathsf{X} = \phi_t^{-1}(\mathsf{x}) \in B_0</script>. Another example could be a relation of the form
+<script type="math/tex; mode=display">\dot{\sigma}(\mathsf{x},t) = \mathcal{G}(\text{grad }\mathsf{v}(\mathsf{x},t)).</script>
+Recall that <script type="math/tex">\dot{\sigma}</script> denotes the material time derivative of the Cauchy stress tensor.</p>
+</div>
+<h3 id="principle-of-material-frame-indifference">Principle of material frame indifference</h3>
+<p>One of the most important constraints, arguably, on the form of constitutive behavior is the <strong>principle of material frame indifference</strong>. This complicated sounding name is, in essesnce, identical to the observer invariance of the constitutive relations (with respect to Euclidean observer transformations). Recall that our entire development of the balance principles of continuum mechanics hinged upon the central idea that the laws of thermodynamics are observer invariant. It is evident that since constitutive laws are also part of the physical description of the material, they cannot depend on the observer. The principle of material frame indifference is essentially a statement of this fact, with one important additional constraint, namely the <strong>form invariance</strong> of the constitutive laws with respect to Euclidean observer transformations. The form invariance postulate, which is implicit in the material frame indifference postulate, states that the <em>functional form</em> of the the constitutive relation is also invariant with respect to Euclidean observer transformations. </p>
+<p>Rather than explaining these in very general terms, it is perhaps better to focus on specific forms of constitutive relations and explain the consequences of the principle of material frame indifference in the process. Throughout this discussion, we will assume that <script type="math/tex">\mathcal{O}</script> and <script type="math/tex">\mathcal{O}^+</script> are two observers who are related by the Euclidean transformation
+<script type="math/tex; mode=display">\mathsf{x}^+ = \mathsf{c} + \mathsf{Q}\mathsf{x},\qquad t^+ = t.</script>
+Note that both <script type="math/tex">\mathsf{c}</script> and <script type="math/tex">\mathsf{Q}</script> are functions of time, in general.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>To start with, let us consider a constitutive relation of the form 
+<script type="math/tex; mode=display">\sigma(\mathsf{x},t) = \hat{\sigma}(\mathsf{v}(\mathsf{x},t)).</script>
+To keep the notation simple, we will often abbreviate this as <script type="math/tex">\sigma = \hat{\sigma}(\mathsf{v})</script>, with the implicit assumption that the constitive relation is local. Note also that the constitutive relation, as written above, is with respect to an observer <script type="math/tex">\mathcal{O}</script>. The same constitutive relation takes the following form with respect to the observer <script type="math/tex">\mathcal{O}^+</script>:
+<script type="math/tex; mode=display">\sigma^+ = \hat{\sigma}^+(\mathsf{v}^+).</script>
+The form invariance postulate means that the specific functional form characterizing <script type="math/tex">\hat{\sigma}</script>, namely the relation between the Cauchy stress <script type="math/tex">\sigma</script> and the spatial velocity <script type="math/tex">\mathsf{v}</script> is invariant with respect to Euclidean observer transformations. We thus have
+<script type="math/tex; mode=display">\sigma^+ = \hat{\sigma}(\mathsf{v}^+).</script>
+Recall that the spatial velocity transforms as follows:
+<script type="math/tex; mode=display">\mathsf{v}^+ = \dot{\mathsf{c}} + \mathsf{Q}\mathsf{v} + \dot{\mathsf{Q}}\mathsf{x}.</script>
+The Cauchy stress tensor, on the other hand, is objective and transforms as 
+<script type="math/tex; mode=display">\sigma^+ = \mathsf{Q} \sigma \mathsf{Q}^T.</script>
+To see why, note that the equation for the traction vector according to <script type="math/tex">\mathcal{O}</script>, <script type="math/tex">\mathsf{t} = \sigma\mathsf{n}</script>, where <script type="math/tex">\mathsf{n}</script> is an appropriately defined normal vector, can be written with respect to <script type="math/tex">\mathcal{O}^+</script> as <script type="math/tex">\mathsf{t}^+ = \sigma^+\mathsf{n}^+.</script> Noting that both the traction vector and normal vector are objective, the objectivity of the Cauchy stress tensor follows. Using these results, it follows that
+<script type="math/tex; mode=display">
+\mathsf{Q}\sigma\mathsf{Q}^T = \hat{\sigma}(\dot{\mathsf{c}} + \mathsf{Q}\mathsf{v} + \dot{\mathsf{Q}}\mathsf{x}).
+</script>
+As a special case, let us consider the situation where <script type="math/tex">\mathsf{Q}(t) \equiv \mathsf{I}</script>. Since the foregoing relation is also valid in case, we see that
+<script type="math/tex; mode=display">\sigma = \hat{\sigma}(\mathsf{v} + \dot{c}),</script>
+<em>for every</em> admissible <script type="math/tex">\dot{\mathsf{c}}</script>. This is clearly not possible. What this means is that, according to the principle of material frame indifference, it is inadmissible to have a constitutive relation of the form <script type="math/tex">\sigma = \hat{\sigma}(\mathsf{v})</script>!</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>As another example, let us consider a constitutive relation of the form
+<script type="math/tex; mode=display">\sigma = \mathcal{F}(\text{grad }\mathsf{v}),</script>
+according to oberver <script type="math/tex">\mathcal{O}</script>. The same relation, when viewed by observer <script type="math/tex">\mathcal{O}^+</script> takes the form
+<script type="math/tex; mode=display">\sigma^+ = \mathcal{F}(\text{grad}^+\,\mathsf{v}^+).</script>
+Notice how we have tacitly used the form invariance postulate in writing this expression. To compute <script type="math/tex">\text{grad}^+\,\mathsf{v}^+</script>, let us work in a Cartesian coordinate setting. Since the velocities transform as 
+<script type="math/tex; mode=display">v_i^+ = \dot{c}_i + \sum Q_{ij}v_j + \sum \dot{Q}_{ij}x_j</script>
+as a consequene of the Euclidean observer transformation, we see that
+<script type="math/tex; mode=display">\begin{split}
+\frac{\partial v_i^+}{\partial x_j^+} &= \sum \frac{\partial v_i^+}{\partial x_k}\frac{\partial x_k}{\partial x_j^+}\\
+ &= \frac{\partial}{\partial x_k}\left(\sum Q_{il}v_l + \sum \dot{Q}_{il}x_l\right)Q_{jk}\\
+ &= \sum Q_{il}\frac{\partial v_l}{\partial x_k}Q_{jk} + \sum \dot{Q}_{ik}Q_{jk}.
+\end{split}</script>
+In deriving this equation, we have made use of the fact that
+<script type="math/tex; mode=display">
+x_i^+ = c_i + \sum Q_{ij}x_j \quad\Rightarrow\quad \frac{\partial x_k}{\partial x_j^+} = Q_{jk}.
+</script>
+The final result can be expressed in invariant form as
+<script type="math/tex; mode=display">
+\text{grad}^+\mathsf{v}^+ = \mathsf{Q}(\text{grad }\mathsf{v})\mathsf{Q}^T + \Omega.
+</script>
+Here, <script type="math/tex">\Omega = \mathsf{Q}\dot{\mathsf{Q}}^T</script>. It is left as a straightforward exercise to check this - expand this coordinate free result stated above using Cartesian coordinates and note that <script type="math/tex">\mathsf{Q} = \sum \mathsf{e}^+_i \otimes \mathsf{e}_i</script>.</p>
+<p>The transformation rule derived above shows that that the gradient of the velocity field is <em>not</em> an objective tensor field; this is primarily a consequence of the additional term <script type="math/tex">\Omega</script>, which can be chosen arbitrarily. So a constitutive relation of the form <script type="math/tex">\sigma = \mathcal{F}(\text{grad }\mathsf{v})</script> is not observer invariant.</p>
+<p>A simple means to fix this problem is by noting that the rate of deformation tensor, 
+<script type="math/tex; mode=display">\mathsf{d} = \frac{1}{2}\left(\text{grad }\mathsf{v} + (\text{grad }\mathsf{v})^T\right)</script>
+is indeed objective. In other words,
+<script type="math/tex; mode=display">\mathsf{d}^+ = \mathsf{Q}\mathsf{d}\mathsf{Q}^T.</script>
+This follows from the fact that <script type="math/tex">\Omega</script> is skew symmetric, which in turn follows from the orthogonality of <script type="math/tex">\mathsf{Q}(t)</script> for every <script type="math/tex">t</script>. Thus, if we postulate a constitutive relation of the form
+<script type="math/tex; mode=display">\sigma = \mathcal{F}(\mathsf{d}),</script>
+then this is a valid form of the constitutive law as long as the function <script type="math/tex">\mathcal{F}</script> satisfies the following property
+<script type="math/tex; mode=display">
+\mathsf{Q}\mathcal{F}(\mathsf{d})\mathsf{Q}^T = \mathcal{F}(\mathsf{Q}\mathsf{d}\mathsf{Q}^T),
+</script>
+for every <script type="math/tex">\mathsf{Q} \in SO(3)</script>.</p>
+</div>
 <div class="admonition danger">
 <p class="admonition-title">WORK IN PROGRESS!</p>
 <p>To be completed...</p>
