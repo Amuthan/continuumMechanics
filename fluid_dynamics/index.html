@@ -40,7 +40,7 @@
     
     
       
-        <title>Introduction - Continuum Mechanics</title>
+        <title>Fluid dynamics - Continuum Mechanics</title>
       
     
     
@@ -89,7 +89,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#overview-of-course-contents" tabindex="1" class="md-skip">
+      <a href="#elementary-fluid-dynamics" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -114,7 +114,7 @@
               Continuum Mechanics
             </span>
             <span class="md-header-nav__topic">
-              Introduction
+              Fluid dynamics
             </span>
           
         </div>
@@ -192,63 +192,11 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Introduction
-      </label>
-    
-    <a href="./" title="Introduction" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../intro/" title="Introduction" class="md-nav__link">
       Introduction
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#continuum-hypothesis" title="Continuum hypothesis" class="md-nav__link">
-    Continuum hypothesis
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#modeling-continua" title="Modeling continua" class="md-nav__link">
-    Modeling continua
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#outline" title="Outline" class="md-nav__link">
-    Outline
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
     
@@ -352,11 +300,56 @@
       
       
 
+  
 
-  <li class="md-nav__item">
-    <a href="../fluid_dynamics/" title="Fluid dynamics" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Fluid dynamics
+      </label>
+    
+    <a href="./" title="Fluid dynamics" class="md-nav__link md-nav__link--active">
       Fluid dynamics
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#newtonian-viscous-fluids" title="Newtonian viscous fluids" class="md-nav__link">
+    Newtonian viscous fluids
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#poiseuille-flow" title="Poiseuille flow" class="md-nav__link">
+    Poiseuille flow
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
     
@@ -381,22 +374,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#continuum-hypothesis" title="Continuum hypothesis" class="md-nav__link">
-    Continuum hypothesis
+  <a href="#newtonian-viscous-fluids" title="Newtonian viscous fluids" class="md-nav__link">
+    Newtonian viscous fluids
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#modeling-continua" title="Modeling continua" class="md-nav__link">
-    Modeling continua
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#outline" title="Outline" class="md-nav__link">
-    Outline
+  <a href="#poiseuille-flow" title="Poiseuille flow" class="md-nav__link">
+    Poiseuille flow
   </a>
   
 </li>
@@ -418,31 +404,54 @@
               
                 
                 
-                <h1 id="overview-of-course-contents">Overview of course contents</h1>
-<p>Welcome to <em>AE 639: Continuum Mechanics</em>! In this course, we will learn the basic principles how to model the mechanical behavior of continua. These notes assume a prior background in linear algebra and Euclidean tensor analysis; an introduction to the relevant topics may be found <a href="https://amuthan.github.io/tensors-intro/">here</a>.</p>
-<h2 id="continuum-hypothesis">Continuum hypothesis</h2>
+                <h1 id="elementary-fluid-dynamics">Elementary fluid dynamics</h1>
+<p>As a simple application of the constitutive theory developed so far, let us look into a special class of fluids called Newtonian fluids. This will result in the famous <em>Navier-Stokes equation</em> in fluid dynamics. This will be followed by a simple example, called <em>Poiseuille flow</em>, to illustrate how it all comes together.</p>
+<h2 id="newtonian-viscous-fluids">Newtonian viscous fluids</h2>
+<p>Let us now consider the special case of a constitutive relation of the form
+<script type="math/tex; mode=display">\sigma = \mathcal{F}(\mathsf{d}).</script>
+We saw in our previous discussin of constitutive models that this form of the constitutive model is objective provided the function $\mathcal{F}$ satisfies the constraint,
+<script type="math/tex; mode=display">\mathsf{Q}\mathcal{F}(\mathsf{d})\mathsf{Q}^T = \mathcal{F}(\mathsf{Q}\mathsf{d}\mathsf{Q}^T),</script>
+for every <script type="math/tex">\mathsf{Q} \in SO(3)</script>. It can be shonw that the most general form of $\mathcal{F}$ that is compatible with this constraint has the following structure,
+<script type="math/tex; mode=display">\mathcal{F}(\mathsf{d}) = a_0 \mathsf{I} + a_1 \mathsf{d} + a_2 \mathsf{d}^2,</script>
+where $a_1, a_2$ are constants and $a_0$ is an objective scalar functional of $d$. A material whose constitutive relation of this form is called a <strong>non-Newtonian fluid</strong>, or a <strong>Reiner-Rivlin fluid</strong>.</p>
+<p>As a special case of a Reiner-Rivlin fluid, let us consider the case of a <strong>linear viscous fluid</strong>, also called a <strong>Newtonian viscous fluid</strong>, which is characterized by a constitutive relation of the form
+<script type="math/tex; mode=display">\sigma = -p(\rho)\mathsf{I} + \lambda \,\text{tr}(\mathsf{d})\mathsf{I} + 2\eta\mathsf{d},</script>
+where $\lambda,\mu$ are positive constants, and $p(\rho)$ is a function of the density called the <strong>pressure</strong> of the fluid. </p>
+<p>Let us see how the mass and momentum balance equations change as a consequence of this constituive assumption. The mass continuity equation remains unchanged since it does not involve the Cauchy stress tensor. The linear momentum balance equation, on the other hand, takes the following form:
+<script type="math/tex; mode=display">
+\rho\frac{D\mathsf{v}}{Dt} = \rho\mathsf{b} - \text{grad }p + (\lambda + \eta)\,\text{grad div }\mathsf{v} + \eta\,\text{div grad }\mathsf{v}.
+</script>
+This equation is called the <strong>Navier-Stokes equation</strong>, and plays a central role in continuum mechanics. Note that this equaiton, along with the mass continuity equation, provides a closed system of equations for the mass density $\rho$ and the spatial velocity $\mathsf{v}$. When supplied with the appropriate initial and boundary conditions, we can, in principle at least, solve the resulting set of partial differential equations.</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>In deriving the Navier-Stokes equation, we used the following result:
+<script type="math/tex; mode=display">\text{div }\sigma = - \text{grad }p + (\lambda + \eta)\,\text{grad div }\mathsf{v} + \eta\,\text{div grad }\mathsf{v}.</script>
+This is most easily shown by taking recourse to a Cartesian coordinate system, as the following calculation illustrates:
+<script type="math/tex; mode=display">\begin{split}
+(\text{div }\sigma)_i &= \sum \frac{\partial \sigma_{ij}}{\partial x_j}\\
+ &= \sum \frac{\partial}{\partial x_j}\left(-p\delta_{ij} + \lambda \left(\sum \frac{\partial v_k}{\partial x_k}\right)\delta_{ij} + \eta\left(\frac{\partial v_i}{\partial x_j} + \frac{\partial v_j}{\partial x_i}\right)\right)\\
+ &= -\frac{\partial p}{\partial x_i} + (\lambda + \eta)\frac{\partial}{\partial x_i}\left(\sum \frac{\partial v_k}{\partial x_k}\right) + \eta\frac{\partial^2 v_i}{\partial x_j\partial x_j}.
+\end{split}</script>
+Subsituting this in the linear momentum balance equation yields the Navier-Stokes equation.</p>
+</div>
+<p>In the special case of an <strong>incompressible fluid</strong>, we can simplify the mass continuity equation as follows: 
+<script type="math/tex; mode=display">\frac{D\rho}{Dt} = 0 \quad\Leftrightarrow\quad \text{div }v = 0.</script>
+It is easily checked that the Navier-Stokes equation for an incompressible fluid takes the following form:
+<script type="math/tex; mode=display">\rho\left(\frac{\partial \mathsf{v}}{\partial t} + \text{grad }\mathsf{v} \cdot \mathsf{v}\right) = \rho \mathsf{b} - \text{grad }p + \eta\,\text{div grad }\mathsf{v}.</script>
+This equation, along with the incompressibility constraint, is known as the <strong>incompressible Navier-Stokes equation</strong>.</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>Incompressibility is a very useful and satisfactory approximation for fluids whose flow speeds are much smaller than the speed of sound in that fluid. The study of incompressible fluids constitutes an important branch of fluid dynamics, but we will not explore this in any detail in this course.</p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Guess what!</p>
+<p>Proving the existence of solutions for the incompressible Navier-Stokes equation is famously one of the <em>Millenium Problems</em> listed by the Clay Mathematics Institute; see <a href="https://www.claymath.org/millennium-problems/navier–stokes-equation">this page</a> for more details. You can become a millionaire and achieve a permanent place in the history of science if you crack this! </p>
+</div>
+<h2 id="poiseuille-flow">Poiseuille flow</h2>
 <div class="admonition danger">
 <p class="admonition-title">WORK IN PROGRESS</p>
 <p>To be completed.</p>
 </div>
-<h2 id="modeling-continua">Modeling continua</h2>
-<div class="admonition danger">
-<p class="admonition-title">WORK IN PROGRESS</p>
-<p>To be completed.</p>
-</div>
-<p>The primary point of view that we will develop here is that the mechanics of continua is a sub-branch of thermodynamics. </p>
-<p>We will emphasize on two aspects in particular:</p>
-<ul>
-<li>Coordinate system invariance, and</li>
-<li>Observer invariance,</li>
-</ul>
-<p>of the first and second laws of thermodynamics.</p>
-<h2 id="outline">Outline</h2>
-<p>Kinematics</p>
-<p>Balance principles</p>
-<p>Constitutive behavior</p>
-<p>Initial and boundary value problems</p>
-<p>Variational principles</p>
                 
                   
                 
@@ -463,7 +472,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href=".." title="Home" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../constitutive_modeling/" title="Constitutive modeling" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -472,25 +481,11 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Home
+                Constitutive modeling
               </span>
             </div>
           </a>
         
-        
-          <a href="../kinematics_intro/" title="Kinematics - basic definitions" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Kinematics - basic definitions
-              </span>
-            </div>
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
-            </div>
-          </a>
         
       </nav>
     </div>
