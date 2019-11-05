@@ -438,7 +438,7 @@ Subsituting this in the linear momentum balance equation yields the Navier-Stoke
 <script type="math/tex; mode=display">\frac{D\rho}{Dt} = 0 \quad\Leftrightarrow\quad \text{div }v = 0.</script>
 It is easily checked that the Navier-Stokes equation for an incompressible fluid takes the following form:
 <script type="math/tex; mode=display">\rho\left(\frac{\partial \mathsf{v}}{\partial t} + \text{grad }\mathsf{v} \cdot \mathsf{v}\right) = \rho \mathsf{b} - \text{grad }p + \eta\,\text{div grad }\mathsf{v}.</script>
-This equation, along with the incompressibility constraint, is known as the <strong>incompressible Navier-Stokes equation</strong>.</p>
+This equation, along with the incompressibility constraint, is known as the <strong>incompressible Navier-Stokes equation</strong>. Notice that the <em>only</em> unknown in this case is the velocity field. </p>
 <div class="admonition info">
 <p class="admonition-title">Remark</p>
 <p>Incompressibility is a very useful and satisfactory approximation for fluids whose flow speeds are much smaller than the speed of sound in that fluid. The study of incompressible fluids constitutes an important branch of fluid dynamics, but we will not explore this in any detail in this course.</p>
@@ -448,9 +448,51 @@ This equation, along with the incompressibility constraint, is known as the <str
 <p>Proving the existence of solutions for the incompressible Navier-Stokes equation is famously one of the <em>Millenium Problems</em> listed by the Clay Mathematics Institute; see <a href="https://www.claymath.org/millennium-problems/navier–stokes-equation">this page</a> for more details. You can become a millionaire and achieve a permanent place in the history of science if you crack this! </p>
 </div>
 <h2 id="poiseuille-flow">Poiseuille flow</h2>
-<div class="admonition danger">
-<p class="admonition-title">WORK IN PROGRESS</p>
-<p>To be completed.</p>
+<p>Let us now look at simple example, called a <strong>Poiseuille flow</strong>, of an application of the theory developed so far. This will illustrate how everything that we have studied thus far comes together. The problem we will study is that of the steady flow of an inompressible Newtonian viscous fluid through a pipe of constant cross sectional area. The geometry of the flow is illustrated below:</p>
+<p><img alt="Poiseuille flow" src="../pics/poiseuille_flow_geometry.png" /></p>
+<p>As an idealization, we consider a two dimensional pipe of length <script type="math/tex">L</script> and cross sectional width <script type="math/tex">h</script>. Equivalently, this can be looked at as a a semi-infinite pipe with infinite extension along the out-of-plane direction. The steady flow in the pipe is caused by a pressure difference <script type="math/tex">\Delta P = P_1 - P_2 > 0</script>. Let us now see how to <em>solve</em> this problem using the incompressible Navier-Stokes equation.</p>
+<p>What does this mean? Recall that the <em>only</em> unknown in this case is the velocity field. What we understand by a solution is the computation of the velocity field given all the information above. Let us start by writing out the mass and linear momentum balance equations for the steady state flow of an incompressible Newtonian viscous fluid:
+<script type="math/tex; mode=display">\begin{split}
+\text{div }\mathsf{v} &= 0,\\
+\text{grad }\mathsf{v} \cdot \mathsf{v} &= -\text{grad }p + \eta\,\text{div grad }\mathsf{v}.
+\end{split}</script>
+To solve these equations, we need to augment them with the appropriate initial and boundary conditions. In addition to the pressure being specified at the two ends of the pipe, we will also need the <em>no-slip</em> boundary condition on the walls for the velocity field. This cnidition requires that the velocity vanishes at the fluid-wall interface at <script type="math/tex">y = \pm h/2</script>. </p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>The origin of the no-slip boundary condition lies in the details of the interaction between the fluid and wall particles, and cannot be obtained from purely thermodynamic considerations alone.  For our purposes, it can be taken to be an experimental fact. </p>
+</div>
+<p>Let us now look at the velocity field. By symmetry, we do not expect any flow along the <script type="math/tex">y</script> and <script type="math/tex">z</script> directions. Thus, a general form of the velocity field for the present problem can be written as
+<script type="math/tex; mode=display">\mathsf{v}(\mathsf{x}) = u(x,y) \mathsf{e}_x.</script>
+The incompressibility constraint, <script type="math/tex">\text{div }\mathsf{v} = 0</script>, implies that
+<script type="math/tex; mode=display">\frac{\partial u}{\partial x} = 0 \quad\Rightarrow\quad \mathsf{v}(\mathsf{x}) = u(y)\mathsf{e}_x.</script>
+To get the incompressible Navier-Stokes equation for this case, note that
+<script type="math/tex; mode=display">\begin{split}
+\text{grad }\mathsf{v} \cdot \mathsf{v} &= \sum v_j\frac{\partial v_i}{\partial x_j} \mathsf{e}_i = u(y)\frac{\partial u(y)}{\partial x}\mathsf{e}_x = 0,\\
+\text{grad }p &= \frac{\partial p}{\partial x}\mathsf{e}_x + \frac{\partial p}{\partial y}\mathsf{e}_y + \frac{\partial p}{\partial z}\mathsf{e}_z,\\
+\text{div grad }\mathsf{v} &= \sum \frac{\partial^2 v_i}{\partial x_j\partial x_j} \mathsf{e}_i = \frac{\partial^2 u}{\partial y^2}\mathsf{e}_x.
+\end{split}</script>
+Using these results in the incompressible Navier-Stokes equation, we get the following simple equation:
+<script type="math/tex; mode=display">
+\frac{\partial p}{\partial x} = \eta \frac{\partial^2 u}{\partial y^2}, \quad \frac{\partial p}{\partial y} = \frac{\partial p}{\partial z} = 0.
+</script>
+The latter equations imply that the pressure is only a function of the <script type="math/tex">x</script> variable. The former equation then tells us that the left hand side, namely <script type="math/tex">\partial p/\partial x</script>, is just a function of <script type="math/tex">x</script>, while the right hand side, namely <script type="math/tex">\eta\,\partial^2 u/\partial y^2</script>, is a function of <script type="math/tex">y</script> only. The only way this equation can be satisfied, therefore, is when the two are simultaneously equal to some constant, say <script type="math/tex">C</script>:
+<script type="math/tex; mode=display">
+\frac{\partial p}{\partial x} = \eta \frac{\partial^2 u}{\partial y^2} = C.
+</script>
+Solving the equation <script type="math/tex">\partial p/\partial x = C</script>, along with the boundary conditions that the pressure at <script type="math/tex">x = 0</script> is <script type="math/tex">P_1</script> and the pressure at <script type="math/tex">x = L</script> is <script type="math/tex">P_2</script>,  yields the following:
+<script type="math/tex; mode=display">C = -\frac{\Delta P}{L}, \qquad p(x) = P_1 - \frac{\Delta P}{L}x.</script>
+The remaining equation to be solved is
+<script type="math/tex; mode=display">\eta\,\frac{\partial^2 u}{\partial y^2} = -\frac{\Delta P}{L},</script>
+subject to the no-slip boundary conditions,
+<script type="math/tex; mode=display">u\left(\pm \frac{h}{2}\right) = 0.</script>
+A straightforward computation yields the desired solution,
+<script type="math/tex; mode=display">u(y) = \frac{\Delta P}{2\eta L}\left(\frac{h^2}{4} - y^2\right).</script>
+As a consistency check, note that <script type="math/tex">u \equiv 0</script> when <script type="math/tex">\Delta P = 0</script>. This simply states that there is no flow if there is no external pressure gradient to drive it. The velocity profile across the cross-section of the pipe is shown below:</p>
+<p><img alt="Velocity profile in Poiseuille flow" src="../pics/poiseuille_flow_velocity.png" /></p>
+<p>The velocity profile is parabolic and vanishes at the walls of the pipe as required by the no-slip boundary conditions. Note also that the maximum velocity is attained at the center of the pipe.</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>The foregoing conclusion that the maximum flow velocity is at the center of the pipe is also true in the case of a Poiseuille flow in a circular pipe. The details are left as a simple exercise.</p>
 </div>
                 
                   
