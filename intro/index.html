@@ -89,7 +89,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#overview-of-course-contents" tabindex="1" class="md-skip">
+      <a href="#overview-and-course-contents" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -223,6 +223,20 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-study-continuum-mechanics" class="md-nav__link">
+    Why study Continuum Mechanics?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#continuum-hypothesis" class="md-nav__link">
     Continuum hypothesis
   </a>
@@ -230,8 +244,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#modeling-continua" class="md-nav__link">
-    Modeling continua
+  <a href="#key-meta-modeling-assumptions" class="md-nav__link">
+    Key meta-modeling assumptions
   </a>
   
 </li>
@@ -383,6 +397,20 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-study-continuum-mechanics" class="md-nav__link">
+    Why study Continuum Mechanics?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#continuum-hypothesis" class="md-nav__link">
     Continuum hypothesis
   </a>
@@ -390,8 +418,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#modeling-continua" class="md-nav__link">
-    Modeling continua
+  <a href="#key-meta-modeling-assumptions" class="md-nav__link">
+    Key meta-modeling assumptions
   </a>
   
 </li>
@@ -420,31 +448,47 @@
               
                 
                 
-                <h1 id="overview-of-course-contents">Overview of course contents</h1>
-<p>Welcome to <em>AE 639: Continuum Mechanics</em>! In this course, we will learn the basic principles how to model the mechanical behavior of continua. These notes assume a prior background in linear algebra and Euclidean tensor analysis; an introduction to the relevant topics may be found <a href="https://amuthan.github.io/tensors-intro/">here</a>.</p>
+                <h1 id="overview-and-course-contents">Overview and course contents</h1>
+<h2 id="introduction">Introduction</h2>
+<p>Welcome to <em>AE 639: Continuum Mechanics</em>! In this course, we will learn the basic principles related to modeling the mechanical behavior of continua. These notes assume a prior background in linear algebra and Euclidean tensor analysis; an introduction to the relevant topics may be found <a href="https://amuthan.github.io/tensors-intro/">here</a>.</p>
+<div class="admonition danger">
+<p class="admonition-title">About Continuum Mechanics</p>
+<p><em>"...researchers in elasticity theory are very opinionated, even when they are wrong. During our own work in this field we have refused to fight, and in keeping with this pacifist approach, we now issue these general disclaimers: This book is neither complete nor unbiased."</em>
+(Marsden, Hughes: Mathematical Foundations of Elasticity)</p>
+</div>
+<p>As the above quote suggests, continuum mechanics has a rich legacy of researchers with very strong opinions. In this course, I will carefully sidestep all polemics and instead focus on providing a broad introduction to continuum mechanics using ideas which are fairly established now. Nevertheless, it is inescapable that some of my own perspectives and choice of emphasis shows up at places. After finishing this course, you will be better placed to dive deeper into the literature and forge your own perspective, if you choose to do so.</p>
+<div class="admonition danger">
+<p class="admonition-title">"Rational" Thermodynamics</p>
+<p>A very popular school of thought in continuum mechanics is the so-called <em>rational thermodynamics</em> school initiated by Clifford Truesdell and his students/associates. Despite the many excellent contributions from members of this school of thought and their crucial role in giving concrete shape to continuum mechanics as we know it today, I will carefully avoid using strong adjectives like <em>rational</em> in describing one particular school of thought since this has an obviously condescending and dismissive attitude towards other perspectives which are also equally, if not more, rational. When necessary, I will refer to what is conventionally called <em>rational thermodynamics</em> as <em>Truesdellian thermodynamics</em>. This choice of name is not to belittle contributions of other excellent researchers from this school - it merely highlights the fact that Truesdell was one of its most vocal proponents.</p>
+</div>
+<h2 id="why-study-continuum-mechanics">Why study Continuum Mechanics?</h2>
+<p>The primary objective of continuum mechanics (and continuum thermodynamics) is to provide a mathematical framework to analyze the behavior of materials at <em>macroscopic</em> length, time and energy scales, when they are subject to external forces and/or energy inputs in the form of heat. </p>
+<p><img alt="Continuum Mechanics Objective" src="../pics/continuum_objective.png" /></p>
+<p>We will focus exclusively on the thermomechanical response of solids though a similar development can be effected for the study of continuum phenomena involving other fields like electric and magnetic fields. </p>
 <h2 id="continuum-hypothesis">Continuum hypothesis</h2>
+<p>Fundamental to continuum mechanics is the notion of a <em>continuum</em>. When dealing with materials at the macroscopic scale, we rarely think of them as a collection of atoms. Rather, we intuitively think of it as a substance that <em>fills up</em> the space it occupies. This is essentially what is known as the <strong>continuum hypothesis</strong>, and this imaginary substance which fills up the space a material occupies is called a <strong>continuum</strong>. This is best viewed as an idealization of the actual material behavior when dealing with macroscopic length and time scales. Indeed, it is possible to show how the continuum hypothesis is consistent, in an appropriately defined limiting sense, with the fundamental laws of physics. A detailed consideration of these ideas is beyond the scope of this course - the companion course <em>AE 731: Multiscale Modeling of Materials</em> will provide more details on this.</p>
+<p>As a qualitative <em>justification</em> of the continuum hypothesis we may think of the following thought experiment. We know that matter, both solid and fluid, is discrete and constituted of atoms at the nanometer length scale. Let us consider a caricature of this as shown in the figure below.</p>
+<p><img alt="Rationalizing the continuum hypothesis" src="../pics/cont_hyp_disk.png" /></p>
+<p>We now consider imaginary disks, shown as filled grey circles in the picture above, of larger and larger radii and compute the number density of atoms inside these disks. A qualitative plot of the number density of atoms as function of the disk radius is shown below - note that the scale of the <em>X</em> axis is logarithmic. (This plot is adapted from G.K. Batchelor's <em>An Introduction to Fluid Dynamics</em>.)</p>
+<p><img alt="Number density variation" src="../pics/number_density_variation.png" /></p>
+<p>We see that the number density variation exhibits three distinct regimes. For disk radii of the order of nanometers (the typical interatomic spacing $a$ is of the order of a few Angstroms) or below there are large fluctuations. For intermediate length scales larger than the typical atomic length scale and below the typical macroscopic length scales, the number density variation is <em>essentially</em> constant. For macroscopic length scales, we begin to see <em>large wavelength</em> fluctuations of the number density. The key abstraction that we make in continuum mechanics is to ignore the microscopic fluctuations and focus instead entirely on the second and third regimes mentioned above. When we restrict ourselves to these regimes, we may as well introduce an imaginary substance called a <strong>continuum</strong> that fills up the whole of the space that the body occupies and associated with it a <strong>density field</strong> that agrees with the aforementioned figure in the continuum regimes. This abstraction is called the <strong>continuum hypothesis</strong>, and is qualitatively illustrated in the figure below.</p>
+<p><img alt="Illustration of the continuum hypothesis" src="../pics/cont_hyp.png" /></p>
+<p>Mathematically, the shift in perspective can be illustrated as follows: viewed from the atomic perspective, we need to know the positions of the individual atoms $(q_i)_{i=1}^N \in \mathbb{R}^{3N}$ to describe the actual <em>configuration</em> of the body. However, when $N$ is very large (typically larger than Avogadro's number $\sim 10^{23}$) it is more convenient to describe the body by the region $B \subseteq \mathbb{R}^3$ that it occupies and denote a particular point in the body as $x \in B$. Whereas physical properties are described in the atomic perspective as functions of the <em>phase space</em> $\Gamma \subseteq \mathbb{R}^{3N}\times\mathbb{R}^{3N}$ that collects the positions and momenta of the constituent atoms, physical quantities are represented as <em>fields</em> defined on the body $B \subseteq \mathbb{R}^3$. For instance, the mass density is defined as a function of the form $\rho:B \to \mathbb{R}$ that associates with each $x \in B$ the mass density $\rho(x) \in \mathbb{R}$. Continuum mechanics deals exclusively with this <em>field</em> representation, without any reference to the lower scale atomistic representation. </p>
+<p><em>Note:</em> A natural question that may arise is the relationshipe between these two representations. Such questions, while of both conceptual importance and of practical importance in analyzing molecular simulations, will not be discussed in this course. You are welcome to attend the companion course <em>AE 731 - Multiscale Modeling of Materials</em> to learn more about these connections.</p>
 <div class="admonition danger">
-<p class="admonition-title">WORK IN PROGRESS</p>
-<p>To be completed.</p>
+<p class="admonition-title">Truesdellian perspective on continuum mechanics</p>
+<p>Some proponents of the Truesdellian school of continuum mechanics <em>postulate</em> the existence of a continuum, <em>by fiat</em>, and argue against the necessity for an elaborate microscopic justification of the notion of a continuum and the laws of continuum mechanics.</p>
 </div>
-<h2 id="modeling-continua">Modeling continua</h2>
-<div class="admonition danger">
-<p class="admonition-title">WORK IN PROGRESS</p>
-<p>To be completed.</p>
-</div>
-<p>The primary point of view that we will develop here is that the mechanics of continua is a sub-branch of thermodynamics. </p>
-<p>We will emphasize on two aspects in particular:</p>
+<h2 id="key-meta-modeling-assumptions">Key meta-modeling assumptions</h2>
+<p>In this course, we will develop continuum mechanics as a sub-branch of thermodynamics. We will do so in a manner that respects certain fundamental invariance principles that are cherished across all branches of physics. We will emphasize on two aspects in particular:</p>
 <ul>
-<li>Coordinate system invariance, and</li>
-<li>Observer invariance,</li>
+<li>Observer invariance, a.k.a <strong>objectivity</strong>, and </li>
+<li>Coordinate system invariance (for a given observer).</li>
 </ul>
-<p>of the first and second laws of thermodynamics.</p>
+<p>The more fundamental of the two, namely objectivity, requires that the different observers, who are mutually related in some precisely defined sense, agree upon the basic physical behavior of the system under investigation. This is largely just a restricted version of Einstein's relativity principle, but we will see that there are certain additional features that come into play because of the presence of physical variables, like stress, that are specific to continuum mechanics. The second aspect is invariance of the physical laws, for a given observer, with respect to change of coordinate systems. This is easily accomplished by adopting a coordinate-free language that is provided by a branch of mathematics known as <em>tensor analysis</em>.</p>
+<p>A broad summary of this entire course is the systematic application of these two principles to the laws of thermodynamics, and to any postulated material behavior, in a manner that helps us understand the behavior of continua in a reasonably precise manner.</p>
 <h2 id="outline">Outline</h2>
-<p>Kinematics</p>
-<p>Balance principles</p>
-<p>Constitutive behavior</p>
-<p>Initial and boundary value problems</p>
-<p>Variational principles</p>
+<p>We will commence with a purely <em>kinematical</em> description of continua, by which we mean an understanding of the geometry of bodies and descriptions of their changes of shape. We will also discuss the structure of Newtonian spacetime briefly as part of this discussion to set the stage where our story unfolds. We will subsequently study the balance principles related to mass, momentum, energy, and entropy, using a celebrated result known as the <em>Green-Naghdi-Rivlin theorem</em>. All these considerations are universal in the sense that they apply to the thermomechanics of any continua. We bring in material specificity with the introduction of <em>constitutive laws</em> that detail how particular materials behave to external stimuli. We will look at elementary examples involving both fluids and solids to illustrate these ideas. Depending on the time available, we will study a variety of special topics involving linear elasticity, variational principles, internal variable formalism to handle dissipative phenomena, etc. </p>
                 
                   
                 
