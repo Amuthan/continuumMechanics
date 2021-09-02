@@ -300,15 +300,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#mass-continuity-equation" class="md-nav__link">
-    Mass continuity equation
+  <a href="#reynolds-transport-theorem" class="md-nav__link">
+    Reynolds' transport theorem
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#reynolds-transport-theorem" class="md-nav__link">
-    Reynolds' transport theorem
+  <a href="#mass-continuity-equation" class="md-nav__link">
+    Mass continuity equation
   </a>
   
 </li>
@@ -458,15 +458,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#mass-continuity-equation" class="md-nav__link">
-    Mass continuity equation
+  <a href="#reynolds-transport-theorem" class="md-nav__link">
+    Reynolds' transport theorem
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#reynolds-transport-theorem" class="md-nav__link">
-    Reynolds' transport theorem
+  <a href="#mass-continuity-equation" class="md-nav__link">
+    Mass continuity equation
   </a>
   
 </li>
@@ -665,32 +665,6 @@ F_{21} & F_{22}
 </script>
 In the foregoing derivation, we have used the shortand notation <script type="math/tex">v_{i,j}</script> to denote <script type="math/tex">\partial v_i(\mathsf{x},t)/\partial x_j</script>, and omitted the arguments in some of the intermediate expressions to keep the notation simple. </p>
 <p>A similar but more tedious argument can be used to show that the same result holds in three dimensions too. This completes the proof of the important result: <script type="math/tex">\dot{J}(\mathsf{x},t) = J(\mathsf{x},t)\,\text{div }\mathsf{v}(\mathsf{x},t)</script>.</p>
-<h2 id="mass-continuity-equation">Mass continuity equation</h2>
-<p>As an immediate and useful application of the expression for the material time derivative for the determinant of the deformation gradient just derived, let us derive the <em>mass continuity equation</em>. This will also provide a gentle segue to the balance principles that we will study later on, after completing our study of kinematics.</p>
-<p>Suppose that the <strong>mass density</strong> of the body at the inital instant of time <script type="math/tex">t = 0</script> is given by the scalar field <script type="math/tex">\rho_0:B_0 \to \mathbb{R}</script>. This means that if we consider an infinitesimal volume <script type="math/tex">\Delta V</script> about a point <script type="math/tex">\mathsf{X}\in B_0</script>, the mass contained within that volume is given by <script type="math/tex">\rho_0(\mathsf{X})\Delta V</script>. Let the mass density at time time over the region <script type="math/tex">B_t = \varphi_t(B_0)</script> be given by the scalar field <script type="math/tex">\rho_t:B_t \to \mathbb{R}</script>. At any <script type="math/tex">\mathsf{x} \in B_t</script>, we will often write <script type="math/tex">\rho(\mathsf{x},t)</script> for <script type="math/tex">\rho_t(\mathsf{x})</script>. Suppose that <script type="math/tex">\Delta v</script> is the deformed volume at <script type="math/tex">\mathsf{x} = \varphi_t(\mathsf{X})</script> corresponding to the intial infinitesimal volume <script type="math/tex">\Delta V</script> at <script type="math/tex">\mathsf{X} \in B_0</script>. The mass inside the volume <script type="math/tex">\Delta v</script> is exactly identical to the mass inside <script type="math/tex">\Delta V</script> initially since both <script type="math/tex">\Delta V</script> and <script type="math/tex">\Delta v</script> contain exactly the same particles. We therefore have the identity
-<script type="math/tex; mode=display">\rho_0(\mathsf{X})\Delta V = \rho(\mathsf{x},t) \Delta v.</script>
-Using the fact that the <script type="math/tex">\Delta v = J(\mathsf{x},t)\Delta V</script>, we can write the equation above as 
-<script type="math/tex; mode=display">\rho_0(\mathsf{X}) = J(\mathsf{x},t)\rho(\mathsf{x},t).</script>
-This equation is known as the <strong>mass conservation equation</strong> on account of the fact that it relates the initial and current mass densities. </p>
-<p>The mass conservation equation can be cast into a differential equation by taking the material time derivative of the equation <script type="math/tex">\rho_0(\mathsf{X}) = J(\mathsf{x},t)\rho(\mathsf{x},t)</script>. Since <script type="math/tex">\dot{\rho}_0(\mathsf{X}) = 0</script>, we see that
-<script type="math/tex; mode=display">
-\begin{split}
-0 &= \frac{D(J(\mathsf{x},t)\rho(\mathsf{x},t))}{Dt}\\
- &= \dot{J}(\mathsf{x},t) \rho(\mathsf{x},t) + J(\mathsf{x},t) \dot{\rho}(\mathsf{x},t)\\
- &= J(\mathsf{x},t) \rho(\mathsf{x},t) \,\text{div }\mathsf{v}(\mathsf{x},t) + J(\mathsf{x},t) \left(\frac{\partial \rho(\mathsf{x},t)}{\partial t} + \text{grad }\rho(\mathsf{x},t) \cdot \mathsf{v}(\mathsf{x},t) \right)\\
- &= J(\mathsf{x},t)\left(\frac{\partial \rho(\mathsf{x},t)}{\partial t} + \text{div}(\rho(\mathsf{x},t)\mathsf{v}(\mathsf{x},t)) \right).
-\end{split}
-</script>
-In deriving this equation, we used the identity: <script type="math/tex">\text{div}(\rho \mathsf{v}) = \rho \, \text{div }\mathsf{v} + \text{grad }\rho \cdot \mathsf{v}</script>. Since the determinant of the deformation gradient is always strictly positive, we arrive at the following equation:
-<script type="math/tex; mode=display">
-\frac{\partial \rho(\mathsf{x},t)}{\partial t} + \text{div}(\rho(\mathsf{x},t)\mathsf{v}(\mathsf{x},t)) = 0.
-</script>
-This equation is known as the <strong>mass continuity equation</strong>, and is the differential statement of the mass conservation equation <script type="math/tex">\rho_0(\mathsf{X}) = J(\mathsf{x},t)\rho(\mathsf{x},t)</script>. 
-Note that we can also write the mass continuity equation in terms of the material time derivative of the density field as
-<script type="math/tex; mode=display">
-\frac{D\rho(\mathsf{x},t)}{Dt} + \rho(\mathsf{x},t)\,\text{div }\mathsf{v}(\mathsf{x},t) = 0.
-</script>
-Both these forms are useful in applications. We will also present an alternative derivation of the mass continuity equation later on. </p>
 <h2 id="reynolds-transport-theorem">Reynolds' transport theorem</h2>
 <p>To conclude our discussion of time derivatives of various quantities related to the motion and deformation of a body in three dimensional space, let us consider material time derivatives of the form
 <script type="math/tex; mode=display">
@@ -706,24 +680,61 @@ Here, <script type="math/tex">f:\mathbb{R}^3 \times I \to \mathbb{R}</script> is
  &= \int_{B_t} \left(\frac{Df(\mathsf{x},t)}{Dt} + f(\mathsf{x},t)\,\text{div }\mathsf{v}(\mathsf{x},t)\right) \, dv.
 \end{split}
 </script>
-In deriving the foregoing relation, we have used some of the identities derived in the context of the mass continuity equation.</p>
-<div class="admonition info">
-<p class="admonition-title">Remark</p>
-<p>As a simple illustration, consider an initial volume <script type="math/tex">\Omega_0 \subseteq B_0</script>. Let us study the evolution of the mass contained within this volume, which is
+In deriving the foregoing relation, we have used some of the identities derived in the context of the mass continuity equation. The equation that we just derived,
+<script type="math/tex; mode=display">
+\frac{d}{dt} \int_{B_t} f(\mathsf{x},t) \, dv = \int_{B_t} \left(\frac{Df(\mathsf{x},t)}{Dt} + f(\mathsf{x},t)\,\text{div }\mathsf{v}(\mathsf{x},t)\right) \, dv,
+</script>
+is called the <strong>Reynolds' transport theorem</strong>. This will play a key role in our study of continuum mechanics. </p>
+<h2 id="mass-continuity-equation">Mass continuity equation</h2>
+<p>As an application of the Reynolds' transport theorem, let us now derive an important physical principle, namely the <em>mass continuity equation</em>, that describes the conservation of mass during the motion of a continuum body.</p>
+<p>Suppose that the <strong>mass density</strong> of the body at the inital instant of time <script type="math/tex">t = 0</script> is given by the scalar field <script type="math/tex">\rho_0:B_0 \to \mathbb{R}</script>. This means that if we consider an infinitesimal volume <script type="math/tex">\Delta V</script> about a point <script type="math/tex">\mathsf{X}\in B_0</script>, the mass contained within that volume is given by <script type="math/tex">\rho_0(\mathsf{X})\Delta V</script>. Let the mass density at time time over the region <script type="math/tex">B_t = \varphi_t(B_0)</script> be given by the scalar field <script type="math/tex">\rho_t:B_t \to \mathbb{R}</script>. At any <script type="math/tex">\mathsf{x} \in B_t</script>, we will often write <script type="math/tex">\rho(\mathsf{x},t)</script> for <script type="math/tex">\rho_t(\mathsf{x})</script>. Suppose that <script type="math/tex">\Delta v</script> is the deformed volume at <script type="math/tex">\mathsf{x} = \varphi_t(\mathsf{X})</script> corresponding to the intial infinitesimal volume <script type="math/tex">\Delta V</script> at <script type="math/tex">\mathsf{X} \in B_0</script>. The mass inside the volume <script type="math/tex">\Delta v</script> is exactly identical to the mass inside <script type="math/tex">\Delta V</script> initially since both <script type="math/tex">\Delta V</script> and <script type="math/tex">\Delta v</script> contain exactly the same particles. We therefore have the identity
+<script type="math/tex; mode=display">\rho_0(\mathsf{X})\Delta V = \rho(\mathsf{x},t) \Delta v.</script>
+Using the fact that the <script type="math/tex">\Delta v = J(\mathsf{x},t)\Delta V</script>, we can write the equation above as 
+<script type="math/tex; mode=display">\rho_0(\mathsf{X}) = J(\mathsf{x},t)\rho(\mathsf{x},t).</script>
+This equation is known as the <strong>mass conservation equation</strong> on account of the fact that it relates the initial and current mass densities. </p>
+<p>The foregoing equation can be generalized to work for arbitrary volumes. Consider an initial volume <script type="math/tex">\Omega_0 \subseteq B_0</script>. Let us study the evolution of the mass contained within this volume, which is
 <script type="math/tex; mode=display">\int_{\Omega_0} \rho_0(\mathsf{X})\,dV.</script>
 At a later time <script type="math/tex">t</script>, the mass contained the in the deformed volume <script type="math/tex">\Omega_t = \varphi_t(\Omega_0)</script> is given by
 <script type="math/tex; mode=display">\int_{\Omega_t} \rho(\mathsf{x},t)\,dv.</script>
-Since we expect this mass to be exactly identical to the mass contained in the initial volume <script type="math/tex">\Omega_0</script>, we expect the material time derivative of the mass contained in <script type="math/tex">\Omega_t</script> to be zero. Let us verify this:
+Since we expect this mass to be exactly identical to the mass contained in the initial volume <script type="math/tex">\Omega_0</script>, we have the identity
 <script type="math/tex; mode=display">
-\frac{d}{dt}\int_{\Omega_t} \rho(\mathsf{x},t)\,dv = \int_{\Omega_t} \left(\frac{D\rho(\mathsf{x},t)}{Dt} + \rho(\mathsf{x},t)\,\text{div }\mathsf{v}(\mathsf{x},t)\right) \, dv = 0.
+\int_{\Omega_0} \rho_0(\mathsf{X})\,dV = \int_{\Omega_t} \rho(\mathsf{x},t)\,dv.
 </script>
-In the equation above, the last identity follows from the mass continuity equation derived earlier. We thus see that mass continuity equation expresses the simple idea that the mass contained an <em>arbitrary</em> volume of the body does not change if we follow the volume during the motion and deformation of the body. </p>
+Using the transformation rules for multiple integrals, it follows immediately that <script type="math/tex">\rho_0(X) = J(\mathsf{x},t)\rho(\mathsf{x},t)</script>, which is the mass continuity equation derived earlier. </p>
+<p>An equivalent and useful <em>differential</em> restatement of the mass continuity equation is obtained by noting that the integral identity just studied implies that the material time derivative of the mass contained in <script type="math/tex">\Omega_t</script> has to be zero. Thus,
+<script type="math/tex; mode=display">
+0 = \frac{d}{dt}\int_{\Omega_t} \rho(\mathsf{x},t)\,dv = \int_{\Omega_t} \left(\frac{D\rho(\mathsf{x},t)}{Dt} + \rho(\mathsf{x},t)\,\text{div }\mathsf{v}(\mathsf{x},t)\right) \, dv.
+</script>
+Notice how the Reynolds' transport theorem is used to differentiate under the integral sign. Since the foregoing result holds for an <em>arbitrary</em> volume contained in $\Omega_t$, it follows that the integrand has to be zero pointwise inside $\Omega_t$:
+<script type="math/tex; mode=display">
+\frac{D\rho(\mathsf{x},t)}{Dt} + \rho(\mathsf{x},t)\,\text{div }\mathsf{v}(\mathsf{x},t) = 0.
+</script>
+This is the <strong>differential form of the mass continuity equation</strong>. An equivalent way of writing this is by expanding the material derivative:
+<script type="math/tex; mode=display">
+\frac{\partial \rho(\mathsf{x},t)}{\partial t} + \text{div}(\rho(\mathsf{x},t)\mathsf{v}(\mathsf{x},t)) = 0.
+</script>
+In deriving this equation, we used the identity <script type="math/tex">\text{div}(\rho \mathsf{v}) = \rho \, \text{div }\mathsf{v} + \text{grad }\rho \cdot \mathsf{v}</script>, whose validity is easily checked. Both these forms of the mass continuity equation are useful in applications.</p>
+<div class="admonition danger">
+<p class="admonition-title">An incorrect derivation of the mass continuity equation</p>
+<p>An incorrect derivation of the mass continuity equation that is found in some textbooks goes as follows: since <script type="math/tex">\rho_0(\mathsf{X}) = J(\mathsf{x},t)\rho(\mathsf{x},t)</script>, and <script type="math/tex">\dot{\rho}_0(\mathsf{X}) = 0</script>, we see that
+<script type="math/tex; mode=display">
+\begin{split}
+0 &= \frac{D(J(\mathsf{x},t)\rho(\mathsf{x},t))}{Dt}\\
+ &= \dot{J}(\mathsf{x},t) \rho(\mathsf{x},t) + J(\mathsf{x},t) \dot{\rho}(\mathsf{x},t)\\
+ &= J(\mathsf{x},t) \rho(\mathsf{x},t) \,\text{div }\mathsf{v}(\mathsf{x},t) + J(\mathsf{x},t) \left(\frac{\partial \rho(\mathsf{x},t)}{\partial t} + \text{grad }\rho(\mathsf{x},t) \cdot \mathsf{v}(\mathsf{x},t) \right)\\
+ &= J(\mathsf{x},t)\left(\frac{\partial \rho(\mathsf{x},t)}{\partial t} + \text{div}(\rho(\mathsf{x},t)\mathsf{v}(\mathsf{x},t)) \right).
+\end{split}
+</script>
+Since the determinant of the deformation gradient is always strictly positive, we arrive at the mass continuity equation. The problem with this derivation is the assumption that <script type="math/tex">\dot{\rho}_0(\mathsf{X}) = 0</script>. This is not a mathematical identity that is true because $\rho_0(\mathsf{X})$ is independent of $t$, which is the usual argument given. The derivation of the mass continuity equation via the integral formulation presented earlier is much cleaner and also illuminates the reason why this works: if we follow a small volume around $\mathsf{X}$ over time, the mass contained in this volume does not change. Thus, the mass continuity principle directly gives the identity $d(J(\mathsf{x},t)\rho(\mathsf{x},t))/dt = 0$. This is the proper way to justify the foregoing derivation.</p>
 </div>
-<p>Finally, n the special case when the integrand is of the form <script type="math/tex">\rho f</script>, where <script type="math/tex">\rho</script> is the mass density and <script type="math/tex">f</script> is a scalar field, we can use the mass continuity equation to simplify the material time derivative of the integral as follows:
+<div class="admonition info">
+<p class="admonition-title">A useful form of Reynolds' transport theorem</p>
+<p>In the special case when the integrand is of the form <script type="math/tex">\rho f</script>, where <script type="math/tex">\rho</script> is the mass density and <script type="math/tex">f</script> is a scalar field, we can use the mass continuity equation to simplify the material time derivative of the integral as follows:
 <script type="math/tex; mode=display">
 \frac{d}{dt}\int_{B_t} \rho(\mathsf{x},t)f(\mathsf{x},t)\,dv = \int_{B_t} \rho(\mathsf{x},t)\frac{Df(\mathsf{x},t)}{Dt}\,dv.
 </script>
-It is left as a simple exercise to verify this. This important result is known as the <strong>Reynolds' transport theorem</strong>, and will play a key role in our study of the balance principles of continuum mechanics.</p>
+It is left as a simple exercise to verify this. This form of the Reynolds' transport theorem is quite useful in applications. </p>
+</div>
                 
                   
                 
